@@ -79,4 +79,9 @@ function clearSelected() {
     document.getElementById("mat2").classList.remove("selected")
     document.getElementById("mat3").classList.remove("selected")
     document.getElementById("mat4").classList.remove("selected")
+    document.getElementById("mat5").classList.remove("selected")
+    document.getElementById("mat6").classList.remove("selected")
+    document.getElementById("mat7").classList.remove("selected")
+    document.getElementById("mat8").classList.remove("selected")
+    document.getElementById("mat9").classList.remove("selected")
 }

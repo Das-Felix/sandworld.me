@@ -110,7 +110,11 @@ function createPixel(x, y) {
     grid[y][x] = id;
 
     if(id == 3) {
-        drawPixel(x, y, "#331a14");
+        drawPixel(x, y, "#9A9A9A");
+    }
+
+    if(id == 4) {
+        drawPixel(x, y, "#693D1E");
     }
 
     pixelCount++;

@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(206, 206, 206);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)), url('./img/background.jpg');*/
+}
+
+canvas {
+    background-color: #EFEFEF;
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main {
+    width: 1080px;
+    height: 1920px;
+    background-color: white;
+}
+
+.debug {
+    width: 100vw;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: green;
+}
+
+/*Canvas*/
+
+.canvas-container {
+    width: 1080px;
+    height: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/*Settings*/
+
+.settings-container {
+    margin-top: 30px;
+    width: 1000px;
+    margin-left: 40px; 
+}
+
+/*Material Selector*/
+
+.material-selector {
+    padding-top: 10px;
+    background-color: #EFEFEF;
+    display: grid;
+    width: 1000px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.material-select {
+    cursor: pointer;
+    width: 169px;
+    height: 70px;
+    margin-left: 10px;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    border: white 7px solid;
+}
+
+.last-row {
+    padding-bottom: 10px;
+}
+
+
+.selected {
+    border-color: black;
+}
+
+#mat0 {
+    background-color: white;
+    color: black;
+}

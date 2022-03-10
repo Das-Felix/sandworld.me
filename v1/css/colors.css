@@ -1,0 +1,39 @@
+.sand-color {
+    background-color: #DDC78B;
+}
+
+.water-color {
+    background-color: #95BEFF;
+}
+
+.stone-color {
+    background-color: #9A9A9A;
+}
+
+.wood-color {
+    background-color: #693D1E;
+}
+
+.brick-color {
+    background-color: #7B3434;
+}
+
+.fire-color {
+    background-color: #F8A646;
+}
+
+.oil-color {
+    background-color: #414141;
+}
+
+.empty-color {
+    background-color: white;
+}
+
+.dynamite-color {
+    background-color: #C10505;
+}
+
+.acid-color {
+    background-color: #90D335;
+}
