@@ -14,6 +14,11 @@
     <!--Element Imports-->
     <script defer src="./js/elements/sand.js"></script>
     <script defer src="./js/elements/water.js"></script>
+    <script defer src="./js/elements/fire.js"></script>
+    <script defer src="./js/elements/stone.js"></script>
+    <script defer src="./js/elements/smoke.js"></script>
+    <script defer src="./js/elements/oil.js"></script>
+
 
     <link rel="stylesheet" href="./css/colors.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -33,7 +38,7 @@
             <canvas id="canvas" width="1700" height="1000" background="#000000"></canvas>
         </div>
 
-        <div class="settings-container">
+        <div class="menu-container">
 
             <div class="material-selector-container">
 
@@ -89,6 +94,45 @@
                     </div>
                 </div>
             </div>
+
+            <div class="settings-container">
+                <div class="settings-button settings-button-wide" onclick="reset();">
+                    <h2>Reset</h2>
+                </div>
+
+                <div class="settings-button" onclick="undo();">
+                    <h2><</h2>
+                </div>
+
+                <div class="settings-button" onclick="togglePlay();">
+                    <h2>| |</h2>
+                </div>
+
+                <div class="settings-button" onclick="setBrushMode(0);" id="brm0">
+                    <h2>⬜</h2>
+                </div>
+
+                <div class="settings-button selected" onclick="setBrushMode(1);" id="brm1">
+                    <h2>⚪</h2>
+                </div>
+
+                <div class="settings-button" onclick="setBrushSize(1);" id="br1">
+                    <h2>1</h2>
+                </div>
+
+                <div class="settings-button selected" onclick="setBrushSize(5);" id="br5""">
+                    <h2>5</h2>
+                </div>
+
+                <div class="settings-button" onclick="setBrushSize(10);" id="br10">
+                    <h2>10</h2>
+                </div>
+
+                <div class="settings-button" onclick="setBrushSize(20);" id="br20">
+                    <h2>20</h2>
+                </div>
+            </div>
+
         </div>
     </main>
 

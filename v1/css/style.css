@@ -44,7 +44,7 @@ main {
 
 /*Settings*/
 
-.settings-container {
+.menu-container {
     margin-top: 30px;
     width: 1000px;
     margin-left: 40px; 
@@ -76,11 +76,54 @@ main {
 }
 
 
-.selected {
+.material-selector .selected {
     border-color: black;
 }
 
 #mat0 {
     background-color: white;
     color: black;
+}
+
+
+/*General Settings*/
+
+.settings-container {
+    width: 1000px;
+    height: 90px;
+    background-color: #EFEFEF;
+    display: flex;
+    margin-top: 30px;
+}
+
+.settings-button-wide {
+    width: 180px !important;
+}
+
+.settings-button {
+    width: 90px;
+    height: 70px;
+    background-color: white;
+    color: #505050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.settings-button:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+.settings-container .selected {
+    /*background-color: rgb(243, 243, 243);*/
+    background-color: black;
+    color: white;
+}
+
+.settings-button h2 {
+    margin: 0;
 }

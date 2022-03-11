@@ -45,27 +45,37 @@ function simulateSand(x, y) {
 
     //Falling into Liquid
 
+    if(isCellLiquid(x, y + 1)) {
+        clearCell(x, y);
+
+        if(getCellMaterial(x, y + 1) == 7) {
+            moveParticleToClosestEmptySpot(x, y, 7, "#00000");
+        } else {
+            moveParticleToClosestEmptySpot(x, y, 2, waterColors[random]);
+        }
+
+        
+        setCell(x, y + 1, materialId, sandColors[random]);
+        return;
+    }
+
     if(isCellLiquid(x + 1, y + 1) && isCellLiquid(x - 1, y +1)) {
 
         if(random > 5) {
+            clearCell(x, y);
             moveParticleToClosestEmptySpot(x, y, 2, waterColors[random]);
             setCell(x + 1, y + 1, materialId, sandColors[random]);
         }  else {
+            clearCell(x, y);
             moveParticleToClosestEmptySpot(x, y, 2, waterColors[random]);
             setCell(x - 1, y + 1, materialId, sandColors[random]);
         }
         return;
     }
 
-    if(isCellLiquid(x, y + 1)) {
-        moveParticleToClosestEmptySpot(x, y, 2, waterColors[random]);
-        setCell(x, y + 1, materialId, sandColors[random]);
-        return;
-    }
-
 
     if(isCellLiquid(x + 1, y + 1)) {
-
+        clearCell(x, y);
         moveParticleToClosestEmptySpot(x, y, 2, waterColors[random]);
         
         setCell(x + 1, y + 1, materialId, sandColors[random]);
@@ -73,6 +83,7 @@ function simulateSand(x, y) {
     }
 
     if(isCellLiquid(x - 1, y + 1)) {
+        clearCell(x, y);
         moveParticleToClosestEmptySpot(x, y, 2, waterColors[random]);
         setCell(x - 1, y + 1, materialId, sandColors[random]);
         return;

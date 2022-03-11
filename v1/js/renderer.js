@@ -8,3 +8,12 @@ function drawPixel(x, y, color) {
 function clearPixel(x, y) {
     context.clearRect(x*pixelSize, y*pixelSize, pixelSize, pixelSize);
 }
+
+function getMaterialColor(id) {
+    switch(id) {
+        case 2:
+            return waterColors[0];
+        case 7:
+            return "#00000";
+    }
+}

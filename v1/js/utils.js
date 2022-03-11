@@ -6,3 +6,5 @@ function shuffle(a) {
     }
     return a;
 }
+
+var difference = function (a, b) { return Math.abs(a - b); }

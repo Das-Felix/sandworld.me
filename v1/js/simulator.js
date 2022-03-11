@@ -65,11 +65,25 @@ function runSimulation(x, y) {
         case 2:
             simulateWater(x, y);
             break;
+        case 3:
+            simulateStone(x, y);
+            break;
+        case 6:
+            simulateFire(x, y);
+            break;
+        case 7:
+            simulateOil(x, y);
+            break;
+        case 10:
+            simulateSmoke(x, y);
+            break;
     }
 }
 
 function isCellEmtpy(x, y) {
-    return grid[y][x] == 0;
+    if(grid[y][x] == undefined) return true;
+
+    return grid[y][x] == 0 && y > 0 && y < windowHeightInPixels && x > 0 && x < windowWithInPixels;
 }
 
 function clearCell(x, y) {
@@ -77,17 +91,29 @@ function clearCell(x, y) {
     clearPixel(x, y);
 }
 
+function getCellMaterial(x, y) {
+    return grid[y][x];
+}
+
 function isCellLiquid(x, y) {
     //TODO: Implement Material System
 
-    return grid[y][x] == 2;
+    return grid[y][x] == 2 || grid[y][x] == 7;
+
+}
+
+function isCellWater() {
+    
+}
+
+function isCellOil() {
 
 }
 
 function isCellFlamable(x, y) {
     //TODO: Implement Material System
 
-    return grid[y][x] == 3;
+    return grid[y][x] == 4 || grid[y][x] == 7;
 
 }
 
@@ -97,6 +123,9 @@ function setCell(x, y, material, color) {
 }
 
 function createPixel(x, y) {
+    if(x > windowWithInPixels || x < 0 || y > windowHeightInPixels || y < 0) return;
+
+
     var id = currentMaterial;
 
     if(id == 0) {
@@ -109,10 +138,6 @@ function createPixel(x, y) {
 
     grid[y][x] = id;
 
-    if(id == 3) {
-        drawPixel(x, y, "#9A9A9A");
-    }
-
     if(id == 4) {
         drawPixel(x, y, "#693D1E");
     }
@@ -122,4 +147,20 @@ function createPixel(x, y) {
 
 function setMat(id) {
     currentMaterial = id;
+}
+
+function reset() {
+    grid = [];
+
+    for(var i = 0; i < windowHeightInPixels; i++) {
+        var gridRow = [];
+    
+        for(var j = 0; j < windowWithInPixels; j++) {
+            gridRow.push(0);
+        }
+    
+        grid.push(gridRow);
+    }
+
+    context.clearRect(0, 0, canvas.width, canvas.height);
 }
