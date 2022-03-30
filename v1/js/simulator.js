@@ -1,6 +1,7 @@
 
 var grid = [];
 var materials = [];
+var bounding = [];
 
 var currentMaterial = 1;
 
@@ -19,38 +20,18 @@ var runLeftTime = 0;
 
 //Running the simulation
 function simulate() {
-
-    /*var random = Math.floor(Math.random() * (100 - 0 + 1)) + 1;
-    
-    if(random > 99) {
-        runLeft = !runLeft;
-    }*/
-    
-    //runLeftTime ++;
-
-    if(runLeftTime > 100) {
-        runLeft = !runLeft;
-        runLeftTime = 0;
-    }
-
-    
-    
-
     for(var y = grid.length - 2; y > 1; y--) {
 
-        if(runLeft) {
-            for(var x = 0; x < grid[y].length; x++) {
-                runSimulation(x, y);
-            }
-            continue;
+        for(var x = 0; x < grid[y].length; x++) {
+
+            runSimulation(x, y); 
         }
-        
-        for(var x = grid[y].length; x > 0; x--) {
-            runSimulation(x, y);
-        }
+        continue;
 
         
     }
+
+    bounding = [];
 }
 
 function runSimulation(x, y) {
@@ -78,6 +59,14 @@ function runSimulation(x, y) {
             simulateSmoke(x, y);
             break;
     }
+}
+
+function setBounding(x, y) {
+    bounding.push("X:" + x + "Y:" + y);
+}
+
+function isBounding(x, y) {
+    return bounding.includes("X:" + x + "Y:" + y);
 }
 
 function isCellEmtpy(x, y) {
@@ -118,6 +107,7 @@ function isCellFlamable(x, y) {
 }
 
 function setCell(x, y, material, color) {
+    setBounding(x, y);
     grid[y][x] = material;
     drawPixel(x, y, color)
 }

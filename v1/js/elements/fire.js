@@ -2,8 +2,6 @@ var fireColors = ["#ff4616", "#ff2414", "#ff7214", "#ff5214", "#ff1414", "#ff391
 
 function simulateFire(x, y) {
 
-    var dontMove = [];
-
     var materialId = 6;
 
     var random = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
