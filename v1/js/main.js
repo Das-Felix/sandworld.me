@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 
-var pixelSize = 5;
+var pixelSize = 6;
 var pixelCount = 0;
 var refreshRate = 10;
 var windowWithInPixels = 340;

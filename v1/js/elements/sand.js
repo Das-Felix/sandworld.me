@@ -6,6 +6,10 @@ function simulateSand(x, y) {
 
     var random = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
 
+    if(random == 10) {
+        return;
+    }
+
     if(isCellEmtpy(x, y + 1)) {
         clearCell(x, y);
         setCell(x, y + 1, materialId, sandColors[random]);
