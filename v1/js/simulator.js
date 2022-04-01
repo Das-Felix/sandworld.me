@@ -17,6 +17,13 @@ for(var i = 0; i < windowHeightInPixels; i++) {
 var runLeft = false;
 var runLeftTime = 0;
 
+var movedPixels = 0;
+var maxMovedPixels = 3000;
+
+function increaseMovedPixels() {
+    movedPixels ++;
+}
+
 //Running the simulation
 function simulate() {
 
@@ -36,7 +43,13 @@ function simulate() {
     
     
 
-    for(var y = grid.length - 2; y > 1; y--) {
+    for(var y = 0; y < grid.length; y++) {
+
+        if(movedPixels > maxMovedPixels) {
+            movedPixels = 0;
+            continue;
+        }
+
 
         if(runLeft) {
             for(var x = 0; x < grid[y].length; x++) {
@@ -53,7 +66,7 @@ function simulate() {
     }
 }
 
-function runSimulation(x, y) {
+function runSimulation(x, y) {  
     var cellType = grid[y][x];
 
     switch(cellType) {
@@ -74,6 +87,9 @@ function runSimulation(x, y) {
         case 7:
             simulateOil(x, y);
             break;
+        case 9:
+            simulateAcid(x, y);
+            break
         case 10:
             simulateSmoke(x, y);
             break;
@@ -81,9 +97,7 @@ function runSimulation(x, y) {
 }
 
 function isCellEmtpy(x, y) {
-    if(grid[y][x] == undefined) return true;
-
-    return grid[y][x] == 0 && y > 0 && y < windowHeightInPixels && x > 0 && x < windowWithInPixels;
+    return y > 0 && y < windowHeightInPixels && x > 0 && x < windowWithInPixels && grid[y][x] == 0;
 }
 
 function clearCell(x, y) {
@@ -97,6 +111,9 @@ function getCellMaterial(x, y) {
 
 function isCellLiquid(x, y) {
     //TODO: Implement Material System
+    if(y > 0 || y < windowHeightInPixels || x > 0 || x < windowWithInPixels || grid[y] != null) return false;
+
+
 
     return grid[y][x] == 2 || grid[y][x] == 7;
 
@@ -137,6 +154,11 @@ function createPixel(x, y) {
     if(grid[y][x] != 0) return;
 
     grid[y][x] = id;
+
+    switch(id) {
+        case 1:
+            drawPixel(x, y, sndColors[0]);
+    }
 
     if(id == 4) {
         drawPixel(x, y, "#693D1E");

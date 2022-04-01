@@ -6,6 +6,10 @@ function simulateStone(x, y) {
 
     var random = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
 
+    if(random <= 2) {
+        return;
+    }
+
     if(isCellEmtpy(x, y + 1)) {
         clearCell(x, y);
         setCell(x, y + 1, materialId, stoneColors[random]);

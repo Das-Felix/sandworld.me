@@ -1,4 +1,4 @@
-var smokeColors = ["#555556", "#4f4f4f", "#2b2b2b", "#707070", "#555556", "#4f4f4f", "#2b2b2b", "#707070", "#555556", "#4f4f4f", "#2b2b2b", "#707070"];
+var smokeColors = ["#c9cacc", "#c6c6c6", "#d9dadb","#c9cacc", "#c6c6c6", "#8a8b8c","#c9cacc", "#8a8b8c", "#d9dadb","#c9cacc", "#c6c6c6", "#d9dadb","#c9cacc", "#c6c6c6", "#d9dadb"];
 
 function simulateSmoke(x, y) {
 
