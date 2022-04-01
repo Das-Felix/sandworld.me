@@ -5,7 +5,11 @@ function simulateSand(x, y) {
 
     var random = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
 
+<<<<<<< HEAD
     if(random <= 2) {
+=======
+    if(random == 10) {
+>>>>>>> 5c1e1c0e80f00459364e1a53fc30c5b7e9986476
         return;
     }
 
@@ -45,26 +49,22 @@ function simulateSand(x, y) {
     if(isCellLiquid(x, y + 1)) {
         clearCell(x, y);
 
-        if(getCellMaterial(x, y + 1) == 7) {
-            moveParticleToClosestEmptySpot(x, y, 7, "#00000");
-        } else {
-            moveParticleToClosestEmptySpot(x, y, 2, waterColors[random]);
-        }
-
+        
+        setCell(x, y, 2, waterColors[random]);
         
         setCell(x, y + 1, materialId, sandColors[random]);
         return;
     }
 
-    if(isCellLiquid(x + 1, y + 1) && isCellLiquid(x - 1, y +1)) {
+    if(isCellLiquid(x + 1, y) && isCellLiquid(x - 1, y +1)) {
 
         if(random > 5) {
             clearCell(x, y);
-            moveParticleToClosestEmptySpot(x, y, 2, waterColors[random]);
+            setCell(x, y, 2, waterColors[random]);
             setCell(x + 1, y + 1, materialId, sandColors[random]);
         }  else {
             clearCell(x, y);
-            moveParticleToClosestEmptySpot(x, y, 2, waterColors[random]);
+            setCell(x, y, 2, waterColors[random]);
             setCell(x - 1, y + 1, materialId, sandColors[random]);
         }
         return;
@@ -73,7 +73,7 @@ function simulateSand(x, y) {
 
     if(isCellLiquid(x + 1, y + 1)) {
         clearCell(x, y);
-        moveParticleToClosestEmptySpot(x, y, 2, waterColors[random]);
+        setCell(x, y, 2, waterColors[random]);
         
         setCell(x + 1, y + 1, materialId, sandColors[random]);
         return;
@@ -81,23 +81,9 @@ function simulateSand(x, y) {
 
     if(isCellLiquid(x - 1, y + 1)) {
         clearCell(x, y);
-        moveParticleToClosestEmptySpot(x, y, 2, waterColors[random]);
+        setCell(x, y, 2, waterColors[random]);
         setCell(x - 1, y + 1, materialId, sandColors[random]);
         return;
     }
 
-}
-
-function moveParticleToClosestEmptySpot(x, y, material, color) {
-    if(isCellEmtpy(x + 1, y)) {
-        setCell(x + 1, y, material, color);
-    } else if(isCellEmtpy(x - 1, y)) {
-        setCell(x - 1, y, material, color);
-    } else if(isCellEmtpy(x - 1, y + 1)) {
-        setCell(x - 1, y + 1, material, color);
-    } else if(isCellEmtpy(x + 1, y + 1)) {
-        setCell(x + 1, y + 1, material, color);
-    } else {
-        setCell(x, y, material, color);
-    }
 }

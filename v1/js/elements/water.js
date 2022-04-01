@@ -6,9 +6,13 @@ function simulateWater(x, y) {
 
     var random = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
 
+<<<<<<< HEAD
     if(random <= 2) {
         return;
     }
+=======
+    if(random == 10) return;
+>>>>>>> 5c1e1c0e80f00459364e1a53fc30c5b7e9986476
 
     if(isCellEmtpy(x, y + 1)) {
         clearCell(x, y);
@@ -16,6 +20,7 @@ function simulateWater(x, y) {
         return;
     }
 
+<<<<<<< HEAD
     if(isCellEmtpy(x + 1, y) && isCellEmtpy(x - 1, y)) {
 
         if(random > 7) {
@@ -29,6 +34,9 @@ function simulateWater(x, y) {
     }
 
     if(random >= 8) return;
+=======
+    
+>>>>>>> 5c1e1c0e80f00459364e1a53fc30c5b7e9986476
 
     if(isCellEmtpy(x + 1, y)) {
         clearCell(x, y);
@@ -37,6 +45,7 @@ function simulateWater(x, y) {
     }
 
     if(isCellEmtpy(x - 1, y)) {
+        if(random > 5) return;
         clearCell(x, y);
         setCell(x - 1, y, materialId, waterColors[random]);
         return;
