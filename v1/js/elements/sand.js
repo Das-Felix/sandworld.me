@@ -3,19 +3,15 @@ function simulateSand(x, y) {
 
     var materialId = 1;
 
+    
     var random = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
 
-<<<<<<< HEAD
-    if(random <= 2) {
-=======
-    if(random == 10) {
->>>>>>> 5c1e1c0e80f00459364e1a53fc30c5b7e9986476
+    if(random == 9) {
         return;
     }
 
     if(isCellEmtpy(x, y + 1)) {
-        clearCell(x, y);
-        setCell(x, y + 1, materialId, sandColors[random]);
+        moveCell(x, y, x, y + 1);
         increaseMovedPixels();
         return;
     }
@@ -23,24 +19,20 @@ function simulateSand(x, y) {
     if(isCellEmtpy(x + 1, y + 1) && isCellEmtpy(x - 1, y +1)) {
 
         if(random > 5) {
-            clearCell(x, y);
-            setCell(x + 1, y + 1, materialId, sandColors[random]);
+            moveCell(x, y, x + 1, y + 1);
         }  else {
-            clearCell(x, y);
-            setCell(x - 1, y + 1, materialId, sandColors[random]);
+            moveCell(x, y, x - 1, y + 1);
         }
         return;
     }
 
     if(isCellEmtpy(x + 1, y + 1)) {
-        clearCell(x, y);
-        setCell(x + 1, y + 1, materialId, sandColors[random]);
+        moveCell(x, y, x + 1, y + 1);
         return;
     }
 
     if(isCellEmtpy(x - 1, y + 1)) {
-        clearCell(x, y);
-        setCell(x - 1, y + 1, materialId, sandColors[random]);
+        moveCell(x, y, x - 1, y + 1);
         return;
     }
 

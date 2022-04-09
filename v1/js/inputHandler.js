@@ -87,8 +87,8 @@ canvas.addEventListener("mousedown", (event) => {
     const realX = Math.min(Math.floor(canvasLeft), width - 1);
     const realY = Math.min(Math.floor(canvasTop), height - 1);
     
-    const x = Math.round(realX / pixelSize, 0);
-    const y = Math.round(realY / pixelSize, 0);
+    const x = Math.round(realX, 0);
+    const y = Math.round(realY, 0);
 
 
     paint(mouseX, mouseY);
@@ -108,8 +108,8 @@ canvas.addEventListener("mousemove", (event) => {
     const realX = Math.min(Math.floor(canvasLeft), width - 1);
     const realY = Math.min(Math.floor(canvasTop), height - 1);
     
-    const x = Math.round(realX / pixelSize, 0);
-    const y = Math.round(realY / pixelSize, 0);
+    const x = Math.round(realX, 0);
+    const y = Math.round(realY, 0);
 
     mouseX = x;
     mouseY = y;

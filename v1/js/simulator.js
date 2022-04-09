@@ -5,11 +5,14 @@ var bounding = [];
 
 var currentMaterial = 1;
 
-for(var i = 0; i < windowHeightInPixels; i++) {
+for(var i = 0; i < height; i++) {
     var gridRow = [];
 
-    for(var j = 0; j < windowWithInPixels; j++) {
-        gridRow.push(0);
+    for(var j = 0; j < width; j++) {
+        gridRow.push({
+            type: 0,
+            alpha: 255,
+        });
     }
 
     grid.push(gridRow);
@@ -30,8 +33,6 @@ function simulate() {
     for(var y = grid.length - 2; y !== 1; y--) {
 
         for(var x = 0; x !== grid[y].length; x++) {
->>>>>>> 5c1e1c0e80f00459364e1a53fc30c5b7e9986476
-
             runSimulation(x, y); 
         }
         continue;
@@ -39,11 +40,12 @@ function simulate() {
         
     }
 
+    drawGrid(grid);
     bounding = [];
 }
 
 function runSimulation(x, y) {  
-    var cellType = grid[y][x];
+    var cellType = grid[y][x].type;
 
     switch(cellType) {
         case 0:
@@ -72,34 +74,22 @@ function runSimulation(x, y) {
     }
 }
 
-function setBounding(x, y) {
-    bounding.push("X:" + x + "Y:" + y);
-}
-
-function isBounding(x, y) {
-    return bounding.includes("X:" + x + "Y:" + y);
-}
 
 function isCellEmtpy(x, y) {
-    return y > 0 && y < windowHeightInPixels && x > 0 && x < windowWithInPixels && grid[y][x] == 0;
+    return y >= 0 && y < height && x >= 0 && x < width && grid[y][x].type == 0;
 }
 
 function clearCell(x, y) {
-    grid[y][x] = 0;
-    clearPixel(x, y);
-}
-
-function getCellMaterial(x, y) {
-    return grid[y][x];
+    grid[y][x].type = 0;
 }
 
 function isCellLiquid(x, y) {
     //TODO: Implement Material System
-    if(y > 0 || y < windowHeightInPixels || x > 0 || x < windowWithInPixels || grid[y] != null) return false;
+    if(y >= 0 || y < height || x >= 0 || x < width || grid[y] != null) return false;
 
 
 
-    return grid[y][x] == 2 || grid[y][x] == 7;
+    return grid[y][x].type == 2 || grid[y][x].type == 7;
 
 }
 
@@ -118,36 +108,56 @@ function isCellFlamable(x, y) {
 
 }
 
-function setCell(x, y, material, color) {
-    setBounding(x, y);
-    grid[y][x] = material;
-    drawPixel(x, y, color)
+function setCell(x, y, material, alpha) {
+    grid[y][x] = {
+        type: material,
+        alpha: alpha,
+    };
 }
 
+
+function moveCell(x, y, newX, newY) {
+    grid[newY][newX] = {
+        type: grid[y][x].type,
+        alpha: grid[y][x].alpha,
+    }
+
+    clearCell(x, y);
+}
+
+
+var currentAlpha = 200;
+var mode = 1;
+var last = 0;
+
 function createPixel(x, y) {
-    if(x > windowWithInPixels || x < 0 || y > windowHeightInPixels || y < 0) return;
+    if(x > width || x < 0 || y > height || y < 0 || grid[y] == null || grid[y][x] == null) return;
+
+
+    if(currentAlpha == 255 || currentAlpha == 199) mode = mode * -1; 
+
+    last ++;
+    if(last > 10) {
+        currentAlpha = currentAlpha + (1 * mode);
+        last = 0;
+    }
+
+    
 
 
     var id = currentMaterial;
 
     if(id == 0) {
-        clearPixel(x, y);
-        grid[y][x] = 0;
+        grid[y][x].type = 0;
         return;
     }
 
-    if(grid[y][x] != 0) return;
+    if(grid[y][x].type != 0) return;
 
-    grid[y][x] = id;
-
-    switch(id) {
-        case 1:
-            drawPixel(x, y, sndColors[0]);
-    }
-
-    if(id == 4) {
-        drawPixel(x, y, "#693D1E");
-    }
+    grid[y][x] = {
+        type: id,
+        alpha: currentAlpha,    
+    };
 
     pixelCount++;
 }
@@ -159,15 +169,16 @@ function setMat(id) {
 function reset() {
     grid = [];
 
-    for(var i = 0; i < windowHeightInPixels; i++) {
+    for(var i = 0; i < height; i++) {
         var gridRow = [];
     
-        for(var j = 0; j < windowWithInPixels; j++) {
-            gridRow.push(0);
+        for(var j = 0; j < width; j++) {
+            gridRow.push({
+                type: 0,
+                alpha: 255,
+            });
         }
     
         grid.push(gridRow);
     }
-
-    context.clearRect(0, 0, canvas.width, canvas.height);
 }
