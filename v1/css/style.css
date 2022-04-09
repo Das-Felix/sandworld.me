@@ -108,7 +108,7 @@ canvas {
 }
 
 .material-selector div h2 {
-    font-size: clamp(1rem, 2vh, 2.5rem);
+    font-size: clamp(0.5rem, 2vh, 2.5rem);
     font-weight: 500;
     margin: 0;
     cursor: pointer;

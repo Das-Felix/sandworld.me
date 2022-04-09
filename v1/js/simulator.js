@@ -48,7 +48,7 @@ function simulate() {
     }
 
 
-    for(var y = grid.length - 2; y !== 1; y--) {
+    for(var y = grid.length - 2; y >= 0; y--) {
         for(var x = 0; x !== grid[y].length; x++) {
             runSimulation(x, y); 
         }
