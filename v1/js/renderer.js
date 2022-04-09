@@ -9,22 +9,23 @@ function getMaterialColor(id) {
     }
 }
 
-var glow = -20;
+var glow = 50;
 var lastGlowStep = 0;
 var glowDirection = -1;
+
+var maxGlow = 50;
+var minGlow = 1;
 
 function drawGrid(grid) {
 
     lastGlowStep ++;
 
-    if(lastGlowStep >= 50) {
-        lastGlowStep = 0;
+    if(lastGlowStep == 3) {
         glow = glow + glowDirection;
+        lastGlowStep = 0;
     }
 
-    console.log(glowDirection)
-
-    if(glow < -20) {
+    if(glow >= maxGlow || glow <= minGlow) {
         glowDirection = glowDirection * -1;
     }
 
@@ -53,21 +54,16 @@ function drawGrid(grid) {
                     b = 110;
                     break;
                 case 2:
-                    r = 88;
-                    g = 124;
-                    b = 245;
-
-                    if(a + glow > 255) {
-                        a = 255;
-                    } else {
-                        a = a + glow;
-                    }
+                    r = 152;
+                    g = 189;
+                    b = 249;
+                    a = a - glow;
 
                     break;
                 case 3:
-                    r = 0;
-                    g = 0;
-                    b = 0;
+                    r = 98;
+                    g = 98;
+                    b = 98;
                     break;
                 case 4:
                     r = 155;

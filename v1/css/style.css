@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(206, 206, 206);
+    background-color: #404040;
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,135 +8,144 @@ body {
     /*background: linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)), url('./img/background.jpg');*/
 }
 
-canvas {
-    background-color: #EFEFEF;
-}
-
-h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-main {
-    width: 1080px;
-    height: 1920px;
-    background-color: white;
+:root {
+    --screen-width: calc(80vh / 3 * 2);
+    --screen-height: 80vh;
 }
 
 .debug {
-    width: 100vw;
+    position: absolute;
+    color: lime;
     text-align: center;
-    position: fixed;
-    top: 0;
     left: 0;
-    color: green;
+    bottom: 0;
+    font-size: 0.5rem;
 }
+
+main {
+    background-color: #232323;
+    width: calc(var(--screen-width) + 4vh);
+    height: 100vh;
+}
+
+/*Title*/
+.title {
+    position: absolute;
+    width: 100vw;
+    color: var(--yellow);
+    text-align: center;
+    left: 0;
+    top: 1vh;
+    font-size: clamp(1rem, 1.5vh, 2rem);
+    font-style: italic;
+    z-index: 100;
+}
+
 
 /*Canvas*/
 
 .canvas-container {
-    width: 1080px;
-    height: 1500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-/*Settings*/
-
-.menu-container {
-    margin-top: 30px;
-    width: 1000px;
-    margin-left: 40px; 
-}
-
-/*Material Selector*/
-
-.material-selector {
-    padding-top: 10px;
-    background-color: #EFEFEF;
-    display: grid;
-    width: 1000px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
-.material-select {
-    cursor: pointer;
-    width: 169px;
-    height: 70px;
-    margin-left: 10px;
-    text-align: center;
-    color: white;
-    font-weight: lighter;
-    border: white 7px solid;
-}
-
-.last-row {
-    padding-bottom: 10px;
-}
-
-
-.material-selector .selected {
-    border-color: black;
-}
-
-#mat0 {
-    background-color: white;
-    color: black;
-}
-
-
-/*General Settings*/
-
-.settings-container {
-    width: 1000px;
-    height: 90px;
-    background-color: #EFEFEF;
-    display: flex;
-    margin-top: 30px;
-}
-
-.settings-button-wide {
-    width: 180px !important;
-}
-
-.settings-button {
-    width: 90px;
-    height: 70px;
-    background-color: white;
-    color: #505050;
+    width: 100%;
+    height: 82vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: all 0.2s;
 }
 
-.settings-button:hover {
-    background-color: rgb(243, 243, 243);
-}
-
-.settings-container .selected {
-    /*background-color: rgb(243, 243, 243);*/
-    background-color: black;
-    color: white;
-}
-
-.settings-button h2 {
-    margin: 0;
-}
-
-#canvas {
+.canvas-container div {
     height: 80vh;
+    width: calc(80vh / 3 * 2);
+    position: relative;
 }
 
 canvas {
-    
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    width: calc(80vh / 3 * 2);
+    background-color: #404040;
     image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
-  }
-  
+}
+
+#input-controller {
+    background-color: transparent;
+    z-index: 200;
+}
+
+/*Menu*/
+
+.menu-container {
+    height: 15vh;
+}
+
+/*Material Selector*/
+
+.material-selector-container {
+    width: 100%;
+    display: flex;
+    justify-content:  center;
+}
+
+.material-selector {
+    width: var(--screen-width);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.material-selector div {
+    border-style: solid;
+    border-width: clamp(0.2rem, 0.5vh, 0.5rem);
+    color: white;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-selector div h2 {
+    font-size: clamp(1rem, 2vh, 2.5rem);
+    font-weight: 500;
+    margin: 0;
+    cursor: pointer;
+}
+
+/*Settings Selector*/
+
+
+.settings-container {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content:  center;
+}
+
+.settings-selector {
+    width: var(--screen-width);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+}
+
+.settings-selector div {
+    border-style: solid;
+    border-width: clamp(0.2rem, 0.5vh, 0.5rem);
+    border-color: rgb(133, 133, 133);
+    background-color: #404040;
+    color: white;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-selector div h2 {
+    font-size: clamp(1rem, 2vh, 2.5rem);
+    font-weight: 500;
+    margin: 0;
+    cursor: pointer;
+}

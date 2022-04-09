@@ -35,8 +35,15 @@
             <h1>DEBUG MODE - Pixels: <span id="pixelCount"></span> FPS: <span id="fps"></span></h1>
         </div>
 
+        <div class="title">
+            <h1>pixelspiel.io</h1>
+        </div>
+
         <div class="canvas-container">
-            <canvas id="canvas" width="200" height="300" background="#000000"></canvas>
+            <div>
+                <canvas id="input-controller" width="200" height="300" background="#FF0000"></canvas>
+                <canvas id="canvas" width="200" height="300" background="#000000"></canvas>
+            </div>
         </div>
 
         <div class="menu-container">
@@ -46,91 +53,80 @@
                 <!--Row 1-->
                 <div class="material-selector">
                     <div class="material-select sand-color selected first" onclick="setMaterial(1)" id="mat1">
-                        <h2>sand</h2>
+                        <h2>Sand</h2>
                     </div>
              
                     <div class="material-select water-color" onclick="setMaterial(2)" id="mat2">
-                        <h2>water</h2>
+                        <h2>Water</h2>
                     </div>
              
              
                     <div class="material-select stone-color" onclick="setMaterial(3)" id="mat3">
-                        <h2>stone</h2>
+                        <h2>Stone</h2>
                     </div>
              
              
                     <div class="material-select wood-color" onclick="setMaterial(4)" id="mat4">
-                        <h2>wood</h2></div>
+                        <h2>Wood</h2></div>
              
                     <div class="material-select brick-color" onclick="setMaterial(5)" id="mat5">
-                        <h2>brick</h2>
+                        <h2>Brick</h2>
                     </div>
-                </div>
 
-
-
-
-                <!--Row 2-->
-
-                <div class="material-selector last-row">
                     <div class="material-select fire-color first" onclick="setMaterial(6)" id="mat6">
-                        <h2>fire</h2>
+                        <h2>Fire</h2>
                     </div>
              
                     <div class="material-select oil-color" onclick="setMaterial(7)" id="mat7">
-                        <h2>oil</h2>
+                        <h2>Oil</h2>
                     </div>
              
              
-                    <div class="material-select clear-color" onclick="setMaterial(0)" id="mat0">
-                        <h2>clear</h2>
+                    <div class="material-select empty-color" onclick="setMaterial(0)" id="mat0">
+                        <h2>Clear</h2>
                     </div>
              
              
                     <div class="material-select dynamite-color" onclick="setMaterial(8)" id="mat8">
-                        <h2>dynamite</h2></div>
+                        <h2>TNT</h2></div>
              
                     <div class="material-select acid-color" onclick="setMaterial(9)" id="mat9">
-                        <h2>acid</h2>
+                        <h2>Acid</h2>
                     </div>
+
                 </div>
+
             </div>
 
             <div class="settings-container">
-                <div class="settings-button settings-button-wide" onclick="reset();">
-                    <h2>Reset</h2>
-                </div>
-
-                <div class="settings-button" onclick="undo();">
-                    <h2><</h2>
-                </div>
-
-                <div class="settings-button" onclick="togglePlay();">
-                    <h2>| |</h2>
-                </div>
-
-                <div class="settings-button" onclick="setBrushMode(0);" id="brm0">
-                    <h2>⬜</h2>
-                </div>
-
-                <div class="settings-button selected" onclick="setBrushMode(1);" id="brm1">
-                    <h2>⚪</h2>
-                </div>
-
-                <div class="settings-button" onclick="setBrushSize(1);" id="br1">
-                    <h2>1</h2>
-                </div>
-
-                <div class="settings-button selected" onclick="setBrushSize(5);" id="br5""">
-                    <h2>5</h2>
-                </div>
-
-                <div class="settings-button" onclick="setBrushSize(10);" id="br10">
-                    <h2>10</h2>
-                </div>
-
-                <div class="settings-button" onclick="setBrushSize(20);" id="br20">
-                    <h2>20</h2>
+                <div class="settings-selector">
+                    <div class="settings-button settings-button-wide" onclick="reset();">
+                        <h2>Reset</h2>
+                    </div>
+    
+                    <div class="settings-button" onclick="setBrushMode(0);" id="brm0">
+                        <h2>⬜</h2>
+                    </div>
+    
+                    <div class="settings-button selected" onclick="setBrushMode(1);" id="brm1">
+                        <h2>⚪</h2>
+                    </div>
+    
+                    <div class="settings-button" onclick="setBrushSize(1);" id="br1">
+                        <h2>1</h2>
+                    </div>
+    
+                    <div class="settings-button selected" onclick="setBrushSize(5);" id="br5""">
+                        <h2>5</h2>
+                    </div>
+    
+                    <div class="settings-button" onclick="setBrushSize(10);" id="br10">
+                        <h2>10</h2>
+                    </div>
+    
+                    <div class="settings-button" onclick="setBrushSize(20);" id="br20">
+                        <h2>20</h2>
+                    </div>
                 </div>
             </div>
 

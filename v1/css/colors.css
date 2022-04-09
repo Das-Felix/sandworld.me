@@ -1,39 +1,54 @@
+:root {
+    --yellow: #FFE30A;
+}
+
 .sand-color {
-    background-color: #DDC78B;
+    background-color: #AF9D6D;
+    border-color: #8D7E58;
 }
 
 .water-color {
-    background-color: #95BEFF;
+    background-color: #6B8DC4;
+    border-color: #4A6289;
 }
 
 .stone-color {
-    background-color: #9A9A9A;
+    background-color: #808080;
+    border-color: #505050;
 }
 
 .wood-color {
     background-color: #693D1E;
+    border-color: #462B18;
 }
 
 .brick-color {
-    background-color: #7B3434;
+    background-color: #672C2C;
+    border-color: #451E1E;
 }
 
 .fire-color {
-    background-color: #F8A646;
+    background-color: #C17814;
+    border-color: #8B560D;
 }
 
 .oil-color {
-    background-color: #414141;
+    background-color: #383838;
+    border-color: #1F1F1F;
 }
 
 .empty-color {
     background-color: white;
+    border-color: rgb(199, 199, 199);
+    color: black !important;
 }
 
 .dynamite-color {
-    background-color: #C10505;
+    background-color: #C12626;
+    border-color: #791616;
 }
 
 .acid-color {
-    background-color: #90D335;
+    background-color: #68B922;
+    border-color: #4F7916;
 }

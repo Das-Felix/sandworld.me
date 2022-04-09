@@ -6,6 +6,8 @@ var mouseDown = false;
 var mouseX = 0;
 var mouseY = 0;
 
+var inputController = document.getElementById("input-controller");
+
 
 function  setBrushSize(size) {
     brushSize = size;
@@ -73,7 +75,7 @@ setInterval(() => {
     
 }, 100);
 
-canvas.addEventListener("mousedown", (event) => {
+inputController.addEventListener("mousedown", (event) => {
     mouseDown = true;
 
     const boundingRect = canvas.getBoundingClientRect();
@@ -96,7 +98,7 @@ canvas.addEventListener("mousedown", (event) => {
     
 });
 
-canvas.addEventListener("mousemove", (event) => {
+inputController.addEventListener("mousemove", (event) => {
     const boundingRect = canvas.getBoundingClientRect();
 
     const scaleX = canvas.width / Math.ceil(window.devicePixelRatio) / boundingRect.width;
@@ -121,7 +123,7 @@ canvas.addEventListener("mousemove", (event) => {
        
 });
 
-canvas.addEventListener("mouseup", (event) => {
+inputController.addEventListener("mouseup", (event) => {
     mouseDown = false;
 })
 

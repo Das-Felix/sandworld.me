@@ -24,21 +24,38 @@ var runLeftTime = 0;
 var movedPixels = 0;
 var maxMovedPixels = 3000;
 
+var resetting = false;
+var resetRow = 0;
+
 function increaseMovedPixels() {
     movedPixels ++;
 }
 
 //Running the simulation
 function simulate() {
-    for(var y = grid.length - 2; y !== 1; y--) {
 
+    if(resetting) {
+        if(resetRow == 300) {
+            resetRow = 0;
+            resetting = false;    
+        }
+
+        clearRow(resetRow);
+        clearRow(resetRow + 1);
+        clearRow(resetRow + 2);
+        clearRow(resetRow + 3);
+        clearRow(resetRow + 4);
+    }
+
+
+    for(var y = grid.length - 2; y !== 1; y--) {
         for(var x = 0; x !== grid[y].length; x++) {
             runSimulation(x, y); 
         }
-        continue;
-
-        
     }
+    
+    if(resetting) resetRow += 5;
+    
 
     drawGrid(grid);
     bounding = [];
@@ -83,11 +100,15 @@ function clearCell(x, y) {
     grid[y][x].type = 0;
 }
 
+function clearRow(y) {
+    for(var i = 0; i < grid[y].length; i++) {
+        clearCell(i, y);
+    }
+}
+
 function isCellLiquid(x, y) {
-    //TODO: Implement Material System
-    if(y >= 0 || y < height || x >= 0 || x < width || grid[y] != null) return false;
 
-
+    if(grid[y][x] == null) return false;
 
     return grid[y][x].type == 2 || grid[y][x].type == 7;
 
@@ -102,9 +123,9 @@ function isCellOil() {
 }
 
 function isCellFlamable(x, y) {
-    //TODO: Implement Material System
+    if(grid[y][x] == null) return false;
 
-    return grid[y][x] == 4 || grid[y][x] == 7;
+    return grid[y][x].type == 4 || grid[y][x].type == 7;
 
 }
 
@@ -113,6 +134,14 @@ function setCell(x, y, material, alpha) {
         type: material,
         alpha: alpha,
     };
+}
+
+function swapCells(x, y, x2, y2) {
+    var cell1 = grid[y][x];
+    var cell2 = grid[y2][x2];
+
+    grid[y][x] = cell2;
+    grid[y2][x2] = cell1;
 }
 
 
@@ -134,15 +163,15 @@ function createPixel(x, y) {
     if(x > width || x < 0 || y > height || y < 0 || grid[y] == null || grid[y][x] == null) return;
 
 
-    if(currentAlpha == 255 || currentAlpha == 199) mode = mode * -1; 
+    if(currentAlpha == 230 || currentAlpha == 199) mode = mode * -1; 
 
     last ++;
-    if(last > 10) {
+    if(last > 50) {
         currentAlpha = currentAlpha + (1 * mode);
         last = 0;
     }
 
-    
+    var random = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
 
 
     var id = currentMaterial;
@@ -156,7 +185,7 @@ function createPixel(x, y) {
 
     grid[y][x] = {
         type: id,
-        alpha: currentAlpha,    
+        alpha: currentAlpha + random,    
     };
 
     pixelCount++;
@@ -167,18 +196,6 @@ function setMat(id) {
 }
 
 function reset() {
-    grid = [];
-
-    for(var i = 0; i < height; i++) {
-        var gridRow = [];
-    
-        for(var j = 0; j < width; j++) {
-            gridRow.push({
-                type: 0,
-                alpha: 255,
-            });
-        }
-    
-        grid.push(gridRow);
-    }
+    resetRow = 0;
+    resetting = true;
 }

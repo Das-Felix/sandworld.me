@@ -39,42 +39,30 @@ function simulateSand(x, y) {
     //Falling into Liquid
 
     if(isCellLiquid(x, y + 1)) {
-        clearCell(x, y);
 
-        
-        setCell(x, y, 2, waterColors[random]);
-        
-        setCell(x, y + 1, materialId, sandColors[random]);
+        swapCells(x, y, x, y + 1)
+
         return;
     }
 
     if(isCellLiquid(x + 1, y) && isCellLiquid(x - 1, y +1)) {
 
         if(random > 5) {
-            clearCell(x, y);
-            setCell(x, y, 2, waterColors[random]);
-            setCell(x + 1, y + 1, materialId, sandColors[random]);
+            swapCells(x, y, x + 1, y + 1);
         }  else {
-            clearCell(x, y);
-            setCell(x, y, 2, waterColors[random]);
-            setCell(x - 1, y + 1, materialId, sandColors[random]);
+            swapCells(x - 1, y, x + 1, y + 1);
         }
         return;
     }
 
 
     if(isCellLiquid(x + 1, y + 1)) {
-        clearCell(x, y);
-        setCell(x, y, 2, waterColors[random]);
-        
-        setCell(x + 1, y + 1, materialId, sandColors[random]);
+        swapCells(x, y, x + 1, y + 1);
         return;
     }
 
     if(isCellLiquid(x - 1, y + 1)) {
-        clearCell(x, y);
-        setCell(x, y, 2, waterColors[random]);
-        setCell(x - 1, y + 1, materialId, sandColors[random]);
+        swapCells(x, y, x - 1, y + 1);
         return;
     }
 
