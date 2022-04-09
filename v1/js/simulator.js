@@ -29,31 +29,6 @@ function increaseMovedPixels() {
 function simulate() {
     for(var y = grid.length - 2; y !== 1; y--) {
 
-<<<<<<< HEAD
-    /*var random = Math.floor(Math.random() * (100 - 0 + 1)) + 1;
-    
-    if(random > 99) {
-        runLeft = !runLeft;
-    }*/
-    
-    //runLeftTime ++;
-
-    if(runLeftTime > 100) {
-        runLeft = !runLeft;
-        runLeftTime = 0;
-    }
-
-    
-    
-
-    for(var y = 0; y < grid.length; y++) {
-
-        if(movedPixels > maxMovedPixels) {
-            movedPixels = 0;
-            continue;
-        }
-
-=======
         for(var x = 0; x !== grid[y].length; x++) {
 >>>>>>> 5c1e1c0e80f00459364e1a53fc30c5b7e9986476
 
