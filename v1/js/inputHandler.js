@@ -6,6 +6,9 @@ var mouseDown = false;
 var mouseX = 0;
 var mouseY = 0;
 
+var lastMouseX = 0;
+var lastMouseY = 0;
+
 const ongoingTouches = [];
 
 var inputController = document.getElementById("input-controller");
@@ -70,6 +73,7 @@ function setMaterial(id) {
 setInterval(() => {
 
     if(mouseDown) {
+        smooth();
         paint(mouseX, mouseY, brushSize);
     }
 
@@ -99,11 +103,15 @@ inputController.addEventListener("mousemove", (event) => {
     const x = Math.round(realX * 2, 0);
     const y = Math.round(realY * 2, 0);
 
+    lastMouseX = mouseX;
+    lastMouseY = mouseY;
+
     mouseX = x;
     mouseY = y;
 
 
     if(mouseDown) {
+        smooth();
         paint(mouseX, mouseY, brushSize);
     }
        
@@ -147,6 +155,22 @@ inputController.addEventListener('touchmove', (event) => {
         paint(x, y, brushSize);
     })
 });
+
+function smooth() {
+    var duration = 20;
+
+    for(var i = 0; i < duration; i ++) {
+
+        progress = i / duration;
+
+        var x = Math.round(lastMouseX + (mouseX - lastMouseX) * progress);
+        var y = Math.round(lastMouseY + (mouseY - lastMouseY) * progress);
+
+        console.log("X: " + x, "Y: " + y)
+
+        paint(x, y, brushSize);
+    }
+}
 
 
 
