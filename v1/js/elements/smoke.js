@@ -7,9 +7,8 @@ function simulateSmoke(x, y) {
     var random = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
 
     if(isCellEmtpy(x, y-2)) {
-        if(random > 7) {
-            clearCell(x, y);
-            setCell(x, y - 2, materialId, smokeColors[random]);
+        if(random > 8) {
+            moveCell(x, y, x, y-2)
             return;
         }
     }

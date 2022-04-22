@@ -90,11 +90,12 @@ canvas {
     justify-content:  center;
 }
 
+
 .material-selector {
     width: var(--screen-width);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
+    grid-gap: clamp(0.3rem, 1vh, 1rem);;
 }
 
 .material-selector div {
@@ -107,6 +108,11 @@ canvas {
     align-items: center;
 }
 
+.material-selector .selected {
+border-color: white; 
+}
+
+
 .material-selector div h2 {
     font-size: clamp(0.5rem, 2vh, 2.5rem);
     font-weight: 500;
@@ -118,7 +124,7 @@ canvas {
 
 
 .settings-container {
-    margin-top: 1rem;
+    margin-top: clamp(0.3rem, 1vh, 1rem);
     width: 100%;
     display: flex;
     justify-content:  center;
@@ -144,7 +150,7 @@ canvas {
 }
 
 .settings-selector div h2 {
-    font-size: clamp(1rem, 2vh, 2.5rem);
+    font-size: clamp(0.5rem, 2vh, 2.5rem);
     font-weight: 500;
     margin: 0;
     cursor: pointer;

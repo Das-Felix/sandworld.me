@@ -31,12 +31,12 @@ function drawGrid(grid) {
 
 
 
-    const imageData = context.createImageData(200, 300);
+    const imageData = context.createImageData(width, height);
 
     var index = 0;
 
-    for(var i = 0; i < 300; i++) {
-        for(var j = 0; j < 200; j++) {
+    for(var i = 0; i < height; i++) {
+        for(var j = 0; j < width; j++) {
 
             var type = grid[i][j].type;
             var r = 0;
@@ -87,9 +87,10 @@ function drawGrid(grid) {
                     a = 255;
                     break;
                 case 10:
-                    r = 0;
-                    g = 0;
-                    b = 0;
+                    r = 255;
+                    g = 255;
+                    b = 255;
+                    a = a - 200;
                     break;
             }
 

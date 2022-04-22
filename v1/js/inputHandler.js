@@ -6,6 +6,8 @@ var mouseDown = false;
 var mouseX = 0;
 var mouseY = 0;
 
+const ongoingTouches = [];
+
 var inputController = document.getElementById("input-controller");
 
 
@@ -27,32 +29,31 @@ function setBrushMode(mode) {
     document.getElementById("brm" + mode).classList.add("selected");
 }
 
-function paint(x, y) {
+function paint(x, y, size, mat) {
 
-
-    if(brushSize == 1) {
-        createPixel(x, y);
+    if(size == 1) {
+        createPixel(x, y, mat);
         return;
     }
 
     if(brushMode == 0) {
-        for(var i = x-brushSize/2;i < x+brushSize/2; i++) {
-            for(var j = y-brushSize/2;j < y+brushSize/2; j++) {
-                createPixel(i, j);
+        for(var i = x-size/2;i < x+size/2; i++) {
+            for(var j = y-size/2;j < y+size/2; j++) {
+                createPixel(i, j, mat);
             }
         }
         return;
     }
 
-    for(var i = x-brushSize/2;i < x+brushSize/2; i++) {
-        for(var j = y-brushSize/2;j < y+brushSize/2; j++) {
+    for(var i = x-size/2;i < x+size/2; i++) {
+        for(var j = y-size/2;j < y+size/2; j++) {
             var a = difference(x, i);
             var b = difference(y, j);
 
             var distance = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 
-            if(distance <= (brushSize / 2)) {
-                createPixel(i, j);
+            if(distance <= (size / 2)) {
+                createPixel(i, j, mat);
             }
         }
     }
@@ -69,7 +70,7 @@ function setMaterial(id) {
 setInterval(() => {
 
     if(mouseDown) {
-        paint(mouseX, mouseY);
+        paint(mouseX, mouseY, brushSize);
     }
 
     
@@ -78,22 +79,7 @@ setInterval(() => {
 inputController.addEventListener("mousedown", (event) => {
     mouseDown = true;
 
-    const boundingRect = canvas.getBoundingClientRect();
-
-    const scaleX = canvas.width / Math.ceil(window.devicePixelRatio) / boundingRect.width;
-    const scaleY = canvas.height / Math.ceil(window.devicePixelRatio) / boundingRect.height;
-
-    const canvasLeft = (event.clientX - boundingRect.left) * scaleX;
-    const canvasTop = (event.clientY - boundingRect.top) * scaleY;
-
-    const realX = Math.min(Math.floor(canvasLeft), width - 1);
-    const realY = Math.min(Math.floor(canvasTop), height - 1);
-    
-    const x = Math.round(realX, 0);
-    const y = Math.round(realY, 0);
-
-
-    paint(mouseX, mouseY);
+    paint(mouseX, mouseY, brushSize);
 
     
 });
@@ -110,15 +96,15 @@ inputController.addEventListener("mousemove", (event) => {
     const realX = Math.min(Math.floor(canvasLeft), width - 1);
     const realY = Math.min(Math.floor(canvasTop), height - 1);
     
-    const x = Math.round(realX, 0);
-    const y = Math.round(realY, 0);
+    const x = Math.round(realX * 2, 0);
+    const y = Math.round(realY * 2, 0);
 
     mouseX = x;
     mouseY = y;
 
 
     if(mouseDown) {
-        paint(mouseX, mouseY);
+        paint(mouseX, mouseY, brushSize);
     }
        
 });
@@ -126,6 +112,43 @@ inputController.addEventListener("mousemove", (event) => {
 inputController.addEventListener("mouseup", (event) => {
     mouseDown = false;
 })
+
+
+//Touch Events
+
+inputController.addEventListener('touchstart', (event) => {
+    event.preventDefault();
+});
+
+
+inputController.addEventListener('touchend', (event) => {
+    event.preventDefault();
+});
+
+
+inputController.addEventListener('touchmove', (event) => {
+    const boundingRect = canvas.getBoundingClientRect();
+
+    event.preventDefault();
+
+    Array.from(event.touches).forEach(touch => {
+        const scaleX = canvas.width / Math.ceil(window.devicePixelRatio) / boundingRect.width;
+        const scaleY = canvas.height / Math.ceil(window.devicePixelRatio) / boundingRect.height;
+
+        const canvasLeft = (touch.clientX - boundingRect.left) * scaleX;
+        const canvasTop = (touch.clientY - boundingRect.top) * scaleY;
+
+        const realX = Math.min(Math.floor(canvasLeft), width - 1);
+        const realY = Math.min(Math.floor(canvasTop), height - 1);
+        
+        const x = Math.round(realX * 2, 0);
+        const y = Math.round(realY * 2, 0);
+
+        paint(x, y, brushSize);
+    })
+});
+
+
 
 function clearSelectedColor() {
 
@@ -153,5 +176,4 @@ function clearSelectedBrushSize() {
 function clearSelectedBrushMode()  {
     document.getElementById("brm0").classList.remove("selected");
     document.getElementById("brm1").classList.remove("selected");
-
 }

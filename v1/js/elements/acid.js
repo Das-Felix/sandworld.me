@@ -1,36 +1,62 @@
-var acidColors = ["#9cfca2", "#9cfca2", "#9cfca2", "#9cfca2","#9cfca2","#9cfca2","#9cfca2","#9cfca2","#9cfca2","#9cfca2","#9cfca2","#9cfca2","#9cfca2","#9cfca2",];
-
 function simulateAcid(x, y) {
 
     var materialId = 9;
 
-    var random = Math.floor(Math.random() * (4 - 0 + 1)) + 1;
-    var burn = Math.floor(Math.random() * (100 - 0 + 1)) + 1;
+    var random = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
+
+    if(random >= 9) return;
 
     if(isCellEmtpy(x, y + 1)) {
-        clearCell(x, y);
-        setCell(x, y + 1, materialId, acidColors[random]);
+        moveCell(x, y, x, y + 1)
         return;
     }
 
-    if(burn > 80) {
-
-        if(random == 3) {
-            clearCell(x, y);
-            setCell(x + 1, y, materialId, acidColors[random]);
-            return;
-        }
-
-        if(random <= 2) {
-            clearCell(x, y);
-            setCell(x - 1, y, materialId, acidColors[random]);
-            return;
-        }
-
-        clearCell(x, y);
-        setCell(x, y + 1, materialId, acidColors[random]);
+    if(isCellEmtpy(x + 1, y)) {
+        moveCell(x, y, x + 1, y)
         return;
-
     }
 
+    if(isCellEmtpy(x - 1, y)) {
+        if(random > 6) return;
+        moveCell(x, y, x - 1, y);
+        return;
+    }
+
+    if(isCellEmtpy(x + 1, y + 1)) {
+        moveCell(x, y, x + 1, y + 1);
+        return;
+    }
+
+    if(isCellEmtpy(x - 1, y + 1)) {
+        moveCell(x, y, x - 1, y + 1);
+        return;
+    }
+
+    //Removing Cells
+
+    if(y < 300 && getCellMaterial(x, y + 1) != materialId) {
+        clearCell(x, y);
+        clearCell(x, y + 1);
+        return;
+    }
+
+    if(getCellMaterial(x + 1, y) != materialId) {
+        clearCell(x, y);
+        clearCell(x + 1, y);
+        return;
+    }
+
+    if(getCellMaterial(x - 1, y) != materialId) {
+        clearCell(x, y);
+        clearCell(x - 1, y);
+        return;
+    }
+
+    if(!isCellEmtpy(x, y - 1) && getCellMaterial(x, y - 1) != materialId) {
+        clearCell(x, y);
+        clearCell(x, y - 1);
+        return;
+    }
+
+    increaseInactive(x, y);
 }

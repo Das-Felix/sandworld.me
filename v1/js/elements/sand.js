@@ -12,12 +12,10 @@ function simulateSand(x, y) {
 
     if(isCellEmtpy(x, y + 1)) {
         moveCell(x, y, x, y + 1);
-        increaseMovedPixels();
         return;
     }
 
     if(isCellEmtpy(x + 1, y + 1) && isCellEmtpy(x - 1, y +1)) {
-
         if(random > 5) {
             moveCell(x, y, x + 1, y + 1);
         }  else {
@@ -48,22 +46,24 @@ function simulateSand(x, y) {
     if(isCellLiquid(x + 1, y) && isCellLiquid(x - 1, y +1)) {
 
         if(random > 5) {
-            swapCells(x, y, x + 1, y + 1);
+            moveCell(x, y, x + 1, y + 1);
         }  else {
-            swapCells(x - 1, y, x + 1, y + 1);
+            moveCell(x - 1, y, x + 1, y + 1);
         }
         return;
     }
 
 
     if(isCellLiquid(x + 1, y + 1)) {
-        swapCells(x, y, x + 1, y + 1);
+        moveCell(x, y, x + 1, y + 1);
         return;
     }
 
     if(isCellLiquid(x - 1, y + 1)) {
-        swapCells(x, y, x - 1, y + 1);
+        moveCell(x, y, x - 1, y + 1);
         return;
     }
+
+    increaseInactive(x, y);
 
 }

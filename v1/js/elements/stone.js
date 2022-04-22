@@ -19,4 +19,6 @@ function simulateStone(x, y) {
         return;
     }
 
+    increaseInactive(x, y);
+
 }

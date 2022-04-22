@@ -5,9 +5,9 @@ context.imageSmoothingEnabled = true;
 
 var pixelSize = 6;
 var pixelCount = 0;
-var refreshRate = 12;
-var width = 200;
-var height = 300;
+var refreshRate = 14;
+var width = 150;
+var height = 225;
 
 canvas.width = width;
 canvas.height = height;

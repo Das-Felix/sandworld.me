@@ -30,5 +30,5 @@ function simulateWater(x, y) {
         return;
     }
 
-
-}
+    increaseInactive(x, y);
+}   
