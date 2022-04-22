@@ -6,7 +6,7 @@ var animation;
 function renderFrame(frame) {
     if(animationFramesQueue[frame] != null && computed && animationFramesQueue[frame].paint) {
         var point = animationFramesQueue[frame];
-        
+
         paint(point.x, point.y, 6, point.material);
     }
 }
@@ -53,7 +53,7 @@ function computeAnimation(animation) {
 loadAnimations();
 
 function loadAnimations() {
-    fetch("/js/animation/animations/animation_01.json")
+    fetch("./js/animation/animations/animation_01.json")
     .then(response => {
         return response.json();
     })

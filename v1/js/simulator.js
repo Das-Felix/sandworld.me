@@ -213,7 +213,9 @@ var last = 0;
 function createPixel(x, y, material) {
     if(x > width || x < 0 || y > height || y < 0 || grid[y] == null || grid[y][x] == null) return;
 
+    
     reactivateCells(x, y);
+
 
     if(currentAlpha == 230 || currentAlpha == 199) mode = mode * -1; 
 
