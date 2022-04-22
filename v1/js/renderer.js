@@ -38,11 +38,12 @@ function drawGrid(grid) {
     for(var i = 0; i < height; i++) {
         for(var j = 0; j < width; j++) {
 
-            var type = grid[i][j].type;
+            var cell = grid[i][j];
+            var type = cell.type;
             var r = 0;
             var g = 0;
             var b = 0;
-            var a = grid[i][j].alpha;
+            var a = cell.alpha;
 
             switch(type) {
                 case 0:
@@ -93,6 +94,8 @@ function drawGrid(grid) {
                     a = a - 200;
                     break;
             }
+
+            if(!cell.active) a = a - 100;
 
             
 

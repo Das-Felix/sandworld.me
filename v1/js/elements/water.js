@@ -4,28 +4,28 @@ function simulateWater(x, y) {
 
     if(random == 10) return;
 
-    if(isCellEmtpy(x, y + 1)) {
+    if(isCellEmpty(x, y + 1)) {
         moveCell(x, y, x, y + 1)
         return;
     }
 
-    if(isCellEmtpy(x + 1, y)) {
+    if(isCellEmpty(x + 1, y)) {
         moveCell(x, y, x + 1, y)
         return;
     }
 
-    if(isCellEmtpy(x - 1, y)) {
+    if(isCellEmpty(x - 1, y)) {
         if(random > 6) return;
         moveCell(x, y, x - 1, y);
         return;
     }
 
-    if(isCellEmtpy(x + 1, y + 1)) {
+    if(isCellEmpty(x + 1, y + 1)) {
         moveCell(x, y, x + 1, y + 1);
         return;
     }
 
-    if(isCellEmtpy(x - 1, y + 1)) {
+    if(isCellEmpty(x - 1, y + 1)) {
         moveCell(x, y, x - 1, y + 1);
         return;
     }

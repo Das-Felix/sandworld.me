@@ -6,7 +6,7 @@ function simulateStone(x, y) {
         return;
     }
 
-    if(isCellEmtpy(x, y + 1)) {
+    if(isCellEmpty(x, y + 1)) {
         moveCell(x, y, x, y + 1)
         return;
     }

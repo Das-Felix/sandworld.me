@@ -6,33 +6,39 @@ function simulateAcid(x, y) {
 
     if(random >= 9) return;
 
-    if(isCellEmtpy(x, y + 1)) {
+    if(isCellEmpty(x, y + 1)) {
         moveCell(x, y, x, y + 1)
         return;
     }
 
-    if(isCellEmtpy(x + 1, y)) {
+    if(isCellEmpty(x + 1, y)) {
         moveCell(x, y, x + 1, y)
         return;
     }
 
-    if(isCellEmtpy(x - 1, y)) {
+    if(isCellEmpty(x - 1, y)) {
         if(random > 6) return;
         moveCell(x, y, x - 1, y);
         return;
     }
 
-    if(isCellEmtpy(x + 1, y + 1)) {
+    if(isCellEmpty(x + 1, y + 1)) {
         moveCell(x, y, x + 1, y + 1);
         return;
     }
 
-    if(isCellEmtpy(x - 1, y + 1)) {
+    if(isCellEmpty(x - 1, y + 1)) {
         moveCell(x, y, x - 1, y + 1);
         return;
     }
 
     //Removing Cells
+
+    if(!isCellEmpty(x, y - 1) && getCellMaterial(x, y - 1) != materialId) {
+        clearCell(x, y);
+        clearCell(x, y - 1);
+        return;
+    }
 
     if(y < 300 && getCellMaterial(x, y + 1) != materialId) {
         clearCell(x, y);
@@ -52,7 +58,7 @@ function simulateAcid(x, y) {
         return;
     }
 
-    if(!isCellEmtpy(x, y - 1) && getCellMaterial(x, y - 1) != materialId) {
+    if(!isCellEmpty(x, y - 1) && getCellMaterial(x, y - 1) != materialId) {
         clearCell(x, y);
         clearCell(x, y - 1);
         return;

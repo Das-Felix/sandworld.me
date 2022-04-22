@@ -111,7 +111,7 @@ function increaseInactive(x, y) {
     grid[y][x].inactiveSince = i + 1;
 }
 
-function isCellEmtpy(x, y) {
+function isCellEmpty(x, y) {
     return grid[y] != null && grid[y][x] != null && grid[y][x].type == 0;
 }
 

@@ -6,7 +6,7 @@ function simulateSmoke(x, y) {
 
     var random = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
 
-    if(isCellEmtpy(x, y-2)) {
+    if(isCellEmpty(x, y-2)) {
         if(random > 8) {
             moveCell(x, y, x, y-2)
             return;

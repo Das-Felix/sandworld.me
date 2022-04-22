@@ -10,12 +10,12 @@ function simulateSand(x, y) {
         return;
     }
 
-    if(isCellEmtpy(x, y + 1)) {
+    if(isCellEmpty(x, y + 1)) {
         moveCell(x, y, x, y + 1);
         return;
     }
 
-    if(isCellEmtpy(x + 1, y + 1) && isCellEmtpy(x - 1, y +1)) {
+    if(isCellEmpty(x + 1, y + 1) && isCellEmpty(x - 1, y +1)) {
         if(random > 5) {
             moveCell(x, y, x + 1, y + 1);
         }  else {
@@ -24,12 +24,12 @@ function simulateSand(x, y) {
         return;
     }
 
-    if(isCellEmtpy(x + 1, y + 1)) {
+    if(isCellEmpty(x + 1, y + 1)) {
         moveCell(x, y, x + 1, y + 1);
         return;
     }
 
-    if(isCellEmtpy(x - 1, y + 1)) {
+    if(isCellEmpty(x - 1, y + 1)) {
         moveCell(x, y, x - 1, y + 1);
         return;
     }
