@@ -117,7 +117,7 @@ inputController.addEventListener("mousemove", (event) => {
        
 });
 
-inputController.addEventListener("mouseup", (event) => {
+window.addEventListener("mouseup", (event) => {
     mouseDown = false;
 })
 
@@ -165,8 +165,6 @@ function smooth() {
 
         var x = Math.round(lastMouseX + (mouseX - lastMouseX) * progress);
         var y = Math.round(lastMouseY + (mouseY - lastMouseY) * progress);
-
-        console.log("X: " + x, "Y: " + y)
 
         paint(x, y, brushSize);
     }

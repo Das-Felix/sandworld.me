@@ -1,21 +1,24 @@
 
 var grid = [];
+
 var materials = [];
-var bounding = [];
 
 var inactiveValue = 20;
 
 var currentMaterial = 1;
 
-for(var i = 0; i < height; i++) {
+for(var i = 0; i < height + 1; i++) {
     var gridRow = [];
 
     for(var j = 0; j < width; j++) {
         gridRow.push({
             type: 0,
             alpha: 255,
+            data: 0,
+            clock: 0,
             active: true,
             inactiveSince: 0,
+            lifetime: 30,
         });
     }
 
@@ -38,6 +41,7 @@ function simulate() {
 
     simulationFrame++;
 
+    //Animation
     renderFrame(simulationFrame);
 
     if(resetting) {
@@ -53,10 +57,9 @@ function simulate() {
         clearRow(resetRow + 4);
     }
 
-
-    for(var y = grid.length - 2; y >= 0; y--) {
+    for(var y = 0; y < grid.length; y++) {
         for(var x = 0; x !== grid[y].length; x++) {
-            if(grid[y][x].active) {
+            if(grid[y][x].active && grid[y][x].clock != simulationFrame) {
                 runSimulation(x, y); 
             }
         }
@@ -71,6 +74,7 @@ function simulate() {
 
 function runSimulation(x, y) {  
     var cellType = grid[y][x].type;
+    grid[y][x].clock = simulationFrame; 
 
     switch(cellType) {
         case 0:
@@ -89,6 +93,9 @@ function runSimulation(x, y) {
             break;
         case 7:
             simulateOil(x, y);
+            break;
+        case 8:
+            simulateTNT(x, y);
             break;
         case 9:
             simulateAcid(x, y);
@@ -118,6 +125,7 @@ function isCellEmpty(x, y) {
 function clearCell(x, y) {
     if(grid[y] == null || grid[y][x] == undefined) return;
     grid[y][x].type = 0;
+    grid[y][x].lifetime = 60;
     reactivateCells(x, y);
 }
 
@@ -131,17 +139,9 @@ function clearRow(y) {
 
 function isCellLiquid(x, y) {
 
-    if(grid[y][x] == null) return false;
+    if(grid[y] == null || grid[y][x] == null) return false;
 
     return grid[y][x].type == 2 || grid[y][x].type == 7;
-
-}
-
-function isCellWater() {
-    
-}
-
-function isCellOil() {
 
 }
 
@@ -158,12 +158,11 @@ function getCellMaterial(x, y) {
 }
 
 function setCell(x, y, material, alpha) {
-    grid[y][x] = {
-        type: material,
-        alpha: alpha,
-        active: true,
-        inactiveSince: 0,
-    };
+    grid[y][x].type = material;
+    grid[y][x].alpha = alpha;
+    grid[y][x].active = true;
+    grid[y][x].inactiveSince = 0;
+
     reactivateCells(x, y);
 }
 
@@ -179,12 +178,13 @@ function swapCells(x, y, x2, y2) {
 
 
 function moveCell(x, y, newX, newY) {
-    grid[newY][newX] = {
-        type: grid[y][x].type,
-        alpha: grid[y][x].alpha,
-        active: true,
-        inactiveSince: 0,
-    }
+    grid[newY][newX].type = grid[y][x].type;
+    grid[newY][newX].alpha = grid[y][x].alpha;
+    grid[newY][newX].active = true;
+    grid[newY][newX].inactiveSince = 0;
+    grid[newY][newX].clock = grid[y][x].clock;
+    grid[newY][newX].lifetime = grid[y][x].lifetime;
+    grid[newY][newX].data = grid[y][x].data;
 
     clearCell(x, y);
 
@@ -210,7 +210,7 @@ var currentAlpha = 200;
 var mode = 1;
 var last = 0;
 
-function createPixel(x, y, material) {
+function createPixel(x, y, material, force) {
     if(x > width || x < 0 || y > height || y < 0 || grid[y] == null || grid[y][x] == null) return;
 
     
@@ -235,14 +235,12 @@ function createPixel(x, y, material) {
         return;
     }
 
-    if(grid[y][x].type != 0) return;
+    if(force || grid[y][x].type != 0) return;
 
-    grid[y][x] = {
-        type: id,
-        alpha: currentAlpha + random,
-        active: true,
-        inactiveSince: 0    
-    };
+    grid[y][x].type = id;
+    grid[y][x].alpha = currentAlpha + random;
+    grid[y][x].active = true;
+    grid[y][x].inactiveSince = 0;
 
     pixelCount++;
 }

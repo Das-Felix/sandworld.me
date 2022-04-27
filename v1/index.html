@@ -11,6 +11,8 @@
     <script defer src="./js/simulator.js"></script>
     <script defer src="./js/utils.js"></script>
     <script defer src="./js/inputHandler.js"></script>
+    <!-- <script defer src="./js/fluid.js"></script>
+    <script defer src="./js/effectHandler.js"></script> -->
 
     <!--Element Imports-->
     <script defer src="./js/elements/sand.js"></script>
@@ -20,6 +22,7 @@
     <script defer src="./js/elements/smoke.js"></script>
     <script defer src="./js/elements/oil.js"></script>
     <script defer src="./js/elements/acid.js"></script>
+    <script defer src="./js/elements/tnt.js"></script>
 
 
     <link rel="stylesheet" href="./css/colors.css">
@@ -42,8 +45,9 @@
 
         <div class="canvas-container">
             <div>
-                <canvas id="input-controller" width="150" height="225" background="#FF0000"></canvas>
-                <canvas id="canvas" width="150" height="225" background="#000000"></canvas>
+                <canvas id="input-controller" width="300" height="200"></canvas>
+                <canvas id="canvas" width="200" height="300"></canvas>
+                <canvas id="effect-canvas" width="1000" height="500"></canvas>
             </div>
         </div>
 

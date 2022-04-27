@@ -1,10 +1,18 @@
-function simulateSand(x, y) {
+function simulateTNT(x, y) {
 
     var random = Math.floor(Math.random() * (21 - 0 + 1)) + 1;
 
-    var materialId = 1;
+    var materialId = 8;
 
     var dir= getRandomDirection();
+    var vec1 = getRandomVector();
+    var vec2 = getRandomVector();
+
+    if(isFire(x + vec1.x, y + vec1.y) || isFire(x - vec1.x, y - vec1.y) || isFire(x + vec2.x, y + vec2.y) || isFire(x - vec2.x, y - vec2.y) && random > 0) {
+        clearCell(x, y);
+        createPixel(x, y, 6);
+        // explode();
+    }
 
     if(isCellEmpty(x, y + 1)) {
         if(random < 5) return;
@@ -47,4 +55,8 @@ function moveSideways(x, y) {
         moveCell(x, y, x + 1, y);
         return;
     }
+}
+
+function isFire(x, y) {
+    return getCellMaterial(x, y) == 6;
 }

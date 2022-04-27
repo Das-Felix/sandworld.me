@@ -64,16 +64,26 @@ canvas {
     left: 0;
     height: 80vh;
     width: calc(80vh / 3 * 2);
-    background-color: #404040;
+    background-color: transparent;
     image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
+    background-color: transparent;
+}
+
+#canvas {
+    z-index: 100;
 }
 
 #input-controller {
     background-color: transparent;
     z-index: 200;
+}
+
+#effect-canvas {
+    background-color: #404040;
+    z-index: 1;
 }
 
 /*Menu*/

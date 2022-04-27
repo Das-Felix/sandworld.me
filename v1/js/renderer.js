@@ -73,12 +73,17 @@ function drawGrid(grid) {
                     break;
                 case 6:
                     r = 255;
-                    g = 165;
-                    b = 120;
+                    g = 100 + cell.data;
+                    b = 100;
                     break;
                 case 7:
                     r = 0;
                     g = 0;
+                    b = 0;
+                    break;
+                case 8:
+                    r = 70;
+                    g = 6;
                     b = 0;
                     break;
                 case 9:
@@ -95,7 +100,7 @@ function drawGrid(grid) {
                     break;
             }
 
-            if(!cell.active) a = a - 100;
+            //if(!cell.active) a = a - 50;
 
             
 

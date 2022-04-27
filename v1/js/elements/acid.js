@@ -22,23 +22,7 @@ function simulateAcid(x, y) {
         return;
     }
 
-    if(isCellEmpty(x + 1, y + 1)) {
-        moveCell(x, y, x + 1, y + 1);
-        return;
-    }
-
-    if(isCellEmpty(x - 1, y + 1)) {
-        moveCell(x, y, x - 1, y + 1);
-        return;
-    }
-
     //Removing Cells
-
-    if(!isCellEmpty(x, y - 1) && getCellMaterial(x, y - 1) != materialId) {
-        clearCell(x, y);
-        clearCell(x, y - 1);
-        return;
-    }
 
     if(y < 300 && getCellMaterial(x, y + 1) != materialId) {
         clearCell(x, y);
@@ -46,13 +30,13 @@ function simulateAcid(x, y) {
         return;
     }
 
-    if(getCellMaterial(x + 1, y) != materialId) {
+    if(!isCellEmpty(x + 1, y) && getCellMaterial(x + 1, y) != materialId) {
         clearCell(x, y);
         clearCell(x + 1, y);
         return;
     }
 
-    if(getCellMaterial(x - 1, y) != materialId) {
+    if(!isCellEmpty(x - 1, y) && getCellMaterial(x - 1, y) != materialId) {
         clearCell(x, y);
         clearCell(x - 1, y);
         return;
