@@ -47,5 +47,5 @@ function isFire(x, y) {
 
 function multiplyFire(x, y) {
     clearCell(x, y);
-    createPixel(x, y, 6);
+    createCell(x, y, 6);
 }

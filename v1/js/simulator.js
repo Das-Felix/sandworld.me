@@ -215,7 +215,7 @@ var currentAlpha = 200;
 var mode = 1;
 var last = 0;
 
-function createPixel(x, y, material, force) {
+function createCell(x, y, material, force, data) {
     if(x > width || x < 0 || y > height || y < 0 || grid[y] == null || grid[y][x] == null) return;
 
     
@@ -246,6 +246,7 @@ function createPixel(x, y, material, force) {
     grid[y][x].alpha = currentAlpha + random;
     grid[y][x].active = true;
     grid[y][x].inactiveSince = 0;
+    grid[y][x].data = data;
 
     pixelCount++;
 }

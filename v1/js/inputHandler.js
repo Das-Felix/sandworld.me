@@ -37,14 +37,14 @@ function setBrushMode(mode) {
 function paint(x, y, size, mat) {
 
     if(size == 1) {
-        createPixel(x, y, mat);
+        createCell(x, y, mat);
         return;
     }
 
     if(brushMode == 0) {
         for(var i = x-size/2;i < x+size/2; i++) {
             for(var j = y-size/2;j < y+size/2; j++) {
-                createPixel(i, j, mat);
+                createCell(i, j, mat);
             }
         }
         return;
@@ -58,7 +58,7 @@ function paint(x, y, size, mat) {
             var distance = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 
             if(distance <= (size / 2)) {
-                createPixel(i, j, mat);
+                createCell(i, j, mat);
             }
         }
     }

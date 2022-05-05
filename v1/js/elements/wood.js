@@ -9,7 +9,7 @@ function simulateWood(x, y) {
 
     var burn = false;
 
-    if(random > 5) return;
+    if(random > 1) return;
 
     if(isFire(x + vec1.x, y + vec1.y)) {
         moveCell(x + vec1.x, y + vec1.y, x, y);
@@ -32,5 +32,5 @@ function isFire(x, y) {
 
 function multiplyFire(x, y) {
     clearCell(x, y);
-    createPixel(x, y, 6);
+    createCell(x, y, 6);
 }

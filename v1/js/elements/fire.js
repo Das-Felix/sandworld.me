@@ -5,6 +5,10 @@ function simulateFire(cellX, cellY) {
     var random = Math.floor(Math.random() * (6 - 0 + 1)) + 1;
     var dir = getRandomDirection();
 
+    if(isCellEmpty(x, y - 1) && random == 2) {
+        createCell(x, y - 1, 10);
+    }
+
     grid[y][x].data = random * 8 * dir;
 
     if(isCellFlamable(x, y + 1) || isCellFlamable(x + 1, y) || isCellFlamable(x - 1, y)) {
