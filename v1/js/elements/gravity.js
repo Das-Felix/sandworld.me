@@ -3,14 +3,20 @@ function simulateGravity(cellX, cellY) {
     var x = cellX;
     var y = cellY;
 
-    if(grid[y][x].data == null || grid[y][x].data == 20) {
+    if(grid[y][x].data.mat == 8) {
         clearCell(x, y);
+        createCell(x, y, 6);
         return;
     }
 
-    if(grid[y][x].data == 8) {
-        clearCell(x, y);
-        createCell(x, y, 6);
+    if(grid[y][x].data.dir == 1) {
+        if(isCellEmpty(x, y + 1)) {
+            moveCell(x, y, x, y + 1);
+        } else {
+            var gravityType = grid[y][x].data.mat;
+            clearCell(x, y);
+            createCell(x, y, gravityType);
+        }
         return;
     }
 
@@ -30,9 +36,7 @@ function simulateGravity(cellX, cellY) {
 
     
     if(grid[y][x].lifetime <= 0) {
-        var gravityType = grid[y][x].data;
-        clearCell(x, y);
-        createCell(x, y, gravityType);
+        grid[y][x].data.dir = 1;
         return;
     }
 

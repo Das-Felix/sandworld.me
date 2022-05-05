@@ -27,7 +27,7 @@ function simulateTNT(x, y) {
 
             for(var i = 0; i < goDown; i++) {
                 if(!isCellEmpty(x, y + i) && y + i <= 299) {
-                    if(i % 2 == 0) {
+                    if(i % 2 == 0 || getCellMaterial(x, y + i) == 4 || getCellMaterial(x, y + i) == 5) {
                         clearCell(x, y + i);
                         moveAwaySideways(x, y, x + dir, y);
 
@@ -97,6 +97,9 @@ function isFire(x, y) {
 
 function throwUp(x, y) {
     var mat = getCellMaterial(x, y);
+
+    if(mat == 20 || mat == 6 || mat==10 || mat == 0 || mat == 4 || mat == 5) return;
+
     clearCell(x, y);
 
     var newY = y;
@@ -105,7 +108,10 @@ function throwUp(x, y) {
         newY ++;
     }
 
-    createCell(x, newY, 20, false, mat);
+    createCell(x, newY, 20, false, {
+        mat: mat,
+        dir: -1,
+    });
 }
 
 function moveAwaySideways(x, y, x1, y1) {
