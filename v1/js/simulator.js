@@ -60,7 +60,7 @@ function simulate() {
     for(var y = 0; y < grid.length; y++) {
         for(var x = 0; x !== grid[y].length; x++) {
             if(grid[y][x].active && grid[y][x].clock != simulationFrame) {
-                runSimulation(x, y); 
+            runSimulation(x, y); 
             }
         }
     }
@@ -88,6 +88,9 @@ function runSimulation(x, y) {
         case 3:
             simulateStone(x, y);
             break;
+        case 4:
+            simulateWood(x, y);
+            break;
         case 6:
             simulateFire(x, y);
             break;
@@ -103,6 +106,8 @@ function runSimulation(x, y) {
         case 10:
             simulateSmoke(x, y);
             break;
+        case 20:
+            simulateGravity(x, y);
     }
 }
 

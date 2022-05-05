@@ -1,40 +1,51 @@
-var oilColors = ["#00000", "#00000", "#00000", "#00000", "#00000", "#00000", "#00000", "#00000", "#00000", "#00000", "#00000", "#00000", "#00000", "#00000"];
-
 function simulateOil(x, y) {
 
     var materialId = 7;
 
-    var random = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
+    var random = Math.floor(Math.random() * (21 - 0 + 1)) + 1;
 
-    if(isCellEmpty(x, y + 1)) {
-        clearCell(x, y);
-        setCell(x, y + 1, materialId, "#000000");
+    var dir = getRandomDirection();
+    var vec1 = getRandomVector();
+    var vec2 = getRandomVector();
+
+    var random = Math.floor(Math.random() * (100 - 0 + 1)) + 1;
+
+    if(random < 5) {
+        if(isFire(x + vec1.x, y + vec1.y)) {
+            moveCell(x + vec1.x, y + vec1.y, x, y);
+            multiplyFire(x + vec1.x, y + vec1.y);
+        } else if(isFire(x - vec1.x, y - vec1.y)) {
+            moveCell(x - vec1.x, y - vec1.y, x, y);
+            multiplyFire(x - vec1.x, y - vec1.y);
+        } else if(isFire(x + vec2.x, y + vec2.y)) {
+            moveCell( x + vec2.x, y + vec2.y, x, y);
+            multiplyFire(x + vec2.x, y + vec2.y);
+        } else if(isFire(x - vec2.x, y - vec2.y)) {
+            moveCell(x - vec2.x, y - vec2.y, x, y);
+            multiplyFire(x - vec2.x, y - vec2.y);
+        } 
+    }
+
+    if(isCellEmpty(x, y + 1) || getCellMaterial(x, y + 1) == 6) {
+        moveCell(x, y, x, y + 1)
         return;
     }
 
-    if(isCellEmpty(x + 1, y) && isCellEmpty(x - 1, y)) {
-
-        if(random > 5) {
-            clearCell(x, y);
-            setCell(x + 1, y, materialId, "#000000");
-        }  else {
-            clearCell(x, y);
-            setCell(x - 1, y, materialId, "#000000");
-        }
+    if(isCellEmpty(x + dir, y)) {
+        moveCell(x, y, x + dir, y)
         return;
     }
+    
 
-    if(random >= 8) return;
+    increaseInactive(x, y);
 
-    if(isCellEmpty(x + 1, y)) {
-        clearCell(x, y);
-        setCell(x + 1, y, materialId, "#000000");
-        return;
-    }
+}
 
-    if(isCellEmpty(x - 1, y)) {
-        clearCell(x, y);
-        setCell(x - 1, y, materialId, "#000000");
-        return;
-    }
+function isFire(x, y) {
+    return getCellMaterial(x, y) == 6;
+}
+
+function multiplyFire(x, y) {
+    clearCell(x, y);
+    createPixel(x, y, 6);
 }

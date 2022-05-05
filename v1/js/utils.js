@@ -68,3 +68,9 @@ function getRandomVector() {
         y: dirY,
     }
 }
+
+function getClosestEmtpySpot(x, y) {
+    var dir = getRandomDirection();
+
+    
+}

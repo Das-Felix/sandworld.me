@@ -40,6 +40,9 @@ function drawGrid(grid) {
 
             var cell = grid[i][j];
             var type = cell.type;
+
+            if(type == 20) type = cell.data;
+
             var r = 0;
             var g = 0;
             var b = 0;
@@ -87,10 +90,10 @@ function drawGrid(grid) {
                     b = 0;
                     break;
                 case 9:
-                    r = 88;
-                    g = 255;
-                    b = 160;
-                    a = 255;
+                    r = 79;
+                    g = 121;
+                    b = 22;
+                
                     break;
                 case 10:
                     r = 255;

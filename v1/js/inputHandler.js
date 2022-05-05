@@ -6,13 +6,15 @@ var mouseDown = false;
 var mouseX = 0;
 var mouseY = 0;
 
-var lastMouseX = 0;
-var lastMouseY = 0;
+var lastMouseLoc = {
+    x: 0,
+    y: 0,
+    clock: 0,
+}
 
 const ongoingTouches = [];
 
 var inputController = document.getElementById("input-controller");
-
 
 function  setBrushSize(size) {
     brushSize = size;
@@ -103,8 +105,9 @@ inputController.addEventListener("mousemove", (event) => {
     const x = Math.round(realX * 2, 0);
     const y = Math.round(realY * 2, 0);
 
-    lastMouseX = mouseX;
-    lastMouseY = mouseY;
+    lastMouseLoc.x = mouseX;
+    lastMouseLoc.y = mouseY;
+    lastMouseLoc.clock = simulationFrame;
 
     mouseX = x;
     mouseY = y;
@@ -148,15 +151,30 @@ inputController.addEventListener('touchmove', (event) => {
 
         const realX = Math.min(Math.floor(canvasLeft), width - 1);
         const realY = Math.min(Math.floor(canvasTop), height - 1);
-        
+    
         const x = Math.round(realX * 2, 0);
         const y = Math.round(realY * 2, 0);
 
-        paint(x, y, brushSize);
+        lastMouseLoc.x = mouseX;
+        lastMouseLoc.y = mouseY;
+        lastMouseLoc.clock = simulationFrame;
+
+        mouseX = x;
+        mouseY = y;
+
+
+        paint(mouseX, mouseY, brushSize);
     })
 });
 
 function smooth() {
+    var lastMouseX = lastMouseLoc.x;
+    var lastMouseY = lastMouseLoc.y;
+
+    if(lastMouseLoc.clock < (simulationFrame - 10)) {
+        return;
+    }
+
     var duration = 20;
 
     for(var i = 0; i < duration; i ++) {

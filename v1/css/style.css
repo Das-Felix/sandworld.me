@@ -73,7 +73,8 @@ canvas {
 }
 
 #canvas {
-    z-index: 100;
+    z-index: 1;
+    background-color: #404040;
 }
 
 #input-controller {
@@ -83,7 +84,7 @@ canvas {
 
 #effect-canvas {
     background-color: #404040;
-    z-index: 1;
+    z-index: -1;
 }
 
 /*Menu*/

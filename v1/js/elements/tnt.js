@@ -8,10 +8,17 @@ function simulateTNT(x, y) {
     var vec1 = getRandomVector();
     var vec2 = getRandomVector();
 
-    if(isFire(x + vec1.x, y + vec1.y) || isFire(x - vec1.x, y - vec1.y) || isFire(x + vec2.x, y + vec2.y) || isFire(x - vec2.x, y - vec2.y) && random > 0) {
+    if(isFire(x + vec1.x, y + vec1.y) || isFire(x - vec1.x, y - vec1.y) || isFire(x + vec2.x, y + vec2.y) || isFire(x - vec2.x, y - vec2.y)) {
         clearCell(x, y);
         createPixel(x, y, 6);
-        // explode();
+
+        if(!isCellEmpty(x, y + 1)) {
+            var mat = getCellMaterial(x, y + 1);
+
+            
+
+        }
+
     }
 
     if(isCellEmpty(x, y + 1)) {

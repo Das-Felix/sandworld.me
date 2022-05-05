@@ -1,41 +1,33 @@
-function simulateFire(cellX, cellY) {
+function simulateGravity(cellX, cellY) {
+
+
+    var materialId = 20;
     var x = cellX;
     var y = cellY;
+
+    if(grid[y][x].data == 0) grid[y][x].data = 2;
 
     var random = Math.floor(Math.random() * (6 - 0 + 1)) + 1;
     var dir = getRandomDirection();
 
-    grid[y][x].data = random * 8 * dir;
-
-    if(isCellFlamable(x, y + 1) || isCellFlamable(x + 1, y) || isCellFlamable(x - 1, y)) {
-        grid[y][x].lifetime = grid[y][x].lifetime + 1;
-        return;
-    }
-
-    reactivateCells(x, y);
-
-    if(isCellEmpty(x, y - 1)) { 
+    if(isCellEmpty(x, y - 1)) {
         moveCell(x, y, x, y -1);
         y = y - 1;
     }   
 
     if(dir == 1) {
         grid[y][x].lifetime = grid[y][x].lifetime + 1;
-    } else {
-        grid[y][x].lifetime = grid[y][x].lifetime - 5;
+    } else if(!getCellMaterial(x + 1, y) == 6 || !getCellMaterial(x - 1, y)) {
+        grid[y][x].lifetime = grid[y][x].lifetime - random;
     }
-
-    // else if(!getCellMaterial(x + 1, y) == 6 || !getCellMaterial(x - 1, y)) {
-    //     grid[y][x].lifetime = grid[y][x].lifetime - random;
-    // }
 
     
     if(grid[y][x].lifetime <= 0) {
+        var gravityType = grid[y][x].data;
         clearCell(x, y);
+        createPixel(x, y, gravityType);
         return;
     }
-
-    var materialId = 6;
 
     var vector = getRandomVector();
 
