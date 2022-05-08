@@ -5,6 +5,8 @@ function simulateFire(cellX, cellY) {
     var random = Math.floor(Math.random() * (6 - 0 + 1)) + 1;
     var dir = getRandomDirection();
 
+    reactivateCells(x, y);
+
     if(isCellEmpty(x, y - 1) && random == 2) {
         createCell(x, y - 1, 10);
     }
@@ -15,8 +17,6 @@ function simulateFire(cellX, cellY) {
         grid[y][x].lifetime = grid[y][x].lifetime + 1;
         return;
     }
-
-    reactivateCells(x, y);
 
     if(isCellEmpty(x, y - 1)) { 
         moveCell(x, y, x, y -1);

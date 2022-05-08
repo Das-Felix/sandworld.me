@@ -42,6 +42,7 @@ function drawGrid(grid) {
             var type = cell.type;
 
             if(type == 20) type = cell.data.mat;
+            
 
             var r = 0;
             var g = 0;
@@ -106,9 +107,31 @@ function drawGrid(grid) {
                     b = 255;
                     a = a - 200;
                     break;
+                case 11:
+                    r = 180;
+                    g = 60;
+                    b = 255;
+                    break;
+                case 12:
+                    r = 100;
+                    g = 165;
+                    b = 180;
+                    break;
             }
 
-            //if(!cell.active) a = a - 50;
+            if(DEBUG) {
+                if(!cell.active) a = a - 50;
+
+                if(a == 0) a = 100;
+
+                shockwaves.forEach(wave => {    
+                    var dist = getDistance(j, i, wave.x, wave.y);
+                    if(dist < wave.outer && dist > wave.inner) {
+                        r = r + 100;
+                    }
+                });
+            }
+            
 
             
 

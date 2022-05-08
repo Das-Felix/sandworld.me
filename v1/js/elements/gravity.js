@@ -3,6 +3,8 @@ function simulateGravity(cellX, cellY) {
     var x = cellX;
     var y = cellY;
 
+    if(grid[y][x].data == undefined) return;
+
     if(grid[y][x].data.mat == 8) {
         clearCell(x, y);
         createCell(x, y, 6);

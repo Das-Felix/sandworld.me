@@ -1,5 +1,6 @@
 
 var grid = [];
+var shockwaves = [];
 
 var materials = [];
 
@@ -7,34 +8,34 @@ var inactiveValue = 20;
 
 var currentMaterial = 1;
 
-for(var i = 0; i < height + 1; i++) {
-    var gridRow = [];
-
-    for(var j = 0; j < width; j++) {
-        gridRow.push({
-            type: 0,
-            alpha: 255,
-            data: 0,
-            clock: 0,
-            active: true,
-            inactiveSince: 0,
-            lifetime: 30,
-        });
-    }
-
-    grid.push(gridRow);
-}
-
-var runLeft = false;
-var runLeftTime = 0;
-
 var movedPixels = 0;
 var maxMovedPixels = 3000;
+var pause = false;
 
 var resetting = false;
 var resetRow = 0;
 
 var simulationFrame = 0;
+
+function generateGrid(w, h) {
+    for(var i = 0; i < h + 1; i++) {
+        var gridRow = [];
+    
+        for(var j = 0; j < w; j++) {
+            gridRow.push({
+                type: 0,
+                alpha: 255,
+                data: 0,
+                clock: 0,
+                active: true,
+                inactiveSince: 0,
+                lifetime: 30,
+            });
+        }
+    
+        grid.push(gridRow);
+    }
+}
 
 //Running the simulation
 function simulate() {
@@ -57,13 +58,18 @@ function simulate() {
         clearRow(resetRow + 4);
     }
 
-    for(var y = 0; y < grid.length; y++) {
-        for(var x = 0; x !== grid[y].length; x++) {
-            if(grid[y][x].active && grid[y][x].clock != simulationFrame) {
-            runSimulation(x, y); 
+    if(!pause) {
+        for(var y = 0; y < grid.length; y++) {
+            for(var x = 0; x !== grid[y].length; x++) {
+                if(reactToShockwave(x, y)) continue;
+                if(grid[y][x].active && grid[y][x].clock != simulationFrame) {
+                    runSimulation(x, y); 
+                }
             }
         }
     }
+
+    simulateShockwaves();
     
     if(resetting) resetRow += 5;
     
@@ -105,10 +111,58 @@ function runSimulation(x, y) {
             break
         case 10:
             simulateSmoke(x, y);
+        case 11:
+            simulateInflow(x, y);
+            break;
+        case 12:
+            simulateOutflow(x, y);
             break;
         case 20:
             simulateGravity(x, y);
+            break;
     }
+}
+
+function createShockwave(x, y, strength) {
+    shockwaves.push({
+        x: x,
+        y: y,
+        strenght: strength,
+        outer: strength,
+        inner: 0,
+    });
+}
+
+function simulateShockwaves() {
+    for(var i = 0; i < shockwaves.length; i++) {
+        var wave = shockwaves[i];
+
+        if(wave.outer >= wave.strenght * 2) {
+            shockwaves.pop(i);
+            continue;
+        }
+
+        shockwaves[i].outer = wave.outer + 1;
+        //shockwaves[i].inner = wave.inner - 1;
+
+    }
+}
+
+function reactToShockwave(x, y) {
+    var mat = getCellMaterial(x, y);
+
+    if(mat == 0 || mat == 6 || mat == 8) return;
+
+    shockwaves.forEach(wave => {    
+        var dist = getDistance(x, y, wave.x, wave.y);
+        if(dist < wave.outer && dist > wave.inner) {
+            moveAway(wave.x, wave.y, x, y);
+            //moveAwaySideways(wave.x, wave.y, x, y);
+            return true;
+        }
+    });
+
+    return false;
 }
 
 function increaseInactive(x, y) {
@@ -128,9 +182,12 @@ function isCellEmpty(x, y) {
 }
 
 function clearCell(x, y) {
+    cellCount --;
     if(grid[y] == null || grid[y][x] == undefined) return;
     grid[y][x].type = 0;
     grid[y][x].lifetime = 60;
+    grid[y][x].data = 0;
+
     reactivateCells(x, y);
 }
 
@@ -192,6 +249,7 @@ function moveCell(x, y, newX, newY) {
     grid[newY][newX].data = grid[y][x].data;
 
     clearCell(x, y);
+    cellCount++;
 
     reactivateCells(x, y);
 }
@@ -248,7 +306,7 @@ function createCell(x, y, material, force, data) {
     grid[y][x].inactiveSince = 0;
     grid[y][x].data = data;
 
-    pixelCount++;
+    cellCount++;
 }
 
 function setMat(id) {

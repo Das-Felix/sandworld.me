@@ -52,3 +52,13 @@
     background-color: #68B922;
     border-color: rgb(79, 121, 22);
 }
+
+.inflow-color {
+    background-color: #660055;
+    border-color: rgb(65, 0, 30);
+}
+
+.outflow-color {
+    background-color: #006658;
+    border-color: rgb(0, 52, 65);
+}

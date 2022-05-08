@@ -58,12 +58,20 @@ main {
     position: relative;
 }
 
+.MOBILE canvas {
+    height: 80vh;
+    width: calc(80vh / 3 * 2);
+}
+
+.DESKTOP canvas {
+    height: calc(80vh / 3 * 2);
+    width: 80vh;
+}
+
 canvas {
     position: absolute;
     top: 0;
     left: 0;
-    height: 80vh;
-    width: calc(80vh / 3 * 2);
     background-color: transparent;
     image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-crisp-edges;
@@ -105,7 +113,7 @@ canvas {
 .material-selector {
     width: var(--screen-width);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: clamp(0.3rem, 1vh, 1rem);;
 }
 

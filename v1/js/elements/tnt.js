@@ -5,47 +5,47 @@ function simulateTNT(x, y) {
     var materialId = 8;
 
     var dir= getRandomDirection();
-    var vec1 = getRandomVector();
-    var vec2 = getRandomVector();
+    // var vec1 = getRandomVector();
+    // var vec2 = getRandomVector();
 
-    if(isFire(x + vec1.x, y + vec1.y) || isFire(x - vec1.x, y - vec1.y) || isFire(x + vec2.x, y + vec2.y) || isFire(x - vec2.x, y - vec2.y)) {
+    if(isFire(x + 1, y) || isFire(x - 1, y) || isFire(x, y + 1) || isFire(x, y - 1)) {
         clearCell(x, y);
         createCell(x, y, 6);
 
-        clearCell(x + vec1.x, y + vec1.y);
-        createCell(x + vec1.x, y + vec1.y, 6);
+        clearCell(x + 1, y);
+        createCell(x + 1, y, 6);
 
-        clearCell(x - vec1.x, y - vec1.y);
-        createCell(x - vec1.x, y - vec1.y, 6);
-        
-        var bMat = getCellMaterial(x, y + 1);
+        clearCell(x - 1, y);
+        createCell(x - 1, y, 6);
 
-        if(bMat != null && bMat != 0 && bMat != 8 && bMat != 20 && bMat != 4) {
-            if(y + 1 <= 299) throwUp(x, y + 1);
+        var m1 = getCellMaterial(x + 1, y);
+        var m2 = getCellMaterial(x - 1, y);
+        var m3 = getCellMaterial(x, y + 1);
+        var m4 = getCellMaterial(x, y - 1);
+        var fM = [0, 8, 6, 10, 20];
 
-            var goDown = Math.round(random);
+        if(!isCellEmpty(x, y + 1) && random < 5 && y < height - 1) {
+            //throwUp(x, y + 1);
+        } 
 
-            for(var i = 0; i < goDown; i++) {
-                if(!isCellEmpty(x, y + i) && y + i <= 299) {
-                    if(i % 2 == 0 || getCellMaterial(x, y + i) == 4 || getCellMaterial(x, y + i) == 5) {
-                        clearCell(x, y + i);
-                        moveAwaySideways(x, y, x + dir, y);
+        if(fM.indexOf(m1) == -1 || fM.indexOf(m2) == -1 || fM.indexOf(m3) == -1 || fM.indexOf(m4) == -1) {
 
-                        //Go Sideways
-                        var goSideways = Math.round(random);
+            var strength = random;
 
-                        for(var j = 0; j < goSideways; j++) {
-                            moveAwaySideways(x, y + 1, x + i, y);
-                            moveAwaySideways(x, y + 1, x - i, y);
-                        }
+            if(strength < 10) strength = 15;
 
-                    } else {
-                        throwUp(x, y + i);
-                    }
-                }
+            var createWave = true;
+
+            // shockwaves.forEach(wave => {
+            //     if(getDistance(x, y, wave.x, wave.y) < wave) {
+            //         createWave = false;
+            //     }
+            // });
+
+            if(shockwaves.length < 2) {
+                createShockwave(x, y, strength);
             }
         }
-
     }
 
     if(isCellEmpty(x, y + 1)) {
@@ -112,18 +112,4 @@ function throwUp(x, y) {
         mat: mat,
         dir: -1,
     });
-}
-
-function moveAwaySideways(x, y, x1, y1) {
-    var dir = 1;
-
-    if(x - x1 < 0) {
-        dir = 1;
-    } else {
-        dir = -1;
-    }
-
-    if(isCellEmpty(x1 + dir, y1)) {
-        moveCell(x1, y1, x1 + dir, y1)
-    }
 }

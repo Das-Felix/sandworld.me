@@ -9,6 +9,14 @@ function shuffle(a) {
 
 var difference = function (a, b) { return Math.abs(a - b); }
 
+function getDistance(x, y, x1, y1) {
+    var a = difference(x, x1);
+    var b = difference(y, y1);
+
+    var distance = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+    return distance;
+}
+
 function getRandomDirection() {
     var random = Math.floor(Math.random() * (1000 - 0 + 1)) + 1;
     
@@ -66,5 +74,70 @@ function getRandomVector() {
     return {
         x: dirX,
         y: dirY,
+    }
+}
+
+function moveAway(x, y, x1, y1) {
+    var dirX = 1;
+    var dirY = 1;
+
+    if(x < x1) {
+        dirX = 1;
+    } else {
+        dirX = -1;
+    }
+    
+    if(y < y1) {
+        dirY = 1;
+    } else {
+        dirY = -1;
+    }
+
+    if(isCellEmpty(x1 + dirX, y1 + dirY)) {
+        moveCell(x1, y1, x1 + dirX, y1 + dirY);
+        return {
+            x: x1 + dirX,
+            y: y1 + dirY
+        }
+    }
+
+    if(isCellEmpty(x1 + dirX, y1 - dirY)) {
+        moveCell(x1, y1, x1 + dirX, y1 - dirY);
+        return {
+            x: x1 + dirX,
+            y: y1 - dirY
+        }
+    }
+
+    // if(getCellMaterial(x1 + dirX, y1 + dirY) == 0 || getCellMaterial(x1 + dirX, y1 + dirY) == 10 || getCellMaterial(x1 + dirX, y1 + dirY) == 6) {
+    //     moveCell(x1, y1, x1 + dirX, y1 + dirY);
+    //     return {
+    //         x: x1 + dirX,
+    //         y: y1 + dirY
+    //     }
+    // }
+
+    // if(getCellMaterial(x1 + dirX, y1 - dirY) == 0 || getCellMaterial(x1 + dirX, y1 - dirY) == 10 || getCellMaterial(x1 + dirX, y1 - dirY) == 6) {
+    //     moveCell(x1, y1, x1 + dirX, y1 - dirY);
+    //     return {
+    //         x: x1 + dirX,
+    //         y: y1 - dirY
+    //     }
+    // }
+    
+}
+
+
+function moveAwaySideways(x, y, x1, y1) {
+    var dir = 1;
+
+    if(x - x1 < 0) {
+        dir = 1;
+    } else {
+        dir = -1;
+    }
+
+    if(isCellEmpty(x1 + dir, y1)) {
+        moveCell(x1, y1, x1 + dir, y1)
     }
 }

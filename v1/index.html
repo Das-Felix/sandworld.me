@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script defer src="./js/utils.js"></script>
-    <script defer src="./js/main.js"></script>
     <script defer src="./js/renderer.js"></script>
     <script defer src="./js/animation/AnimationHandler.js"></script>
     <script defer src="./js/simulator.js"></script>
     <script defer src="./js/inputHandler.js"></script>
+    <script defer src="./js/main.js"></script>
     <!-- <script defer src="./js/fluid.js"></script>
     <script defer src="./js/effectHandler.js"></script> -->
 
@@ -25,6 +25,8 @@
     <script defer src="./js/elements/tnt.js"></script>
     <script defer src="./js/elements/wood.js"></script>
     <script defer src="./js/elements/gravity.js"></script>
+    <script defer src="./js/elements/inflow.js"></script>
+    <script defer src="./js/elements/outflow.js"></script>
     
 
     <link rel="stylesheet" href="./css/colors.css">
@@ -99,6 +101,14 @@
              
                     <div class="material-select acid-color" onclick="setMaterial(9)" id="mat9">
                         <h2>Acid</h2>
+                    </div>
+
+                    <div class="material-select inflow-color" onclick="setMaterial(11)" id="mat11">
+                        <h2>Inflow</h2>
+                    </div>
+
+                    <div class="material-select outflow-color" onclick="setMaterial(12)" id="mat12">
+                        <h2>Outflow</h2>
                     </div>
 
                 </div>

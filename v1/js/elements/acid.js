@@ -24,25 +24,27 @@ function simulateAcid(x, y) {
 
     //Removing Cells
 
-    if(y < 300 && getCellMaterial(x, y + 1) != materialId) {
+    var d = [0,  11, 12, 9]
+
+    if(y < height && d.indexOf(getCellMaterial(x, y + 1)) == -1) {
         clearCell(x, y);
         clearCell(x, y + 1);
         return;
     }
 
-    if(!isCellEmpty(x + 1, y) && getCellMaterial(x + 1, y) != materialId) {
+    if(!isCellEmpty(x + 1, y) && d.indexOf(getCellMaterial(x + 1, y)) == -1) {
         clearCell(x, y);
         clearCell(x + 1, y);
         return;
     }
 
-    if(!isCellEmpty(x - 1, y) && getCellMaterial(x - 1, y) != materialId) {
+    if(!isCellEmpty(x - 1, y) && d.indexOf(getCellMaterial(x - 1, y)) == -1) {
         clearCell(x, y);
         clearCell(x - 1, y);
         return;
     }
 
-    if(!isCellEmpty(x, y - 1) && getCellMaterial(x, y - 1) != materialId) {
+    if(!isCellEmpty(x, y - 1) && d.indexOf(getCellMaterial(x, y - 1)) == -1) {
         clearCell(x, y);
         clearCell(x, y - 1);
         return;

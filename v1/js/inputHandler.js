@@ -35,7 +35,6 @@ function setBrushMode(mode) {
 }
 
 function paint(x, y, size, mat) {
-
     if(size == 1) {
         createCell(x, y, mat);
         return;
@@ -204,6 +203,9 @@ function clearSelectedColor() {
     document.getElementById("mat7").classList.remove("selected")
     document.getElementById("mat8").classList.remove("selected")
     document.getElementById("mat9").classList.remove("selected")
+    document.getElementById("mat11").classList.remove("selected")
+    document.getElementById("mat12").classList.remove("selected")
+
 }
 
 function clearSelectedBrushSize() {
