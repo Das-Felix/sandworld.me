@@ -105,7 +105,7 @@ function drawGrid(grid) {
                     r = 255;
                     g = 255;
                     b = 255;
-                    a = a - 200;
+                    a = 255;
                     break;
                 case 11:
                     r = 180;

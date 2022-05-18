@@ -24,7 +24,7 @@ function simulateAcid(x, y) {
 
     //Removing Cells
 
-    var d = [0,  11, 12, 9]
+    var d = [0,  11, 12, 9, 5]
 
     if(y < height && d.indexOf(getCellMaterial(x, y + 1)) == -1) {
         clearCell(x, y);
@@ -49,6 +49,7 @@ function simulateAcid(x, y) {
         clearCell(x, y - 1);
         return;
     }
+
 
     increaseInactive(x, y);
 }

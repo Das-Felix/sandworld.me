@@ -21,6 +21,9 @@ function simulateInflow(x, y) {
     //Setting inflow Material
     if(data.mat == 0) {
         vectors.forEach(v => {
+
+            if(x + v.x > width || x + v.x < 0 || y + v.y > height || y + v.y < 0) return;
+
             var mat = getCellMaterial(x + v.x, y + v.y);
             if(mat != 0 && mat != 11) {
                 data.mat = mat;

@@ -50,7 +50,7 @@ function computeAnimation(animation) {
     computed = true;
 }
 
-loadAnimations();
+//loadAnimations();
 
 function loadAnimations() {
     fetch("./js/animation/animations/animation_01.json")

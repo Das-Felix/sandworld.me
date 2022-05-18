@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script defer src="./js/utils.js"></script>
-    <script defer src="./js/renderer.js"></script>
+    <script defer src="./js/renderer.js"></script> 
     <script defer src="./js/animation/AnimationHandler.js"></script>
     <script defer src="./js/simulator.js"></script>
     <script defer src="./js/inputHandler.js"></script>
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/imageLoader.js"></script>
     <!-- <script defer src="./js/fluid.js"></script>
     <script defer src="./js/effectHandler.js"></script> -->
 
@@ -37,118 +38,155 @@
 </head>
 <body>
 
+    
+    <!-- <video id="video" width="300" height="200" autoplay></video>
+    <button id="camera-button">Start Camera</button>
+    <button id="click-photo">Take photo</button> -->
+
+    <div class="debug">
+        <h1>DEBUG MODE - Pixels: <span id="pixelCount"></span> FPS: <span id="fps"></span></h1>
+    </div>
+
     <main>
+        <div class="inner">
 
-        <div class="debug">
-            <h1>DEBUG MODE - Pixels: <span id="pixelCount"></span> FPS: <span id="fps"></span></h1>
-        </div>
-
-        <div class="title">
-            <h1>pixelspiel.io</h1>
-        </div>
-
-        <div class="canvas-container">
-            <div>
+            <div class="canvas-container">
                 <canvas id="input-controller" width="200" height="300"></canvas>
                 <canvas id="canvas" width="200" height="300"></canvas>
-                <canvas id="effect-canvas" width="1000" height="500"></canvas>
-            </div>
-        </div>
-
-        <div class="menu-container">
-
-            <div class="material-selector-container">
-
-                <!--Row 1-->
-                <div class="material-selector">
-                    <div class="material-select sand-color selected first" onclick="setMaterial(1)" id="mat1">
-                        <h2>Sand</h2>
-                    </div>
-             
-                    <div class="material-select water-color" onclick="setMaterial(2)" id="mat2">
-                        <h2>Water</h2>
-                    </div>
-             
-             
-                    <div class="material-select stone-color" onclick="setMaterial(3)" id="mat3">
-                        <h2>Stone</h2>
-                    </div>
-             
-             
-                    <div class="material-select wood-color" onclick="setMaterial(4)" id="mat4">
-                        <h2>Wood</h2></div>
-             
-                    <div class="material-select brick-color" onclick="setMaterial(5)" id="mat5">
-                        <h2>Brick</h2>
-                    </div>
-
-                    <div class="material-select fire-color first" onclick="setMaterial(6)" id="mat6">
-                        <h2>Fire</h2>
-                    </div>
-             
-                    <div class="material-select oil-color" onclick="setMaterial(7)" id="mat7">
-                        <h2>Oil</h2>
-                    </div>
-             
-             
-                    <div class="material-select empty-color" onclick="setMaterial(0)" id="mat0">
-                        <h2>Clear</h2>
-                    </div>
-             
-             
-                    <div class="material-select dynamite-color" onclick="setMaterial(8)" id="mat8">
-                        <h2>TNT</h2></div>
-             
-                    <div class="material-select acid-color" onclick="setMaterial(9)" id="mat9">
-                        <h2>Acid</h2>
-                    </div>
-
-                    <div class="material-select inflow-color" onclick="setMaterial(11)" id="mat11">
-                        <h2>Inflow</h2>
-                    </div>
-
-                    <div class="material-select outflow-color" onclick="setMaterial(12)" id="mat12">
-                        <h2>Outflow</h2>
-                    </div>
-
-                </div>
-
             </div>
 
             <div class="settings-container">
-                <div class="settings-selector">
-                    <div class="settings-button settings-button-wide" onclick="reset();">
-                        <h2>Reset</h2>
-                    </div>
+                <div class="material-selector">
+                    <section>
+                        <div class="material-select sand-color selected" onclick="setMaterial(1)" id="mat1">
+                            <p>Sand</p>
+                        </div>
+                        
+                        <div class="material-select stone-color" onclick="setMaterial(3)" id="mat3">
+                            <p>Stone</p>
+                        </div>
+                        
+                        <div class="material-select brick-color" onclick="setMaterial(5)" id="mat5">
+                            <p>Brick</p>
+                        </div>
+
+                        <div class="material-select wood-color" onclick="setMaterial(4)" id="mat4">
+                            <p>Wood</p>
+                        </div>
+
+                        <div class="material-select fire-color first" onclick="setMaterial(6)" id="mat6">
+                            <p>Fire</p>
+                        </div>
+
+                        <div class="material-select water-color" onclick="setMaterial(2)" id="mat2">
+                            <p>Water</p>
+                        </div>
+
+                        <div class="material-select acid-color" onclick="setMaterial(9)" id="mat9">
+                            <p>Acid</p>
+                        </div>
+                 
+                        <div class="material-select oil-color" onclick="setMaterial(7)" id="mat7">
+                            <p>Oil</p>
+                        </div>
+
+                        <div class="material-select lava-color greyed" onclick="" id="mat20">
+                            <p>Lava</p>
+                        </div>
+
+                        <div class="material-select gas-color greyed" onclick="" id="mat20">
+                            <p>Gas</p>
+                        </div>
+
+                        <div class="material-select seed-color greyed" onclick="" id="mat20">
+                            <p>Seed</p>
+                        </div>
+
+                        <div class="material-select bacteria-color greyed" onclick="" id="mat20">
+                            <p>Bacteria</p>
+                        </div>
+
+                        <div class="material-select dynamite-color" onclick="setMaterial(8)" id="mat8">
+                            <p>TNT</p>
+                        </div>
+
+                        <div class="material-select missile-color greyed" onclick="" id="mat20">
+                            <p>Missile</p>
+                        </div>
     
-                    <div class="settings-button" onclick="setBrushMode(0);" id="brm0">
-                        <h2>⬜</h2>
-                    </div>
+                        <div class="material-select inflow-color" onclick="setMaterial(11)" id="mat11">
+                            <p>Inflow</p>
+                        </div>
     
-                    <div class="settings-button selected" onclick="setBrushMode(1);" id="brm1">
-                        <h2>⚪</h2>
-                    </div>
+                        <div class="material-select outflow-color" onclick="setMaterial(12)" id="mat12">
+                            <p>Outflow</p>
+                        </div>
+
+                        
+                    </section>
+                </div>
+
+                <div class="brush-settings-container">
+                    <section>
+                        <div class="eraser" onclick="setMaterial(0)" id="mat0">
+                            <p>Eraser</p>
+                        </div>
     
-                    <div class="settings-button" onclick="setBrushSize(1);" id="br1">
-                        <h2>1</h2>
-                    </div>
+                        <div onclick="setBrushMode(0);" id="brm0">
+                            <div class="rect"></div>
+                        </div>
+                        
+                        <div onclick="setBrushMode(1);" id="brm1">
+                            <div class="circle"></div>
+                        </div>
     
-                    <div class="settings-button selected" onclick="setBrushSize(5);" id="br5""">
-                        <h2>5</h2>
-                    </div>
+                        <div onclick="setBrushSize(1);" id="br1">
+                            <p>1</p>
+                        </div>
     
-                    <div class="settings-button" onclick="setBrushSize(10);" id="br10">
-                        <h2>10</h2>
-                    </div>
+                        <div onclick="setBrushSize(5);" id="br5" class="selected">
+                            <p>5</p>
+                        </div>
     
-                    <div class="settings-button" onclick="setBrushSize(20);" id="br20">
-                        <h2>20</h2>
-                    </div>
+                        <div onclick="setBrushSize(10);" id="br10">
+                            <p>10</p>
+                        </div>
+                        
+                        <div onclick="setBrushSize(20);" id="br20">
+                            <p>20</p>
+                        </div>
+    
+                        <div onclick="undo()" id="undo">
+                            <p><-</p>
+                        </div>
+    
+                        <div class="reset" onclick="reset()" id="reset">
+                            <p>Reset</p>
+                        </div>
+    
+                        <div onclick="togglePause()" id="pause">
+                            <p>II</p>
+                        </div>
+                    </section>    
+                </div>
+
+                <div class="empty-container">
+
+                </div> 
+
+                <div class="info-container">
+                    
+                    <a href="/info">
+                        <p>Info</p>
+                    </a>
+
+                    <a href="/settings">
+                        <p>Settings</p>
+                    </a>
+
                 </div>
             </div>
-
         </div>
     </main>
-
 </body>
 </html>

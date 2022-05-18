@@ -21,5 +21,10 @@ function simulateWater(x, y) {
         return;
     }
 
+    if(getCellMaterial(x + dir, y) == 7) {
+        swapCells(x, y, x + dir, y);
+        return;
+    }
+
     increaseInactive(x, y);
 }   

@@ -1,16 +1,9 @@
 body {
-    background-color: #404040;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*background: linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)), url('./img/background.jpg');*/
-}
-
-:root {
-    --screen-width: calc(80vh / 3 * 2);
-    --screen-height: 80vh;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .debug {
@@ -23,56 +16,39 @@ body {
 }
 
 main {
-    background-color: #232323;
-    width: calc(var(--screen-width) + 4vh);
     height: 100vh;
-}
-
-/*Title*/
-.title {
-    position: absolute;
     width: 100vw;
-    color: var(--yellow);
-    text-align: center;
-    left: 0;
-    top: 1vh;
-    font-size: clamp(1rem, 1.5vh, 2rem);
-    font-style: italic;
-    z-index: 100;
 }
 
+.DESKTOP main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.DESKTOP .inner {
+    width: calc(100vw - 4rem);
+    height: calc((100vw - 4rem) / 16 * 9);
+    display: flex;
+}
 
 /*Canvas*/
-
 .canvas-container {
-    width: 100%;
-    height: 82vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.canvas-container div {
-    height: 80vh;
-    width: calc(80vh / 3 * 2);
     position: relative;
+    height: 100%;
+    width: calc(((100vw - 4rem) / 16 * 9) / 2 * 3);
+    
 }
 
-.MOBILE canvas {
-    height: 80vh;
-    width: calc(80vh / 3 * 2);
-}
-
-.DESKTOP canvas {
-    height: calc(80vh / 3 * 2);
-    width: 80vh;
-}
-
-canvas {
+.canvas-container canvas {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: transparent;
+}
+
+canvas {
+    height: 100%;
+    width: 100%;
     image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
@@ -80,97 +56,119 @@ canvas {
     background-color: transparent;
 }
 
-#canvas {
-    z-index: 1;
-    background-color: #404040;
-}
-
 #input-controller {
-    background-color: transparent;
-    z-index: 200;
+    z-index: 300;
 }
 
-#effect-canvas {
-    background-color: #404040;
-    z-index: -1;
+#canvas {
+    background-color: #EFEFEF;
 }
 
-/*Menu*/
-
-.menu-container {
-    height: 15vh;
+/*Settings*/
+.settings-container {
+    margin-left: 2rem;
+    width: calc(94vw - (((100vw - 4rem) / 16 * 9) / 2 * 3));
+    height: 100%;
 }
-
-/*Material Selector*/
-
-.material-selector-container {
-    width: 100%;
-    display: flex;
-    justify-content:  center;
-}
-
 
 .material-selector {
-    width: var(--screen-width);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: clamp(0.3rem, 1vh, 1rem);;
+    background-color: #EFEFEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.material-selector div {
-    border-style: solid;
-    border-width: clamp(0.2rem, 0.5vh, 0.5rem);
+.material-selector section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.material-selector section div {
+    box-sizing: border-box;
+    border: 0.3vw solid rgba(0, 0, 0, 0.2);
+    height: 2.5vw;
     color: white;
-    height: 3vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+.material-selector section div p {
+    margin: 0;
 }
 
 .material-selector .selected {
-border-color: white; 
+    border-color: black;
 }
 
+/*Brush Settings*/
 
-.material-selector div h2 {
-    font-size: clamp(0.5rem, 2vh, 2.5rem);
-    font-weight: 500;
-    margin: 0;
-    cursor: pointer;
-}
-
-/*Settings Selector*/
-
-
-.settings-container {
-    margin-top: clamp(0.3rem, 1vh, 1rem);
-    width: 100%;
+.brush-settings-container {
+    margin-top: 0.5rem;
+    background-color: #EFEFEF;
     display: flex;
-    justify-content:  center;
+    align-items: center;
+    justify-content: center;
 }
 
-.settings-selector {
-    width: var(--screen-width);
+.brush-settings-container .rect {
+    width: 1vw;
+    height: 1vw;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.brush-settings-container .circle {
+    width: 1vw;
+    height: 1vw;
+    border: 1px solid white;
+    border-radius: 1rem;
+    background-color: transparent;
+
+}
+
+.brush-settings-container section {
+    width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.3rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
-.settings-selector div {
-    border-style: solid;
-    border-width: clamp(0.2rem, 0.5vh, 0.5rem);
-    border-color: rgb(133, 133, 133);
-    background-color: #404040;
+.brush-settings-container section div {
+    background-color: #B1B1B1;
+    box-sizing: border-box;
+    border: 0.3vw solid rgba(0, 0, 0, 0.2);
+    height: 2.5vw;
     color: white;
-    height: 3vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1vw;
+    cursor: pointer;
 }
 
-.settings-selector div h2 {
-    font-size: clamp(0.5rem, 2vh, 2.5rem);
-    font-weight: 500;
+.brush-settings-container .selected {
+    background-color: #484848;
+}
+
+.eraser {
+    grid-column: 1 / 3;
+}
+
+.reset {
+    grid-column: 2 / 4;
+}
+
+.brush-settings-container section div p {
     margin: 0;
-    cursor: pointer;
+}
+
+.greyed {
+    opacity: 0.5;
 }

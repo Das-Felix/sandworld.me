@@ -4,7 +4,7 @@ const context = canvas.getContext("2d");
 context.imageSmoothingEnabled = true;
 
 var cellCount = 0;
-var refreshRate = 12;
+var refreshRate = 16;
 
 var screenMode = "MOBILE";
 var width = 200;
@@ -39,6 +39,13 @@ function Update() {
 } 
 
 function setScreenMode() {
+
+  setCanvasSize(300, 200);
+  screenMode = "DESKTOP";
+  document.querySelector("body").classList.add(screenMode);
+  generateGrid(width, height);
+
+  return;
 
   var screenWidth = window.innerWidth;
   

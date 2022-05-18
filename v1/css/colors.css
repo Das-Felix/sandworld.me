@@ -1,5 +1,5 @@
 :root {
-    --yellow: #FFE30A;
+    --green: #22B174;
 }
 
 .sand-color {
@@ -60,5 +60,24 @@
 
 .outflow-color {
     background-color: #006658;
-    border-color: rgb(0, 52, 65);
+}
+
+.lava-color {
+    background-color: #D65F33;
+}
+
+.missile-color {
+    background-color: #D6BB25;
+}
+
+.seed-color {
+    background-color: #226D24;
+}
+
+.bacteria-color {
+    background-color: #8E74C7;
+}
+
+.gas-color {
+    background-color: #F5B6C5;
 }

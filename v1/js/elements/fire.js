@@ -9,6 +9,7 @@ function simulateFire(cellX, cellY) {
 
     if(isCellEmpty(x, y - 1) && random == 2) {
         createCell(x, y - 1, 10);
+        return;
     }
 
     grid[y][x].data = random * 8 * dir;
@@ -28,10 +29,6 @@ function simulateFire(cellX, cellY) {
     } else {
         grid[y][x].lifetime = grid[y][x].lifetime - 5;
     }
-
-    // else if(!getCellMaterial(x + 1, y) == 6 || !getCellMaterial(x - 1, y)) {
-    //     grid[y][x].lifetime = grid[y][x].lifetime - random;
-    // }
 
     
     if(grid[y][x].lifetime <= 0) {
@@ -55,6 +52,7 @@ function simulateFire(cellX, cellY) {
 
     if(isCellEmpty(x - dirX, y + dirY)) {
         moveCell(x, y, x - dirX, y + dirY);
+        return;
     }
 
     if(isCellEmpty(x + dirX, y + dirY)) {

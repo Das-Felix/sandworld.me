@@ -12,9 +12,6 @@ var movedPixels = 0;
 var maxMovedPixels = 3000;
 var pause = false;
 
-var resetting = false;
-var resetRow = 0;
-
 var simulationFrame = 0;
 
 function generateGrid(w, h) {
@@ -45,19 +42,6 @@ function simulate() {
     //Animation
     renderFrame(simulationFrame);
 
-    if(resetting) {
-        if(resetRow == 300) {
-            resetRow = 0;
-            resetting = false;    
-        }
-
-        clearRow(resetRow);
-        clearRow(resetRow + 1);
-        clearRow(resetRow + 2);
-        clearRow(resetRow + 3);
-        clearRow(resetRow + 4);
-    }
-
     if(!pause) {
         for(var y = 0; y < grid.length; y++) {
             for(var x = 0; x !== grid[y].length; x++) {
@@ -69,10 +53,7 @@ function simulate() {
         }
     }
 
-    simulateShockwaves();
-    
-    if(resetting) resetRow += 5;
-    
+    simulateShockwaves();    
 
     drawGrid(grid);
     bounding = [];
@@ -127,7 +108,7 @@ function createShockwave(x, y, strength) {
     shockwaves.push({
         x: x,
         y: y,
-        strenght: strength,
+        strength: strength,
         outer: strength,
         inner: 0,
     });
@@ -137,13 +118,13 @@ function simulateShockwaves() {
     for(var i = 0; i < shockwaves.length; i++) {
         var wave = shockwaves[i];
 
-        if(wave.outer >= wave.strenght * 2) {
+        if(wave.outer >= wave.strength * 2) {
             shockwaves.pop(i);
             continue;
         }
 
-        shockwaves[i].outer = wave.outer + 1;
-        //shockwaves[i].inner = wave.inner - 1;
+        shockwaves[i].outer = wave.outer + 10;
+        shockwaves[i].inner = wave.inner + 3;
 
     }
 }
@@ -151,7 +132,7 @@ function simulateShockwaves() {
 function reactToShockwave(x, y) {
     var mat = getCellMaterial(x, y);
 
-    if(mat == 0 || mat == 6 || mat == 8) return;
+    if(mat == 0 || mat == 6 || mat == 8 || mat == 5 || mat == 10) return;
 
     shockwaves.forEach(wave => {    
         var dist = getDistance(x, y, wave.x, wave.y);
@@ -182,7 +163,6 @@ function isCellEmpty(x, y) {
 }
 
 function clearCell(x, y) {
-    cellCount --;
     if(grid[y] == null || grid[y][x] == undefined) return;
     grid[y][x].type = 0;
     grid[y][x].lifetime = 60;
@@ -294,6 +274,7 @@ function createCell(x, y, material, force, data) {
     var id = material || currentMaterial;
 
     if(id == 0) {
+        if(grid[y][x].type != 0) cellCount--;
         grid[y][x].type = 0;
         return;
     }
@@ -314,6 +295,15 @@ function setMat(id) {
 }
 
 function reset() {
-    resetRow = 0;
-    resetting = true;
+
+    cellCount = 0;
+
+    for(var i = 0; i < grid.length; i++) {
+        clearRow(i);
+    }
+}
+
+function togglePause() {
+    document.getElementById("pause").classList.toggle("selected");
+    pause = !pause;
 }

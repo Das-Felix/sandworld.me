@@ -101,11 +101,11 @@ function moveAway(x, y, x1, y1) {
         }
     }
 
-    if(isCellEmpty(x1 + dirX, y1 - dirY)) {
-        moveCell(x1, y1, x1 + dirX, y1 - dirY);
+    if(isCellEmpty(x1 + dirX, y1)) {
+        moveCell(x1, y1, x1 + dirX, y1);
         return {
             x: x1 + dirX,
-            y: y1 - dirY
+            y: y1
         }
     }
 
