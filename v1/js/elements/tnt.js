@@ -8,43 +8,35 @@ function simulateTNT(x, y) {
     // var vec1 = getRandomVector();
     // var vec2 = getRandomVector();
 
-    if(isFire(x + 1, y) || isFire(x - 1, y) || isFire(x, y + 1) || isFire(x, y - 1)) {
-        clearCell(x, y);
-        createCell(x, y, 6);
 
-        clearCell(x + 1, y);
-        createCell(x + 1, y, 6);
+    if(shockwaves.length > 0) {
+        for(var i = 0; i < shockwaves.length; i++) {
+            var wave = shockwaves[i];
+            var dist = getDistance(x, y, wave.x, wave.y);
 
-        clearCell(x - 1, y);
-        createCell(x - 1, y, 6);
+            if(dist <= wave.outer) {
 
-        var m1 = getCellMaterial(x + 1, y);
-        var m2 = getCellMaterial(x - 1, y);
-        var m3 = getCellMaterial(x, y + 1);
-        var m4 = getCellMaterial(x, y - 1);
-        var fM = [0, 8, 6, 10, 20];
+                if(dist > wave.inner) {
+                    clearCell(x, y);
+                    createCell(x, y, 6);
 
-        if(!isCellEmpty(x, y + 1) && random < 5 && y < height - 1) {
-            //throwUp(x, y + 1);
-        } 
+                    if(wave.strength < 100) {
+                        shockwaves[i].strength = wave.strength + 0.2;
+                    }
+                    return;
+                }
 
-        if(fM.indexOf(m1) == -1 || fM.indexOf(m2) == -1 || fM.indexOf(m3) == -1 || fM.indexOf(m4) == -1) {
-
-            var strength = random;
-
-            if(strength < 10) strength = 15;
-
-            var createWave = true;
-
-            // shockwaves.forEach(wave => {
-            //     if(getDistance(x, y, wave.x, wave.y) < wave) {
-            //         createWave = false;
-            //     }
-            // });
-
-            if(shockwaves.length < 2) {
-                createShockwave(x, y, strength);
+                return;
             }
+        } 
+    }
+
+    if(isFire(x + 1, y) || isFire(x - 1, y) || isFire(x, y + 1) || isFire(x, y - 1)) {
+
+        if(shockwaves.length < 2) {
+            clearCell(x, y);
+            createShockwave(x, y, random * 2);
+            return; 
         }
     }
 
