@@ -3,63 +3,47 @@
 }
 
 .sand-color {
-    background-color: #AF9D6D;
-    border-color: #8D7E58;
+    background-color: #C1AD78;
 }
 
 .water-color {
     background-color: #6B8DC4;
-    border-color: #4A6289;
 }
 
 .stone-color {
-    background-color: #808080;
-    border-color: #505050;
+    background-color: #8E8E8E;
 }
 
 .wood-color {
-    background-color: #693D1E;
-    border-color: #462B18;
+    background-color: #6E5A3A;
 }
 
 .brick-color {
-    background-color: #672C2C;
-    border-color: #451E1E;
+    background-color: #743737;
 }
 
 .fire-color {
-    background-color: #C17814;
-    border-color: #8B560D;
+    background-color: #D68B33;
 }
 
 .oil-color {
-    background-color: #383838;
-    border-color: #1F1F1F;
-}
-
-.empty-color {
-    background-color: white;
-    border-color: rgb(199, 199, 199);
-    color: black !important;
+    background-color: #4D4D4D;
 }
 
 .dynamite-color {
-    background-color: #C12626;
-    border-color: #791616;
+    background-color: #BA3B3B;
 }
 
 .acid-color {
-    background-color: #68B922;
-    border-color: rgb(79, 121, 22);
+    background-color: #73AC50;
 }
 
 .inflow-color {
-    background-color: #660055;
-    border-color: rgb(65, 0, 30);
+    background-color: #9B21A0;
 }
 
 .outflow-color {
-    background-color: #006658;
+    background-color: #2D8695;
 }
 
 .lava-color {

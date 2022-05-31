@@ -3,7 +3,7 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .debug {
@@ -170,5 +170,38 @@ canvas {
 }
 
 .greyed {
-    opacity: 0.5;
+    opacity: 0.3;
+}
+
+/*Info Contianer*/
+
+.info-container {
+    margin-top: 0.5rem;
+    background-color: #EFEFEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+}
+
+.info-container section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.info-container a {
+    background-color: #B1B1B1;
+    box-sizing: border-box;
+    border: 0.3vw solid rgba(0, 0, 0, 0.2);
+    height: 2.5vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    cursor: pointer;
+    text-decoration: none;
 }

@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:center; 
+    align-items: center;
+    background-color: #EFEFEF;
+}
+
+
+main {
+    height: 100vh;
+    width: calc(100vh / 16 * 9);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .inner {
+    height: calc(100vh - 4rem);
+    width: calc((100vh / 16 * 9) - 4rem);
+}
+
+.canvas-container {
+    height: calc(((100vh / 16 * 9) - 4rem) / 2 * 3);
+    width: calc((100vh / 16 * 9) - 4rem);
+    background-color: #EFEFEF;
+    position: relative;
+}
+
+.canvas-container canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    background-color: transparent;
+}
+
+#canvas {
+    z-index: 100;
+}
+
+#input-controller {
+    z-index: 200;
+}
+
+/*Settings*/
+.settings-container {
+    width: 100%;
+    margin-top: 2rem;
+    height: calc(100vh - 4rem - (((100vh / 16 * 9) - 4rem) / 2 * 3) - 2rem);
+} 
+
+
+.material-selector {
+    width: 100%;
+    height: 75%;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-selector section {
+    width: 95%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.material-select {
+    box-sizing: border-box;
+    border: 0.5vw solid rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+.material-select p {
+    margin: 0;
+}
+
+.material-selector .selected {
+    border-color: black;
+}
+
+.eraser {
+    grid-column: 5 / 7;
+    background-color: #B1B1B1;
+}
+
+.eraser.selected {
+    background-color: #484848;
+}
+
+
+/*Brush Setting*/
+.brush-settings-container {
+   background-color: #EFEFEF;
+   padding-bottom: 1rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.brush-settings-container section {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+
+}
+
+.brush-settings-container section div p {
+    margin: 0;
+}
+
+.brush-settings-container .brush-setting {
+    height: 2.5vh;
+    background-color: #B1B1B1;
+    box-sizing: border-box;
+    border: 0.5vw solid rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+.rect {
+    height: 1rem;
+    width: 1rem;
+    background-color: transparent;
+    border: 0.3vw solid white;
+}
+
+.circle {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    background-color: transparent;
+    border: 0.3vw solid white;
+}
+
+.greyed {
+    opacity: 0.5;
+}
+
+.brush-settings-container .selected {
+    background-color: #484848;
+}
+
+.reset {
+    grid-column: 7 / 9;
+}
+
+.info {
+    grid-column: 11 / 13
+}

@@ -3,3 +3,7 @@
 body {
     font-family: 'Space Mono', monospace;
 }
+
+.hidden {
+    display: none;
+}

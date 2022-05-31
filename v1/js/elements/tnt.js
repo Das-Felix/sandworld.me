@@ -14,19 +14,21 @@ function simulateTNT(x, y) {
             var wave = shockwaves[i];
             var dist = getDistance(x, y, wave.x, wave.y);
 
-            if(dist <= wave.outer) {
+            if(dist <= wave.outer || dist > wave.inner) {
 
-                if(dist > wave.inner) {
-                    clearCell(x, y);
-                    createCell(x, y, 6);
+                clearCell(x, y);
+                createCell(x, y, 6);
 
-                    if(wave.strength < 100) {
-                        shockwaves[i].strength = wave.strength + 0.2;
-                    }
-                    return;
+                if(getCellMaterial(x, y + 1) != null && getCellMaterial(x, y + 1) != 0 && getCellMaterial(x, y + 1) != 8) {
+                    console.log("throw")
+                    throwUp(x, y + 1);
                 }
 
+                if(wave.strength < 100) {
+                    shockwaves[i].strength = wave.strength + 0.2;
+                }
                 return;
+
             }
         } 
     }

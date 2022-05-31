@@ -8,14 +8,13 @@ var inactiveValue = 20;
 
 var currentMaterial = 1;
 
-var movedPixels = 0;
 var maxMovedPixels = 3000;
 var pause = false;
 
 var simulationFrame = 0;
 
 function generateGrid(w, h) {
-    for(var i = 0; i < h + 1; i++) {
+    for(var i = 0; i < h; i++) {
         var gridRow = [];
     
         for(var j = 0; j < w; j++) {
@@ -98,8 +97,17 @@ function runSimulation(x, y) {
         case 12:
             simulateOutflow(x, y);
             break;
+        case 13:
+            simulateGas(x, y);
+            break;
+        case 14:
+            simulateMissile(x, y);
+            break;
         case 20:
             simulateGravity(x, y);
+            break;
+        case 44:
+            simulateCell(x, y);
             break;
     }
 }
@@ -162,11 +170,14 @@ function isCellEmpty(x, y) {
     return grid[y] != null && grid[y][x] != null && grid[y][x].type == 0;
 }
 
-function clearCell(x, y) {
+function clearCell(x, y, dec) {
     if(grid[y] == null || grid[y][x] == undefined) return;
     grid[y][x].type = 0;
     grid[y][x].lifetime = 60;
     grid[y][x].data = 0;
+
+    if(dec == null) dec = 0;
+    cellCount = cellCount - (1 - dec)
 
     reactivateCells(x, y);
 }
@@ -175,7 +186,7 @@ function clearRow(y) {
     if(grid[y] == null) return;
 
     for(var i = 0; i < grid[y].length; i++) {
-        clearCell(i, y);
+        clearCell(i, y, 1);
     }
 }
 
@@ -228,9 +239,7 @@ function moveCell(x, y, newX, newY) {
     grid[newY][newX].lifetime = grid[y][x].lifetime;
     grid[newY][newX].data = grid[y][x].data;
 
-    clearCell(x, y);
-    cellCount++;
-
+    clearCell(x, y, 1);
     reactivateCells(x, y);
 }
 
@@ -288,6 +297,7 @@ function createCell(x, y, material, force, data) {
     grid[y][x].data = data;
 
     cellCount++;
+    totalCellCount++;
 }
 
 function setMat(id) {
@@ -296,11 +306,11 @@ function setMat(id) {
 
 function reset() {
 
-    cellCount = 0;
-
     for(var i = 0; i < grid.length; i++) {
         clearRow(i);
     }
+
+    cellCount = 0;
 }
 
 function togglePause() {

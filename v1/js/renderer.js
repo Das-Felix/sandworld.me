@@ -40,9 +40,10 @@ function drawGrid(grid) {
 
             var cell = grid[i][j];
             var type = cell.type;
+            var data = cell.data;
+            var render = true;
 
-            if(type == 20) type = cell.data.mat;
-            
+            if(type == 20 && cell.data != null && cell.data.mat != null) type = cell.data.mat;
 
             var r = 0;
             var g = 0;
@@ -102,10 +103,10 @@ function drawGrid(grid) {
                 
                     break;
                 case 10:
-                    r = 255;
-                    g = 255;
-                    b = 255;
-                    a = 255;
+                    r = 0;
+                    g = 0;
+                    b = 0;
+                    a = 255 - a;
                     break;
                 case 11:
                     r = 180;
@@ -117,6 +118,27 @@ function drawGrid(grid) {
                     g = 165;
                     b = 180;
                     break;
+                case 13:
+                    r = 245;
+                    g = 182;
+                    b = 197;
+                    break;
+                case 14:
+                    r = 214;
+                    g = 187;
+                    b = 37;
+                    break;
+                case 44:
+                    if(data != null) {
+                        r = data.r;
+                        g = data.g;
+                        b = data.b;
+                        break;
+                    }
+
+                    render = false;
+                    break;
+
             }
 
             if(DEBUG) {
@@ -133,12 +155,13 @@ function drawGrid(grid) {
             }
             
 
-            
+            if(render) {
+                imageData.data[index + 0] = r;
+                imageData.data[index + 1] = g;
+                imageData.data[index + 2] = b;
+                imageData.data[index + 3] = a;               
+            }
 
-            imageData.data[index + 0] = r;
-            imageData.data[index + 1] = g;
-            imageData.data[index + 2] = b;
-            imageData.data[index + 3] = a;
 
             index += 4;
         }

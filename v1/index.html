@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script>var display = false;</script>
+
     <script defer src="./js/utils.js"></script>
     <script defer src="./js/renderer.js"></script> 
     <script defer src="./js/animation/AnimationHandler.js"></script>
@@ -28,6 +30,9 @@
     <script defer src="./js/elements/gravity.js"></script>
     <script defer src="./js/elements/inflow.js"></script>
     <script defer src="./js/elements/outflow.js"></script>
+    <script defer src="./js/elements/gas.js"></script>
+    <script defer src="./js/elements/missile.js"></script>
+    <script defer src="./js/elements/custom.js"></script>
     
 
     <link rel="stylesheet" href="./css/colors.css">
@@ -43,7 +48,7 @@
     <button id="camera-button">Start Camera</button>
     <button id="click-photo">Take photo</button> -->
 
-    <div class="debug">
+    <div class="debug hidden">
         <h1>DEBUG MODE - Pixels: <span id="pixelCount"></span> FPS: <span id="fps"></span></h1>
     </div>
 
@@ -94,7 +99,7 @@
                             <p>Lava</p>
                         </div>
 
-                        <div class="material-select gas-color greyed" onclick="" id="mat20">
+                        <div class="material-select gas-color" onclick="setMaterial(13)" id="mat13">
                             <p>Gas</p>
                         </div>
 
@@ -102,15 +107,15 @@
                             <p>Seed</p>
                         </div>
 
-                        <div class="material-select bacteria-color greyed" onclick="" id="mat20">
+                        <!-- <div class="material-select bacteria-color greyed" onclick="" id="mat20">
                             <p>Bacteria</p>
-                        </div>
+                        </div> -->
 
                         <div class="material-select dynamite-color" onclick="setMaterial(8)" id="mat8">
                             <p>TNT</p>
                         </div>
 
-                        <div class="material-select missile-color greyed" onclick="" id="mat20">
+                        <div class="material-select missile-color" onclick="setMaterial(14)" id="mat14">
                             <p>Missile</p>
                         </div>
     
@@ -120,6 +125,10 @@
     
                         <div class="material-select outflow-color" onclick="setMaterial(12)" id="mat12">
                             <p>Outflow</p>
+                        </div>
+
+                        <div class="material-select bacteria-color" onclick="setMaterial(44)" id="mat44">
+                            <p>Custom</p>
                         </div>
 
                         
@@ -136,7 +145,7 @@
                             <div class="rect"></div>
                         </div>
                         
-                        <div onclick="setBrushMode(1);" id="brm1">
+                        <div onclick="setBrushMode(1);" id="brm1" class="selected">
                             <div class="circle"></div>
                         </div>
     
@@ -170,19 +179,40 @@
                     </section>    
                 </div>
 
-                <div class="empty-container">
+                <div class="custom-material-container">
+                    <p>Color</p>
+                    <hr>
+                    <label for="colorRed">R</label>
+                    <input type="range" min="0" max="255" value="100" class="slider" id="colorRed"><br>
+                    <label for="colorGreen">G</label>
+                    <input type="range" min="0" max="255" value="100" class="slider" id="colorGreen"><br>
+                    <label for="colorBlue">B</label>
+                    <input type="range" min="0" max="255" value="100" class="slider" id="colorBlue"><br>
+
+                    <p>Settings</p>
+                    <hr>
+                    <label for="gravityValue">Gravity (<span id="gravityPreview"></span>)</label>
+                    <input type="range" min="-10" max="10" value="1" class="slider" id="gravityValue"><br>
+                    <label for="liquidValue">Liquid</label>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="liquidValue"><br>
+                    <label for="weightValue">Weight</label>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="weightValue"><br>
+                    <label for="densityValue">Density</label>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="densityValue"><br>
 
                 </div> 
 
                 <div class="info-container">
                     
-                    <a href="/info">
-                        <p>Info</p>
-                    </a>
-
-                    <a href="/settings">
-                        <p>Settings</p>
-                    </a>
+                    <section>
+                        <a href="/info">
+                            <p>Info</p>
+                        </a>
+    
+                        <a href="/settings">
+                            <p>Settings</p>
+                        </a>
+                    </section>
 
                 </div>
             </div>

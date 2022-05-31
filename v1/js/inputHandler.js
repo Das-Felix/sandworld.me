@@ -84,25 +84,27 @@ setInterval(() => {
 inputController.addEventListener("mousedown", (event) => {
     mouseDown = true;
 
-    paint(mouseX, mouseY, brushSize);
+    const boundingRect = inputController.getBoundingClientRect();
+
+    const scaleX = inputController.width / boundingRect.width;
+    const scaleY = inputController.height / boundingRect.height;
+
+    const x = Math.floor((event.clientX - boundingRect.left) * scaleX + 0.5);
+    const y = Math.floor((event.clientY - boundingRect.top) * scaleY + 0.5);
+
+    paint(x, y, brushSize);
 
     
 });
 
 inputController.addEventListener("mousemove", (event) => {
-    const boundingRect = canvas.getBoundingClientRect();
+    const boundingRect = inputController.getBoundingClientRect();
 
-    const scaleX = canvas.width / Math.ceil(window.devicePixelRatio) / boundingRect.width;
-    const scaleY = canvas.height / Math.ceil(window.devicePixelRatio) / boundingRect.height;
+    const scaleX = inputController.width / boundingRect.width;
+    const scaleY = inputController.height / boundingRect.height;
 
-    const canvasLeft = (event.clientX - boundingRect.left) * scaleX;
-    const canvasTop = (event.clientY - boundingRect.top) * scaleY;
-
-    const realX = Math.min(Math.floor(canvasLeft), width - 1);
-    const realY = Math.min(Math.floor(canvasTop), height - 1);
-    
-    const x = Math.round(realX * 2, 0);
-    const y = Math.round(realY * 2, 0);
+    const x = Math.floor((event.clientX - boundingRect.left) * scaleX + 0.5);
+    const y = Math.floor((event.clientY - boundingRect.top) * scaleY + 0.5);
 
     lastMouseLoc.x = mouseX;
     lastMouseLoc.y = mouseY;
@@ -205,6 +207,9 @@ function clearSelectedColor() {
     document.getElementById("mat9").classList.remove("selected")
     document.getElementById("mat11").classList.remove("selected")
     document.getElementById("mat12").classList.remove("selected")
+    document.getElementById("mat13").classList.remove("selected")
+    document.getElementById("mat14").classList.remove("selected")
+    document.getElementById("mat44").classList.remove("selected")
 
 }
 
