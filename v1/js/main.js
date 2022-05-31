@@ -1,6 +1,8 @@
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 
+var VERSION = "0.25.1";
+
 context.imageSmoothingEnabled = true;
 
 var cellCount = 0;
@@ -28,6 +30,8 @@ var frameTime = 0, lastLoop = new Date, thisLoop;
 var DEBUG = false;
 var DEBUG_ALL = false;
 
+var statusbar = document.getElementById("status-bar");
+
 checkDebug();
 loadTotalCellcount();
 
@@ -44,9 +48,6 @@ function Update() {
     frameTime+= (thisFrameTime - frameTime) / filterStrength;
     lastLoop = thisLoop;
 
-    //drawArray();
-
-    if(DEBUG) document.getElementById("pixelCount").innerHTML = cellCount;
 } 
 
 function setScreenMode() {
@@ -99,9 +100,8 @@ function setCanvasSize(w, h) {
 //Running Update
 var gameInterval = setInterval(Update, refreshRate);
 
-var fpsOut = document.getElementById('fps');
 setInterval(function(){
-  if(DEBUG) fpsOut.innerHTML = (1000/frameTime).toFixed(1) + " fps";
+  if(DEBUG) setStatus("DEBUG MODE | Cells: " + cellCount + " | FPS: " + (1000/frameTime).toFixed(1), "INFO");
 },1000);
  
 
@@ -124,9 +124,6 @@ function saveTotalCellCount() {
 function checkDebug() {
   if(window.localStorage.getItem('debug') == "true") {
     DEBUG = true;
-    document.querySelectorAll(".debug").forEach((el) => {
-      el.classList.remove("hidden");
-    });
   }
 
   if(window.localStorage.getItem("debug_all") == "true") {
@@ -153,12 +150,32 @@ function disableDebug() {
   window.localStorage.setItem("debug", false);
   window.localStorage.setItem("debug_all", false);
 
-  document.querySelectorAll(".debug").forEach((el) => {
-    el.classList.add("hidden");
-  });
+  clearStatus();
 }
 
 function setRefreshRate(rate) {
   clearInterval(gameInterval)
   gameInterval = setInterval(Update, rate);
+}
+
+//Statusbar
+
+function setStatus(msg, type) {
+  statusbar.innerHTML = msg;
+
+  statusbar.classList.remove("warning");
+  statusbar.classList.remove("info");
+
+  switch(type) {
+    case "WARN":
+      statusbar.classList.add("warning");
+      break;
+    case "INFO":
+      statusbar.classList.add("info")
+      break;
+  }
+}
+
+function clearStatus() {
+  setStatus("v" + VERSION, "DISPLAY")
 }

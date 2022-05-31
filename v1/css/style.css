@@ -64,7 +64,36 @@ canvas {
 }
 
 #canvas {
+    z-index: 100;
     background-color: #EFEFEF;
+}
+
+.canvas-container div {
+    position: absolute;
+    z-index: 200;
+    width: 100%;
+    text-align: center;
+    color: #22B174;
+}
+
+.canvas-container .title {
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 1.5vw;
+    line-height: 1.3vw;
+}
+
+.canvas-container .status-bar {
+    margin: 0;
+    font-size: 1vw;
+}
+
+.title-container .warning {
+    color: red !important;
+}
+
+.title-container .info {
+    color: rgb(255, 151, 81) !important;
 }
 
 /*Settings*/

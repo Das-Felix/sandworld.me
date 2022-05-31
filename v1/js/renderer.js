@@ -144,11 +144,10 @@ function drawGrid(grid) {
             if(DEBUG) {
                 if(!cell.active) a = a - 50;
 
-                if(a == 0) a = 100;
-
                 shockwaves.forEach(wave => {    
                     var dist = getDistance(j, i, wave.x, wave.y);
                     if(dist < wave.outer && dist > wave.inner) {
+                        a = a + 50;
                         r = r + 100;
                     }
                 });
