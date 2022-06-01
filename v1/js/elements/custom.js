@@ -11,6 +11,7 @@ var matData = {
 
 function simulateCell(x, y) {
     var random = Math.floor(Math.random() * (99 - 0 + 1)) + 1;
+    var moved = false;
 
     var data = grid[y][x].data;
 
@@ -27,6 +28,7 @@ function simulateCell(x, y) {
     for(var i = 1; i <= Math.abs(data.gravity); i++) {
         if(isCellEmpty(x, y + dirY)) {
             movedY = true;
+            moved = true;
             moveCell(x, y, x, y + dirY);
             y = y + dirY;
             continue;
@@ -34,6 +36,7 @@ function simulateCell(x, y) {
 
         if(getCellData(x, y + dirY) != null && getCellData(x, y + dirY).density < data.density) {
             movedY = true;
+            moved = true;
             swapCells(x, y, x, y + dirY);
             y = y + dirY;
             continue;
@@ -48,11 +51,13 @@ function simulateCell(x, y) {
     if(!movedY && data.weight < random) {
         if(isCellEmpty(x + dir, y + dirY)) {
             movedY = true;
+            moved = true;
             moveCell(x, y, x + dir, y + dirY);
             x = x + dir;
             y = y + dirY;
         } else if(getCellData(x + dir, y + dirY) != null && getCellData(x + dir, y + dirY).density < data.density) {
             movedY = true;
+            moved = true;
             swapCells(x, y, x + dir, y + dirY);
             y = y + dirY;
             x = x + dir;
@@ -62,16 +67,18 @@ function simulateCell(x, y) {
     if(!movedY && data.liquid > random) {
         if(isCellEmpty(x + dir, y)) {
             movedY = true;
+            moved = true;
             moveCell(x, y, x + dir, y);
             x = x + dir;
         } else if(getCellData(x + dir, y) != null && getCellData(x + dir, y).density < data.density) {
             movedY = true;
+            moved = true;
             swapCells(x, y, x + dir, y);
             x = x + dir;
         }
     }
 
-
+    if(!moved) increaseInactive(x, y);
 }
 
 function getCellData(x, y) {
