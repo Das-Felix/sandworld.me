@@ -20,7 +20,6 @@ function simulateTNT(x, y) {
                 createCell(x, y, 6);
 
                 if(getCellMaterial(x, y + 1) != null && getCellMaterial(x, y + 1) != 0 && getCellMaterial(x, y + 1) != 8) {
-                    console.log("throw")
                     throwUp(x, y + 1);
                 }
 

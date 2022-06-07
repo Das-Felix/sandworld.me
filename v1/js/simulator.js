@@ -103,6 +103,15 @@ function runSimulation(x, y) {
         case 14:
             simulateMissile(x, y);
             break;
+        case 15:
+            simulateSeed(x, y);
+            break;
+        case 16:
+            simulatePlant(x, y);
+            break;
+        case 17:
+            simulateLava(x, y);
+            break;
         case 20:
             simulateGravity(x, y);
             break;

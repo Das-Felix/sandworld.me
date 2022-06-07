@@ -23,14 +23,14 @@ function simulateMissile(x, y) {
     if(d.mat == 0 || d.mat == 14) {
         //Setting Rocket Material otherwise fall down like Sand
 
-        if(getCellMaterial(x, y - 1) != 0 && getCellMaterial(x, y - 1) != 14 && getCellMaterial(x, y - 1) != null)  {
+        if(getCellMaterial(x, y - 1) != 0 && getCellMaterial(x, y - 1) != 14 && getCellMaterial(x, y - 1) != 11 && getCellMaterial(x, y - 1) != null)  {
             var mat = getCellMaterial(x, y - 1)
             clearCell(x, y);
             createCell(x, y, mat);
             return;
         }
 
-        if(getCellMaterial(x + dir, y) != 0 && getCellMaterial(x + dir, y) != 14 && getCellMaterial(x + dir, y) != null)  {
+        if(getCellMaterial(x + dir, y) != 0 && getCellMaterial(x + dir, y) != 14 && getCellMaterial(x, y - 1) != 11 && getCellMaterial(x + dir, y) != null)  {
             var mat = getCellMaterial(x + dir, y)
             clearCell(x, y);
             createCell(x + dir, y, mat);
@@ -41,13 +41,13 @@ function simulateMissile(x, y) {
         var m2 = getCellMaterial(x + 1, y);
         var m3 = getCellMaterial(x - 1, y);
 
-        if(m1 != 0 && m1 != 14 && m1 != null) {
+        if(m1 != 0 && m1 != 14 && m1 != 11 && m1 != null) {
             return grid[y][x].data.mat = m1;
         }
-        if(m2 != 0 && m2 != 14 && m2 != null) {
+        if(m2 != 0 && m2 != 14 && m2 != 11 && m2 != null) {
             return grid[y][x].data.mat = m2;
         }
-        if(m3 != 0 && m3 != 14 && m3 != null) {
+        if(m3 != 0 && m3 != 14 && m3 != 11 && m3 != null) {
             return grid[y][x].data.mat = m3;
         }
 

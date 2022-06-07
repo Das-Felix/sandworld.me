@@ -12,11 +12,25 @@ function renderFrame(frame) {
 
     currentAnimationFrame++;
 
-    if(animationFramesQueue[frame] != null && computed && animationFramesQueue[frame].paint) {
-        var point = animationFramesQueue[frame];
+    if(animationFramesQueue[currentAnimationFrame] != null && computed && animationFramesQueue[currentAnimationFrame].paint) {
+        var point = animationFramesQueue[currentAnimationFrame];
+        var lastPoint = animationFramesQueue[currentAnimationFrame - 1];
 
-        console.log("animation")
-        paint(point.x, point.y, 6, point.material);
+        if(lastPoint && lastPoint.paint) {
+            var duration = 20;
+    
+            for(var i = 0; i < duration; i ++) {
+        
+                progress = i / duration;
+        
+                var x = Math.round(lastPoint.x + (point.x - lastPoint.x) * progress);
+                var y = Math.round(lastPoint.y + (point.y - lastPoint.y) * progress);
+            }
+
+            paint(x, y, point.brushSize, point.material);
+        }
+
+        paint(point.x, point.y, point.brushSize, point.material);
     }
 
     if(recording) {
@@ -68,6 +82,7 @@ function computeAnimation(animation) {
         animationFramesQueue.push(frame);
     });
 
+    console.log("Animation Computed")
     computed = true;
 }
 
@@ -86,13 +101,27 @@ function loadAnimations() {
 
 function startAnimationRecording() {
 
-    recordedAnimation = {
-        "duration": 0,
-        "keyframes": []
-    };
-    
-    recording = true;
-    setStatus("RECORDING", "WARN");
+    var time = 5;
+
+    var animationInterval;
+
+    animationInterval = setInterval(() => {
+        time--;
+        
+        if(time > -1) {
+            setStatus("Recording in " + time + " seconds");
+        } else {
+            recordedAnimation = {
+                "duration": 0,
+                "keyframes": []
+            };
+            
+            recording = true;
+            setStatus("RECORDING", "WARN");
+            clearInterval(animationInterval);
+        }
+
+    }, 1000);
 }
 
 function stopAnimationRecording() {
@@ -105,6 +134,9 @@ function stopAnimationRecording() {
 }
 
 function recordAnimationFrame() {
+
+    console.log("Recording")
+
     recordedAnimation.duration = recordedAnimation.duration + 1;
 
     recordedAnimation.keyframes.push({
@@ -112,6 +144,7 @@ function recordAnimationFrame() {
         y: mouseY,
         material: currentMaterial,
         paint: mouseDown,
+        brushSize: brushSize,
     });
 }
 

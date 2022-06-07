@@ -128,6 +128,28 @@ function drawGrid(grid) {
                     g = 187;
                     b = 37;
                     break;
+                case 15:
+                    r = 128;
+                    g = 105;
+                    b = 74;
+                    break;
+                case 16:
+                    if(data != null && data.flower) {
+                        r = data.r;
+                        g = data.g;
+                        b = data.b;
+                    } else {
+                        r = 22;
+                        g = 107;
+                        b = 11;
+                    }
+                    break;
+                case 17:
+                    r = 214;
+                    g = 95;
+                    b = 51;
+                    a = a - glow;
+                    break;
                 case 44:
                     if(data != null) {
                         r = data.r;
@@ -140,6 +162,26 @@ function drawGrid(grid) {
                     break;
 
             }
+
+            // var size = brushSize;
+            // var x = mouseX;
+            // var y = mouseY;
+
+            // var midX = x - 0.5;
+            // var midY = y - 0.5;
+
+            // for(var i = x-size/2;i < x+size/2; i++) {
+            //     for(var j = y-size/2;j < y+size/2; j++) {
+            //         var a = difference(midX, i);
+            //         var b = difference(midY, j);
+        
+            //         var distance = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+        
+            //         if(distance <= (size / 2)) {
+            //             a = a - 20;
+            //         }
+            //     }
+            // }
 
             if(DEBUG) {
                 if(!cell.active) a = a - 50;

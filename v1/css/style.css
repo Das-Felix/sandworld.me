@@ -74,6 +74,7 @@ canvas {
     width: 100%;
     text-align: center;
     color: #22B174;
+    user-select: none;
 }
 
 .canvas-container .title {

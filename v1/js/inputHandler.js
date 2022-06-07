@@ -40,6 +40,9 @@ function paint(x, y, size, mat) {
         return;
     }
 
+    midX = x - 0.5;
+    midY = y - 0.5;
+
     if(brushMode == 0) {
         for(var i = x-size/2;i < x+size/2; i++) {
             for(var j = y-size/2;j < y+size/2; j++) {
@@ -51,8 +54,8 @@ function paint(x, y, size, mat) {
 
     for(var i = x-size/2;i < x+size/2; i++) {
         for(var j = y-size/2;j < y+size/2; j++) {
-            var a = difference(x, i);
-            var b = difference(y, j);
+            var a = difference(midX, i);
+            var b = difference(midY, j);
 
             var distance = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 
@@ -209,6 +212,8 @@ function clearSelectedColor() {
     document.getElementById("mat12").classList.remove("selected")
     document.getElementById("mat13").classList.remove("selected")
     document.getElementById("mat14").classList.remove("selected")
+    document.getElementById("mat15").classList.remove("selected")
+    document.getElementById("mat17").classList.remove("selected")
     document.getElementById("mat44").classList.remove("selected")
 
 }
