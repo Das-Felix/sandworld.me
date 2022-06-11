@@ -14,6 +14,7 @@
     <script defer src="./js/inputHandler.js"></script>
     <script defer src="./js/main.js"></script>
     <script defer src="./js/imageLoader.js"></script>
+    <script defer src="./js/snapshotHandler.js"></script>
     <!-- <script defer src="./js/fluid.js"></script>
     <script defer src="./js/effectHandler.js"></script> -->
 
@@ -36,13 +37,14 @@
     <script defer src="./js/elements/seed.js"></script>
     <script defer src="./js/elements/plant.js"></script>
     <script defer src="./js/elements/lava.js"></script>
+    <script defer src="./js/elements/bacteria.js"></script>
     
 
     <link rel="stylesheet" href="./css/colors.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/utils.css">
 
-    <title>Sandspiel</title>
+    <title>sandworld.me</title>
 </head>
 <body>
 
@@ -56,14 +58,17 @@
 
             <div class="canvas-container">
                 <div class="title-container">
-                    <p class="title">Pixelbox.io</p>
-                    <p class="status-bar" id="status-bar">v0.25.1</p>
+                    <p class="title">sandworld.me</p>
+                    <p class="status-bar" id="status-bar">v1.0</p>
                 </div>
                 <canvas id="input-controller" width="200" height="300"></canvas>
                 <canvas id="canvas" width="200" height="300"></canvas>
             </div>
 
             <div class="settings-container">
+
+                <a class="legal" href="http://felix-raffelsberger.at/impressum">Impressum</a>
+
                 <div class="material-selector">
                     <section>
                         <div class="material-select sand-color selected" onclick="setMaterial(1)" id="mat1">
@@ -110,6 +115,10 @@
                             <p>Seed</p>
                         </div>
 
+                        <div class="material-select bacteria-color" onclick="setMaterial(18)" id="mat18">
+                            <p>Bacteria</p>
+                        </div>
+
                         <!-- <div class="material-select bacteria-color greyed" onclick="" id="mat20">
                             <p>Bacteria</p>
                         </div> -->
@@ -129,11 +138,6 @@
                         <div class="material-select outflow-color" onclick="setMaterial(12)" id="mat12">
                             <p>Outflow</p>
                         </div>
-
-                        <div class="material-select bacteria-color" onclick="setMaterial(44)" id="mat44">
-                            <p>Custom</p>
-                        </div>
-
                         
                     </section>
                 </div>
@@ -168,7 +172,7 @@
                             <p>20</p>
                         </div>
     
-                        <div onclick="undo()" id="undo">
+                        <div onclick="loadSnapshot()" id="undo">
                             <p><-</p>
                         </div>
     
@@ -181,43 +185,6 @@
                         </div>
                     </section>    
                 </div>
-<!-- 
-                <div class="custom-material-container">
-                    <p>Color</p>
-                    <hr>
-                    <label for="colorRed">R</label>
-                    <input type="range" min="0" max="255" value="100" class="slider" id="colorRed"><br>
-                    <label for="colorGreen">G</label>
-                    <input type="range" min="0" max="255" value="100" class="slider" id="colorGreen"><br>
-                    <label for="colorBlue">B</label>
-                    <input type="range" min="0" max="255" value="100" class="slider" id="colorBlue"><br>
-
-                    <p>Settings</p>
-                    <hr>
-                    <label for="gravityValue">Gravity (<span id="gravityPreview"></span>)</label>
-                    <input type="range" min="-10" max="10" value="1" class="slider" id="gravityValue"><br>
-                    <label for="liquidValue">Liquid</label>
-                    <input type="range" min="0" max="100" value="0" class="slider" id="liquidValue"><br>
-                    <label for="weightValue">Weight</label>
-                    <input type="range" min="0" max="100" value="0" class="slider" id="weightValue"><br>
-                    <label for="densityValue">Density</label>
-                    <input type="range" min="0" max="100" value="50" class="slider" id="densityValue"><br>
-
-                </div> 
-
-                <div class="info-container">
-                    
-                    <section>
-                        <a href="/info">
-                            <p>Info</p>
-                        </a>
-    
-                        <a href="/settings">
-                            <p>Settings</p>
-                        </a>
-                    </section>
-
-                </div> -->
             </div>
         </div>
     </main>

@@ -141,3 +141,25 @@ function moveAwaySideways(x, y, x1, y1) {
         moveCell(x1, y1, x1 + dir, y1)
     }
 }
+
+function clone(Obj) {
+    let buf; // the cloned object
+    if (Obj instanceof Array) {
+      buf = []; // create an empty array
+      var i = Obj.length;
+      while (i --) {
+        buf[i] = clone(Obj[i]); // recursively clone the elements
+      }
+      return buf;
+    } else if (Obj instanceof Object) {
+      buf = {}; // create an empty object
+      for (const k in Obj) {
+        if (Obj.hasOwnProperty(k)) { // filter out another array's index
+          buf[k] = clone(Obj[k]); // recursively clone the value
+        }     
+      }
+      return buf;
+    } else {
+      return Obj;
+    }
+  }

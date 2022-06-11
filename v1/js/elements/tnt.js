@@ -84,9 +84,7 @@ function moveSideways(x, y) {
     }
 }
 
-function isFire(x, y) {
-    return getCellMaterial(x, y) == 6;
-}
+
 
 function throwUp(x, y) {
     var mat = getCellMaterial(x, y);

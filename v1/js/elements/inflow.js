@@ -2,6 +2,7 @@ var INFLOW_RATE = 300;
 
 function simulateInflow(x, y) {
 
+    
     var data = grid[y][x].data;
 
     if(data == 0 || data == null) {
@@ -27,6 +28,7 @@ function simulateInflow(x, y) {
             var mat = getCellMaterial(x + v.x, y + v.y);
             if(mat != 0 && mat != 11) {
                 data.mat = mat;
+                data.last = INFLOW_RATE - 1;
             }
         })
     }

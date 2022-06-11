@@ -85,6 +85,7 @@ setInterval(() => {
 }, 100);
 
 inputController.addEventListener("mousedown", (event) => {
+    saveSnapshot();
     mouseDown = true;
 
     const boundingRect = inputController.getBoundingClientRect();
@@ -95,9 +96,7 @@ inputController.addEventListener("mousedown", (event) => {
     const x = Math.floor((event.clientX - boundingRect.left) * scaleX + 0.5);
     const y = Math.floor((event.clientY - boundingRect.top) * scaleY + 0.5);
 
-    paint(x, y, brushSize);
-
-    
+    paint(x, y, brushSize);    
 });
 
 inputController.addEventListener("mousemove", (event) => {
@@ -214,6 +213,7 @@ function clearSelectedColor() {
     document.getElementById("mat14").classList.remove("selected")
     document.getElementById("mat15").classList.remove("selected")
     document.getElementById("mat17").classList.remove("selected")
+    document.getElementById("mat18").classList.remove("selected")
 }
 
 function clearSelectedBrushSize() {

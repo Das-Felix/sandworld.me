@@ -91,6 +91,7 @@ function runSimulation(x, y) {
             break
         case 10:
             simulateSmoke(x, y);
+            break;
         case 11:
             simulateInflow(x, y);
             break;
@@ -112,6 +113,9 @@ function runSimulation(x, y) {
         case 17:
             simulateLava(x, y);
             break;
+        case 18:
+            simulateBacteria(x, y);
+            break
         case 20:
             simulateGravity(x, y);
             break;

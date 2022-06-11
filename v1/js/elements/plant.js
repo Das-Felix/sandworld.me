@@ -1,7 +1,9 @@
 var flowerColors = [
-    { r: 237, g: 123, b: 62,}, 
-    { r: 237, g: 185, b: 62,},
-    { r: 237, g: 220, b: 62}, 
+    {r: 224, g: 225, b: 64},
+    {r: 191, g: 104, b: 98},
+    {r: 80, g: 165, b: 196},
+    {r: 245, g: 169, b: 80},
+    {r: 245, g: 93, b: 80},
 ]
 
 function simulatePlant(x, y) {
@@ -41,7 +43,7 @@ function simulatePlant(x, y) {
 
     var burnVectors = [{x: 1, y: 0}, {x: -1, y: 0}, {x: 0, y: -1}, {x: 0, y: 1}]
     burnVectors.forEach(v => {
-        if(getCellMaterial(x + v.x, y + v.y) == 6) {
+        if(isFire(x + v.x, y + v.y)) {
             clearCell(x, y);
             createCell(x, y, 6);
             return;

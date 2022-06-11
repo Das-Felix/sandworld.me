@@ -13,6 +13,8 @@
     <script defer src="../js/inputHandler.js"></script>
     <script defer src="../js/main.js"></script>
     <script defer src="../js/imageLoader.js"></script>
+    <script defer src="./js/displayHandler.js"></script>
+
     <!-- <script defer src="./js/fluid.js"></script>
     <script defer src="./js/effectHandler.js"></script> -->
 
@@ -34,6 +36,8 @@
     <script defer src="../js/elements/seed.js"></script>
     <script defer src="../js/elements/plant.js"></script>
     <script defer src="../js/elements/lava.js"></script>
+    <script defer src="../js/elements/bacteria.js"></script>
+    <script defer src="../js/snapshotHandler.js"></script>
     
 
     <link rel="stylesheet" href="../css/colors.css">
@@ -49,10 +53,16 @@
     <button id="click-photo">Take photo</button> -->
     
     <main>
+
+        <div class="info-page hidden" if="info-page">
+            <p>Info</p>
+        </div>
+
         <div class="inner">
 
             <div class="canvas-container">
                 <canvas id="input-controller" width="200" height="300"></canvas>
+                <p class="title">sandworld.me</p>
                 <p class="creds">Felix Raffelsberger & Tim Edelbauer, 1aHMNM</p>
                 <canvas id="canvas" width="200" height="300"></canvas>
             </div>
@@ -106,7 +116,7 @@
                             <p>Seed</p>
                         </div>
 
-                        <div class="material-select bacteria-color greyed" onclick="" id="mat20">
+                        <div class="material-select bacteria-color" onclick="setMaterial(18)" id="mat18">
                             <p>Bacteria</p>
                         </div>
 

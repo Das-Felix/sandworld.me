@@ -67,14 +67,14 @@ function drawGrid(grid) {
 
                     break;
                 case 3:
-                    r = 98;
-                    g = 98;
-                    b = 98;
+                    r = 115;
+                    g = 115;
+                    b = 115;
                     break;
                 case 4:
-                    r = 155;
-                    g = 89;
-                    b = 55;
+                    r = 110;
+                    g = 74;
+                    b = 56;
                     break;
                 case 5:
                     r = 157;
@@ -97,9 +97,9 @@ function drawGrid(grid) {
                     b = 0;
                     break;
                 case 9:
-                    r = 79;
-                    g = 121;
-                    b = 22;
+                    r = 86;
+                    g = 185;
+                    b = 94;
                 
                     break;
                 case 10:
@@ -109,9 +109,9 @@ function drawGrid(grid) {
                     a = 255 - a;
                     break;
                 case 11:
-                    r = 180;
-                    g = 60;
-                    b = 255;
+                    r = 156;
+                    g = 69;
+                    b = 163;
                     break;
                 case 12:
                     r = 100;
@@ -139,9 +139,9 @@ function drawGrid(grid) {
                         g = data.g;
                         b = data.b;
                     } else {
-                        r = 22;
-                        g = 107;
-                        b = 11;
+                        r = 66;
+                        g = 142;
+                        b = 56;
                     }
                     break;
                 case 17:
@@ -149,6 +149,11 @@ function drawGrid(grid) {
                     g = 95;
                     b = 51;
                     a = a - glow;
+                    break;
+                case 18:
+                    r = 142;
+                    g = 116;
+                    b = 199;
                     break;
                 case 44:
                     if(data != null) {

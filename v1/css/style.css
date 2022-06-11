@@ -82,6 +82,7 @@ canvas {
     margin-bottom: 0;
     font-size: 1.5vw;
     line-height: 1.3vw;
+    font-style: italic;
 }
 
 .canvas-container .status-bar {
@@ -102,6 +103,15 @@ canvas {
     margin-left: 2rem;
     width: 100%;
     height: 100%;
+    position: relative;
+    font-size: 1.5vh;
+}
+
+.legal {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .material-selector {
@@ -127,7 +137,7 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1vw;
+    font-size: 0.9vw;
     cursor: pointer;
 }
 
@@ -182,7 +192,7 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1vw;
+    font-size: 0.9vw;
     cursor: pointer;
 }
 

@@ -27,7 +27,7 @@ function simulateWood(x, y) {
 }
 
 function isFire(x, y) {
-    return getCellMaterial(x, y) == 6;
+    return getCellMaterial(x, y) == 6 || getCellMaterial(x, y) == 17;
 }
 
 function multiplyFire(x, y) {
