@@ -168,3 +168,11 @@ main .inner {
 .info {
     grid-column: 11 / 13
 }
+
+.creds {
+    z-index: 300;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

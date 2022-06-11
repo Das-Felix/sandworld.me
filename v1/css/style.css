@@ -102,7 +102,6 @@ canvas {
     margin-left: 2rem;
     width: 100%;
     height: 100%;
-    overflow: scroll;
 }
 
 .material-selector {

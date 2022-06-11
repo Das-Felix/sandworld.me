@@ -214,8 +214,6 @@ function clearSelectedColor() {
     document.getElementById("mat14").classList.remove("selected")
     document.getElementById("mat15").classList.remove("selected")
     document.getElementById("mat17").classList.remove("selected")
-    document.getElementById("mat44").classList.remove("selected")
-
 }
 
 function clearSelectedBrushSize() {

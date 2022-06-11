@@ -9,11 +9,10 @@ function simulateAcid(x, y) {
     if(isCellEmpty(x, y + 1)) {
         moveCell(x, y, x, y + 1)
         return;
-    } else {
-        if(simAcid(x, y + 1)) {
-            return;
-        }
     }
+
+    
+    if(simAcid(x, y)) return;
 
     if(isCellEmpty(x + 1, y)) {
         moveCell(x, y, x + 1, y)
@@ -25,10 +24,6 @@ function simulateAcid(x, y) {
         moveCell(x, y, x - 1, y);
         return;
     }
-
-    //Removing Cells
-
-    simAcid(x, y);
 
     increaseInactive(x, y);
 }

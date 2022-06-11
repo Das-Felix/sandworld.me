@@ -31,6 +31,9 @@
     <script defer src="../js/elements/outflow.js"></script>
     <script defer src="../js/elements/gas.js"></script>
     <script defer src="../js/elements/missile.js"></script>
+    <script defer src="../js/elements/seed.js"></script>
+    <script defer src="../js/elements/plant.js"></script>
+    <script defer src="../js/elements/lava.js"></script>
     
 
     <link rel="stylesheet" href="../css/colors.css">
@@ -45,13 +48,12 @@
     <button id="camera-button">Start Camera</button>
     <button id="click-photo">Take photo</button> -->
     
-    <p class="creds">Felix Raffelsberger & Tim Edelbauer, 1aHMNM</p>
-
     <main>
         <div class="inner">
 
             <div class="canvas-container">
                 <canvas id="input-controller" width="200" height="300"></canvas>
+                <p class="creds">Felix Raffelsberger & Tim Edelbauer, 1aHMNM</p>
                 <canvas id="canvas" width="200" height="300"></canvas>
             </div>
 
@@ -76,7 +78,7 @@
                             <p>Water</p>
                         </div>
 
-                        <div class="material-select lava-color greyed" onclick="" id="mat20">
+                        <div class="material-select lava-color" onclick="setMaterial(17)" id="mat17">
                             <p>Lava</p>
                         </div>
 
@@ -100,7 +102,7 @@
                             <p>Oil</p>
                         </div>
 
-                        <div class="material-select seed-color greyed" onclick="" id="mat20">
+                        <div class="material-select seed-color" onclick="setMaterial(15)" id="mat15">
                             <p>Seed</p>
                         </div>
 
