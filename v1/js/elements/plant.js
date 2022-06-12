@@ -80,7 +80,9 @@ function simulatePlant(x, y) {
                 });
             }
 
-            grid[y][x].data.grow = 0;
+            if(grid[y][x].data != null) {
+                grid[y][x].data.grow = 0;
+            }
 
 
         }
@@ -112,7 +114,9 @@ function simulatePlant(x, y) {
             });
         }
 
-        grid[y][x].data.grow = 0;
+        if(grid[y][x].data != null) {
+            grid[y][x].data.grow = 0;
+        }
     }
 
 }

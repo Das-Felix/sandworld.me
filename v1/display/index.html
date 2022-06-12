@@ -13,7 +13,8 @@
     <script defer src="../js/inputHandler.js"></script>
     <script defer src="../js/main.js"></script>
     <script defer src="../js/imageLoader.js"></script>
-    <script defer src="./js/displayHandler.js"></script>
+    <script defer src="../js/displayHandler.js"></script>
+    <script defer src="../js/snapshotHandler.js"></script>
 
     <!-- <script defer src="./js/fluid.js"></script>
     <script defer src="./js/effectHandler.js"></script> -->
@@ -37,7 +38,6 @@
     <script defer src="../js/elements/plant.js"></script>
     <script defer src="../js/elements/lava.js"></script>
     <script defer src="../js/elements/bacteria.js"></script>
-    <script defer src="../js/snapshotHandler.js"></script>
     
 
     <link rel="stylesheet" href="../css/colors.css">
@@ -54,8 +54,35 @@
     
     <main>
 
-        <div class="info-page hidden" if="info-page">
-            <p>Info</p>
+        <div class="info-page hidden" id="info-page">
+            <div class="inner">
+                <h1>sandworld.me</h1>
+
+                <p>Sandworld.me is a falling-sand sandbox game, you can play around with many different elements and see how they react with each other.
+                    <br>
+                    <br><br><br>
+                    If you like being creative, or you are just being bored in class, you can try out our browsergame and leave some feedback.<br>
+                    <span class="green">hello@thepixelbox.io</span>  
+                    
+                    <br>
+                    <br>
+                    <br>
+                    We are open-source
+                    <br>
+                    <span class="green">sandworld.me/code</span>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <h2>
+                        <span>Play the game now</span><br>
+                        <span class="italic green">sandworld.me</span>
+                    </h2>
+                </p>
+
+                <button onclick="toggleInfo()">Play</button>
+            </div>
         </div>
 
         <div class="inner">
@@ -175,7 +202,7 @@
                             <p>Reset</p>
                         </div>
 
-                        <a class="brush-setting info" href="/info">
+                        <a class="brush-setting info" onclick="toggleInfo()">
                             <p>Info</p>
                         </a>
     

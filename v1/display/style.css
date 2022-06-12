@@ -186,7 +186,7 @@ main .inner {
     width: 100%;
     text-align: center;
     font-size: 1vh;
-    color: #22B174;
+    color: var(--green);
 }
 
 .title {
@@ -198,5 +198,76 @@ main .inner {
     font-size: 2.5vh;
     font-weight: 900;
     font-style: italic;
-    color: #22B174;
+    color: var(--green);
+}
+
+/*Info Page*/
+
+.info-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-page .inner {
+    height: calc(100vh - 4rem);
+    width: calc(var(--width) - 4rem);
+    position: relative;
+    background-color: #EFEFEF;
+}
+
+.info-page h1 {
+    margin-top: 1vh;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5vh;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--green);
+}
+
+.info-page p {
+    margin-top: 9vh;
+    font-size: 1.3vh;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.info-page .green {
+    color: var(--green);
+}
+
+.info-page a {
+    text-decoration: none;
+    color: black;
+}
+
+.info-page button {
+    position: absolute;
+    bottom: 1vh;
+    right: 1vh;
+
+    height: 2.5vh;
+    background-color: #B1B1B1;
+    box-sizing: border-box;
+    border: 0.3vh solid rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vh;
+    cursor: pointer;
+    width: 7vh;
+}
+
+.info-page h2 {
+    font-weight: lighter;
+    font-size: 1.8vh;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.info-page .italic {
+    font-style: italic;
 }
