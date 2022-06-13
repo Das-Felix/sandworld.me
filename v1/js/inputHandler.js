@@ -141,6 +141,11 @@ inputController.addEventListener('touchend', (event) => {
 
 
 inputController.addEventListener('touchmove', (event) => {
+
+    if(display) {
+        resetResetCountdown();
+    }
+
     const boundingRect = canvas.getBoundingClientRect();
 
     event.preventDefault();

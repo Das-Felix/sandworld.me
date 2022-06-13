@@ -270,4 +270,31 @@ main .inner {
 
 .info-page .italic {
     font-style: italic;
+    font-weight: bold;
+    font-size: 2.5vh;
 }
+
+
+.countdown {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--green);
+}
+
+.countdown p {
+    font-size: 1.5vh;
+    margin: 0;
+    margin-bottom: 1vh;
+}
+
+.countdown h1 {
+    margin: 0;
+    font-size: 10vh;
+    line-height: 9vh;
+}
+

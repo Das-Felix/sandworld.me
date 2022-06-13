@@ -89,7 +89,7 @@ function computeAnimation(animation) {
 loadAnimations();
 
 function loadAnimations() {
-    fetch("./js/animation/animations/animation_02.json")
+    fetch("../js/animation/animations/animation_02.json")
     .then(response => {
         return response.json();
     })
@@ -157,4 +157,8 @@ function playRecordedAnimation() {
         animationFramesQueue.push(frame);
     });
 
+}
+
+function playAnimation() {
+    currentAnimationFrame = 0;
 }
