@@ -3,10 +3,10 @@ var infoSince = 0;
 
 var infoOpen = false;
 
-var inactiveCountdown = 10;
+var inactiveCountdown = 20;
 var inactiveCountdownEnabled = false;
 
-var INACTIVE_AFTER = 60;
+var INACTIVE_AFTER = 300;
 
 
 

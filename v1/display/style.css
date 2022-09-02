@@ -284,6 +284,8 @@ main .inner {
     align-items: center;
     text-align: center;
     color: var(--green);
+    z-index: 199;
+
 }
 
 .countdown p {
@@ -297,4 +299,6 @@ main .inner {
     font-size: 10vh;
     line-height: 9vh;
 }
+
+
 
