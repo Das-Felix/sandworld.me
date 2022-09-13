@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 
-var VERSION = "0.25.1";
+var VERSION = "1.1";
 
 context.imageSmoothingEnabled = true;
 
