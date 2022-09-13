@@ -119,4 +119,6 @@ function simulatePlant(x, y) {
         }
     }
 
+    increaseInactive(x, y);
+
 }

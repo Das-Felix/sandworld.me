@@ -29,4 +29,6 @@ function simulateLava(x, y) {
         return;
     }
 
+    increaseInactive(x, y);
+
 }

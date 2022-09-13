@@ -37,4 +37,6 @@ function simulateGas(x, y) {
         moveCell(x, y, x + vec.x, y + vec.y);
     }
 
+    increaseInactive(x, y);
+
 }

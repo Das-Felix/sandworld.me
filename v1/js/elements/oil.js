@@ -22,7 +22,7 @@ function simulateOil(x, y) {
         return;
     }
     
-    if(random > 1) return;
+    if(random > 1) return increaseInactive(x, y);
     
     var vec1 = getRandomVector();
     var vec2 = getRandomVector();

@@ -17,6 +17,7 @@ function simulateMissile(x, y) {
             dirY: -1,
         }
 
+        increaseInactive(x, y);
         return;
     }
 
@@ -60,6 +61,7 @@ function simulateMissile(x, y) {
         }
 
 
+        increaseInactive(x, y);
         return;
     }
 
@@ -85,5 +87,5 @@ function simulateMissile(x, y) {
     grid[y][x].dirX = dirX;
     grid[y][x].dirY = dirY;
  
-    
+    increaseInactive(x, y);
 }

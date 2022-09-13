@@ -28,4 +28,6 @@ function simulateBacteria(x, y) {
         grid[y][x].data = true;
     }
 
+    increaseInactive(x, y);
+
 }
