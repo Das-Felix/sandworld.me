@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>var display = true;</script>
+    <script defer src="../js/utils.js"></script>
+    <script defer src="../js/renderer.js"></script> 
+    <script defer src="../js/animation/AnimationHandler.js"></script>
+    <script defer src="../js/simulator.js"></script>
+    <script defer src="../js/inputHandler.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/imageLoader.js"></script>
+    <script defer src="../js/displayHandler.js"></script>
+    <script defer src="../js/snapshotHandler.js"></script>
+
+    <!-- <script defer src="./js/fluid.js"></script>
+    <script defer src="./js/effectHandler.js"></script> -->
+
+    <!--Element Imports-->
+    <script defer src="../js/elements/sand.js"></script>
+    <script defer src="../js/elements/water.js"></script>
+    <script defer src="../js/elements/fire.js"></script>
+    <script defer src="../js/elements/stone.js"></script>
+    <script defer src="../js/elements/smoke.js"></script>
+    <script defer src="../js/elements/oil.js"></script>
+    <script defer src="../js/elements/acid.js"></script>
+    <script defer src="../js/elements/tnt.js"></script>
+    <script defer src="../js/elements/wood.js"></script>
+    <script defer src="../js/elements/gravity.js"></script>
+    <script defer src="../js/elements/inflow.js"></script>
+    <script defer src="../js/elements/outflow.js"></script>
+    <script defer src="../js/elements/gas.js"></script>
+    <script defer src="../js/elements/missile.js"></script>
+    <script defer src="../js/elements/seed.js"></script>
+    <script defer src="../js/elements/plant.js"></script>
+    <script defer src="../js/elements/lava.js"></script>
+    <script defer src="../js/elements/bacteria.js"></script>
+    
+
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../css/utils.css">
+
+    <title>Sandspiel</title>
+</head>
+<body>
+    
+    <!-- <video id="video" width="300" height="200" autoplay></video>
+    <button id="camera-button">Start Camera</button>
+    <button id="click-photo">Take photo</button> -->
+    
+    <main>
+
+        <div class="info-page hidden" id="info-page">
+            <div class="inner">
+                <h1>sandworld.me</h1>
+
+                <p>Sandworld.me is a falling-sand sandbox game, you can play around with many different elements and see how they react with each other.
+                    <br>
+                    <br><br><br>
+                    If you like being creative, or you are just being bored in class, you can try out our browsergame and leave some feedback.<br>
+                    <span class="green">hello@sandworld.me</span>  
+                    
+                    <br>
+                    <br>
+                    <br>
+                    We are open-source
+                    <br>
+                    <span class="green">sandworld.me/code</span>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <h2>
+                        <span>Play the game now</span><br>
+                        <span class="italic green">sandworld.me</span>
+                    </h2>
+                </p>
+
+                <button onclick="toggleInfo()">Play</button>
+            </div>
+        </div>
+
+        <div class="inner">
+
+            <div class="canvas-container">
+                <canvas id="input-controller" width="200" height="300"></canvas>
+                <p class="title">sandworld.me</p>
+                <p class="creds">Felix Raffelsberger & Tim Edelbauer, 2aHMNM</p>
+
+                <div class="countdown hidden" id="countdown">
+                    <div>
+                        <p>Press to continue</p>
+                        <h1 id="countdown-time">10</h1>
+                    </div>
+                </div>
+
+                <canvas id="canvas" width="200" height="300"></canvas>
+            </div>
+
+            <div class="settings-container">
+                <div class="material-selector">
+                    <section>
+                        <div class="material-select sand-color selected" onclick="setMaterial(1)" id="mat1">
+                            <p>Sand</p>
+                        </div>
+                        
+                        <div class="material-select stone-color" onclick="setMaterial(3)" id="mat3">
+                            <p>Stone</p>
+                        </div>
+
+                        
+                        <div class="material-select fire-color first" onclick="setMaterial(6)" id="mat6">
+                            <p>Fire</p>
+                        </div>
+
+                        
+                        <div class="material-select water-color" onclick="setMaterial(2)" id="mat2">
+                            <p>Water</p>
+                        </div>
+
+                        <div class="material-select lava-color" onclick="setMaterial(17)" id="mat17">
+                            <p>Lava</p>
+                        </div>
+
+                        <div class="material-select gas-color" onclick="setMaterial(13)" id="mat13">
+                            <p>Gas</p>
+                        </div>
+                        
+                        <div class="material-select brick-color" onclick="setMaterial(5)" id="mat5">
+                            <p>Brick</p>
+                        </div>
+
+                        <div class="material-select wood-color" onclick="setMaterial(4)" id="mat4">
+                            <p>Wood</p>
+                        </div>
+
+                        <div class="material-select acid-color" onclick="setMaterial(9)" id="mat9">
+                            <p>Acid</p>
+                        </div>
+                 
+                        <div class="material-select oil-color" onclick="setMaterial(7)" id="mat7">
+                            <p>Oil</p>
+                        </div>
+
+                        <div class="material-select seed-color" onclick="setMaterial(15)" id="mat15">
+                            <p>Seed</p>
+                        </div>
+
+                        <div class="material-select bacteria-color" onclick="setMaterial(18)" id="mat18">
+                            <p>Bacteria</p>
+                        </div>
+
+                        <div class="material-select dynamite-color" onclick="setMaterial(8)" id="mat8">
+                            <p>TNT</p>
+                        </div>
+
+                        <div class="material-select missile-color" onclick="setMaterial(14)" id="mat14">
+                            <p>Missile</p>
+                        </div>
+    
+                        <div class="material-select inflow-color" onclick="setMaterial(11)" id="mat11">
+                            <p>Cloner</p>
+                        </div>
+    
+                        <div class="material-select outflow-color" onclick="setMaterial(12)" id="mat12">
+                            <p>Remover</p>
+                        </div>
+
+                        <div class="material-select eraser" onclick="setMaterial(0)" id="mat0">
+                            <p>Eraser</p>
+                        </div>
+
+                        
+                    </section>
+                </div>
+
+                <div class="brush-settings-container">
+                    <section>
+    
+                        <div class="brush-setting" onclick="setBrushSize(1);" id="br1">
+                            <p>1</p>
+                        </div>
+    
+                        <div class="brush-setting selected" onclick="setBrushSize(5);" id="br5" class="selected">
+                            <p>5</p>
+                        </div>
+    
+                        <div class="brush-setting" onclick="setBrushSize(10);" id="br10">
+                            <p>10</p>
+                        </div>
+                        
+                        <div class="brush-setting" onclick="setBrushSize(20);" id="br20">
+                            <p>20</p>
+                        </div>
+
+                        <div class="brush-setting" onclick="setBrushMode(0);" id="brm0">
+                            <div class="rect"></div>
+                        </div>
+                        
+                        <div class="brush-setting selected" onclick="setBrushMode(1);" id="brm1">
+                            <div class="circle"></div>
+                        </div>
+    
+                        <div class="brush-setting reset" onclick="reset()" id="reset">
+                            <p>Reset</p>
+                        </div>
+
+                        <div class="brush-setting exit" onclick="exit()">
+                            <p>Exit</p>
+                        </div>
+
+                        <!-- <div class="brush-setting gallery" onclick="reset()" id="reset">
+                            <p>Gallery</p>
+                        </div> -->
+
+                        <a class="brush-setting info" onclick="toggleInfo()">
+                            <p>Info</p>
+                        </a>
+    
+                    </section>    
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

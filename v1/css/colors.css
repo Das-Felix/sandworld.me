@@ -1,0 +1,67 @@
+:root {
+    --green: #22B174;
+}
+
+.sand-color {
+    background-color: #C1AD78;
+}
+
+.water-color {
+    background-color: #6B8DC4;
+}
+
+.stone-color {
+    background-color: #8E8E8E;
+}
+
+.wood-color {
+    background-color: #6E5A3A;
+}
+
+.brick-color {
+    background-color: #743737;
+}
+
+.fire-color {
+    background-color: #D68B33;
+}
+
+.oil-color {
+    background-color: #4D4D4D;
+}
+
+.dynamite-color {
+    background-color: #BA3B3B;
+}
+
+.acid-color {
+    background-color: #73ac50;
+}
+
+.inflow-color {
+    background-color: #9B21A0;
+}
+
+.outflow-color {
+    background-color: #2D8695;
+}
+
+.lava-color {
+    background-color: #D65F33;
+}
+
+.missile-color {
+    background-color: #D6BB25;
+}
+
+.seed-color {
+    background-color: #226D24;
+}
+
+.bacteria-color {
+    background-color: #8E74C7;
+}
+
+.gas-color {
+    background-color: #F5B6C5;
+}

@@ -1,0 +1,4296 @@
+{
+    "duration": 613,
+    "keyframes": [
+        {
+            "x": 77,
+            "y": 146,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 73,
+            "y": 146,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 70,
+            "y": 146,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 68,
+            "y": 146,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 65,
+            "y": 146,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 63,
+            "y": 146,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 60,
+            "y": 146,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 56,
+            "y": 146,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 52,
+            "y": 147,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 48,
+            "y": 148,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 45,
+            "y": 149,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 41,
+            "y": 150,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 36,
+            "y": 151,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 30,
+            "y": 152,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 27,
+            "y": 152,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 25,
+            "y": 153,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 24,
+            "y": 153,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 23,
+            "y": 154,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 22,
+            "y": 155,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 21,
+            "y": 155,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 20,
+            "y": 157,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 19,
+            "y": 158,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 18,
+            "y": 159,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 17,
+            "y": 160,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 16,
+            "y": 161,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 15,
+            "y": 162,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 14,
+            "y": 162,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 13,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 12,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 10,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 9,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 7,
+            "y": 164,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 6,
+            "y": 164,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 5,
+            "y": 164,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 3,
+            "y": 164,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 2,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 1,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 1,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 163,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 1,
+            "y": 162,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 2,
+            "y": 161,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 3,
+            "y": 160,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 5,
+            "y": 159,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 7,
+            "y": 157,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 9,
+            "y": 155,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 13,
+            "y": 152,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 17,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 23,
+            "y": 146,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 30,
+            "y": 143,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 37,
+            "y": 141,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 44,
+            "y": 138,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 51,
+            "y": 135,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 57,
+            "y": 133,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 63,
+            "y": 131,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 68,
+            "y": 129,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 74,
+            "y": 127,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 79,
+            "y": 127,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 82,
+            "y": 126,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 85,
+            "y": 126,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 87,
+            "y": 127,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 89,
+            "y": 128,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 91,
+            "y": 129,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 93,
+            "y": 131,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 95,
+            "y": 132,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 97,
+            "y": 134,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 98,
+            "y": 136,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 100,
+            "y": 138,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 101,
+            "y": 140,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 102,
+            "y": 143,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 104,
+            "y": 145,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 105,
+            "y": 147,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 106,
+            "y": 148,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 107,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 109,
+            "y": 151,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 110,
+            "y": 153,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 111,
+            "y": 154,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 112,
+            "y": 154,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 114,
+            "y": 155,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 115,
+            "y": 155,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 117,
+            "y": 156,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 119,
+            "y": 156,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 121,
+            "y": 156,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 123,
+            "y": 155,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 125,
+            "y": 155,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 127,
+            "y": 154,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 129,
+            "y": 153,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 131,
+            "y": 151,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 135,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 139,
+            "y": 147,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 143,
+            "y": 145,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 146,
+            "y": 142,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 150,
+            "y": 140,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 153,
+            "y": 138,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 156,
+            "y": 136,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 159,
+            "y": 134,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 162,
+            "y": 133,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 165,
+            "y": 132,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 168,
+            "y": 131,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 171,
+            "y": 130,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 175,
+            "y": 130,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 178,
+            "y": 130,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 182,
+            "y": 130,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 186,
+            "y": 130,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 189,
+            "y": 131,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 191,
+            "y": 132,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 194,
+            "y": 133,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 196,
+            "y": 135,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 199,
+            "y": 137,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 201,
+            "y": 139,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 203,
+            "y": 141,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 204,
+            "y": 143,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 206,
+            "y": 146,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 209,
+            "y": 149,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 211,
+            "y": 152,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 213,
+            "y": 154,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 215,
+            "y": 155,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 217,
+            "y": 156,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 218,
+            "y": 157,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 220,
+            "y": 157,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 221,
+            "y": 158,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 223,
+            "y": 158,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 226,
+            "y": 159,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 229,
+            "y": 159,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 232,
+            "y": 159,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 235,
+            "y": 159,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 238,
+            "y": 158,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 241,
+            "y": 157,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 244,
+            "y": 156,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 246,
+            "y": 155,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 248,
+            "y": 154,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 251,
+            "y": 152,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 253,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 255,
+            "y": 149,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 257,
+            "y": 147,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 259,
+            "y": 146,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 261,
+            "y": 145,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 262,
+            "y": 145,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 264,
+            "y": 144,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 266,
+            "y": 143,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 269,
+            "y": 143,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 271,
+            "y": 142,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 273,
+            "y": 142,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 274,
+            "y": 142,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 276,
+            "y": 142,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 278,
+            "y": 142,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 280,
+            "y": 142,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 281,
+            "y": 142,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 283,
+            "y": 143,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 285,
+            "y": 144,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 287,
+            "y": 145,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 288,
+            "y": 146,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 289,
+            "y": 147,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 290,
+            "y": 148,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 291,
+            "y": 148,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 292,
+            "y": 149,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 292,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 293,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 294,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 295,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 296,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 298,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 299,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 299,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 299,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 299,
+            "y": 150,
+            "material": 1,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 299,
+            "y": 150,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 299,
+            "y": 148,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 1,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 143,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 96,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 298,
+            "y": 104,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 296,
+            "y": 110,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 295,
+            "y": 115,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 293,
+            "y": 119,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 292,
+            "y": 124,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 290,
+            "y": 130,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 288,
+            "y": 135,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 288,
+            "y": 139,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 288,
+            "y": 142,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 287,
+            "y": 144,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 287,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 287,
+            "y": 147,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 288,
+            "y": 147,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 289,
+            "y": 147,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 290,
+            "y": 147,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 292,
+            "y": 147,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 294,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 295,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 295,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 295,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 295,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 295,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 296,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 296,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 296,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 296,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 296,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 296,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 296,
+            "y": 146,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 293,
+            "y": 145,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 291,
+            "y": 145,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 289,
+            "y": 145,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 287,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 284,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 281,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 275,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 267,
+            "y": 147,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 258,
+            "y": 147,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 248,
+            "y": 147,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 238,
+            "y": 147,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 230,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 222,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 216,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 211,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 207,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 204,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 200,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 197,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 193,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 190,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 186,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 181,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 176,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 170,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 163,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 156,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 148,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 139,
+            "y": 146,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 131,
+            "y": 145,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 123,
+            "y": 145,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 116,
+            "y": 144,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 110,
+            "y": 144,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 104,
+            "y": 143,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 98,
+            "y": 143,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 93,
+            "y": 143,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 89,
+            "y": 143,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 84,
+            "y": 143,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 80,
+            "y": 143,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 77,
+            "y": 142,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 73,
+            "y": 142,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 68,
+            "y": 142,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 65,
+            "y": 142,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 61,
+            "y": 142,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 58,
+            "y": 142,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 55,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 51,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 48,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 44,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 40,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 37,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 33,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 29,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 26,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 22,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 19,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 15,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 12,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 9,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 6,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 3,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 1,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": true,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 0,
+            "y": 141,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 1,
+            "y": 138,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 7,
+            "y": 136,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 17,
+            "y": 135,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 29,
+            "y": 134,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 41,
+            "y": 132,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 52,
+            "y": 130,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 64,
+            "y": 127,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 75,
+            "y": 126,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 84,
+            "y": 125,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 91,
+            "y": 124,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 98,
+            "y": 124,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 105,
+            "y": 123,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 115,
+            "y": 122,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 125,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 138,
+            "y": 119,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 153,
+            "y": 118,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 168,
+            "y": 116,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 184,
+            "y": 115,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 199,
+            "y": 115,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 212,
+            "y": 115,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 225,
+            "y": 115,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 238,
+            "y": 116,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 250,
+            "y": 117,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 261,
+            "y": 118,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 270,
+            "y": 118,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 280,
+            "y": 119,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 288,
+            "y": 120,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 296,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        },
+        {
+            "x": 300,
+            "y": 121,
+            "material": 2,
+            "paint": false,
+            "brushSize": 10
+        }
+    ]
+}
