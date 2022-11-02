@@ -98,23 +98,31 @@
                 </div>
             </div>
 
-            <div class="canvas-container">
-                <canvas id="input-controller" class="inputController" width="200" height="300"></canvas>
-                <p class="creds">Felix Raffelsberger & Tim Edelbauer, 2aHMNM</p>
+            <div class="canvas-wrapper">
+                <div class="canvas-container">
 
-                <div class="countdown hidden" id="countdown">
-                    <div>
-                        <p>Press to continue</p>
-                        <h1 id="countdown-time">10</h1>
+                    <div class="canvas-window-title">
+                        <p>Canvas</p>
                     </div>
-                </div>
 
-                <canvas class="mainCanvas" id="canvas" width="200" height="300"></canvas>
+                    <canvas id="input-controller" class="inputController" width="200" height="300"></canvas>
+                    <p class="creds">Felix Raffelsberger & Tim Edelbauer, 2aHMNM</p>
+    
+                    <div class="countdown hidden" id="countdown">
+                        <div>
+                            <p>Press to continue</p>
+                            <h1 id="countdown-time">10</h1>
+                        </div>
+                    </div>
+    
+                    <canvas class="mainCanvas" id="canvas" width="200" height="300"></canvas>
+                </div>
             </div>
 
-            <div class="settings-container">
-                <div class="material-selector">
-                    <section>
+           
+            <div class="settings-wrapper">
+                <div class="settings-container">
+                    <div class="material-selector">
                         <div class="material-select sand-color selected" onclick="setMaterial(1)" id="mat1">
                             <p>Sand</p>
                         </div>
@@ -184,57 +192,56 @@
                         <div class="material-select eraser" onclick="setMaterial(0)" id="mat0">
                             <p>Eraser</p>
                         </div>
-
-                        
-                    </section>
-                </div>
-
-                <div class="brush-settings-container">
-                    <section>
+                    </div>
     
-                        <div class="brush-setting" onclick="setBrushSize(1);" id="br1">
-                            <p>1</p>
-                        </div>
+                    <div class="brush-settings-container">
+                        <section>
+        
+                            <div class="brush-setting" onclick="setBrushSize(1);" id="br1">
+                                <p>1</p>
+                            </div>
+        
+                            <div class="brush-setting selected" onclick="setBrushSize(5);" id="br5" class="selected">
+                                <p>5</p>
+                            </div>
+        
+                            <div class="brush-setting" onclick="setBrushSize(10);" id="br10">
+                                <p>10</p>
+                            </div>
+                            
+                            <div class="brush-setting" onclick="setBrushSize(20);" id="br20">
+                                <p>20</p>
+                            </div>
     
-                        <div class="brush-setting selected" onclick="setBrushSize(5);" id="br5" class="selected">
-                            <p>5</p>
-                        </div>
+                            <div class="brush-setting" onclick="setBrushMode(0);" id="brm0">
+                                <div class="rect"></div>
+                            </div>
+                            
+                            <div class="brush-setting selected" onclick="setBrushMode(1);" id="brm1">
+                                <div class="circle"></div>
+                            </div>
+        
+                            <div class="brush-setting reset" onclick="reset()" id="reset">
+                                <p>Reset</p>
+                            </div>
     
-                        <div class="brush-setting" onclick="setBrushSize(10);" id="br10">
-                            <p>10</p>
-                        </div>
-                        
-                        <div class="brush-setting" onclick="setBrushSize(20);" id="br20">
-                            <p>20</p>
-                        </div>
-
-                        <div class="brush-setting" onclick="setBrushMode(0);" id="brm0">
-                            <div class="rect"></div>
-                        </div>
-                        
-                        <div class="brush-setting selected" onclick="setBrushMode(1);" id="brm1">
-                            <div class="circle"></div>
-                        </div>
+                            <div class="brush-setting exit" onclick="exit()">
+                                <p>Exit</p>
+                            </div>
     
-                        <div class="brush-setting reset" onclick="reset()" id="reset">
-                            <p>Reset</p>
-                        </div>
-
-                        <div class="brush-setting exit" onclick="exit()">
-                            <p>Exit</p>
-                        </div>
-
-                        <!-- <div class="brush-setting gallery" onclick="reset()" id="reset">
-                            <p>Gallery</p>
-                        </div> -->
-
-                        <a class="brush-setting info" onclick="toggleInfo()">
-                            <p>Info</p>
-                        </a>
+                            <!-- <div class="brush-setting gallery" onclick="reset()" id="reset">
+                                <p>Gallery</p>
+                            </div> -->
     
-                    </section>    
+                            <a class="brush-setting info" onclick="toggleInfo()">
+                                <p>Info</p>
+                            </a>
+        
+                        </section>    
+                    </div>
                 </div>
             </div>
+
         </div>
     </main>
 </body>

@@ -17,7 +17,7 @@ body {
 
 main {
     width: 90vw;
-    height: 95vh;
+    height: 93vh;
     background-color: #C0C0C0;
     font-family: "w95fa";
 
@@ -56,24 +56,56 @@ main {
 }
 
 .menu-bar button {
-    height: 3rem;
-    width: 3rem;
-    margin-right: 1rem;
     font-family: "w95fa";
-    font-size: 1.5rem;
-    border-radius: 0;
-    border-top: 5px solid white;
-    border-left: 5px solid white;
-    border-right: 5px solid #808080;
-    border-bottom: 5px solid #808080;
+    font-weight: bold;
+    font-size: 2rem;
+    
+    height: 3rem;
+    width: 3.6rem;
+
+    margin-right: 0.5rem;
+    padding: 0;
+
     background-color: #c0c0c0;
+    border-image-slice: 60 66 68 60;
+    border-image-width: 7px 7px 7px 7px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch; 
+    border-image-source: url("/img/display_button_border.png");
 }
 
 /*Canvas Container*/
 
+.canvas-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .canvas-container {
+    margin-top: 2rem;
+    width: 93%;
     position: relative;
     aspect-ratio: 2 / 3;
+    
+    border-image-slice: 80 80 80 80;
+    border-image-width: 7px 7px 7px 7px;
+    border-image-outset: 7px 7px 7px 7px;
+    border-image-repeat: stretch stretch; 
+    border-image-source: url("/img/display_canvas_border.png");
+}
+
+.canvas-window-title {
+    position: absolute;
+    background-color: #c0c0c0;
+    top: -1.5rem;
+    left: 1rem;
+    font-size: 1.5rem;
+}
+
+.canvas-window-title p {
+    padding: 0.5rem;
+    margin: 0;
 }
 
 .canvas-container .inputController {
@@ -99,10 +131,33 @@ main {
     background-color: transparent;
 }
 
-.canvas-container p {
+.creds {
     width: 100%;
     text-align: center;
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 100;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+/*Material Selector*/
+
+.settings-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.settings-container {
+    width: 93%;
+}
+
+.material-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
 }
