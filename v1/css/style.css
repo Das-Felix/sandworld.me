@@ -208,10 +208,6 @@ canvas {
     grid-column: 2 / 4;
 }
 
-.reset {
-    grid-column: 4 / 6;
-}
-
 .brush-settings-container section div p {
     margin: 0;
 }
